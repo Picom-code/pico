@@ -37,7 +37,7 @@ jobs:
           git checkout -q FETCH_HEAD
       - name: venv (Hermes lockfile + engine)
         run: |
-          uv venv -q -p 3.12 .venv
+          uv venv -q -p 3.14 .venv
           uv export -q --project "$RUNNER_TEMP/hermes-agent" --frozen --no-dev --no-emit-project --no-hashes --no-header -o "$RUNNER_TEMP/hermes-req.txt"
           uv pip install -q --python .venv/bin/python --no-deps -r "$RUNNER_TEMP/hermes-req.txt"
           uv pip install -q --python .venv/bin/python -e "engine[test]"
