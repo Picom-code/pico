@@ -1,0 +1,5 @@
+- Renovation is 60% done.
+- Board added $48,000 for asbestos; total budget $1.23 million.
+- Reopening moves from 1 December to 2 February.
+- Pop-up library stays open until then.
+- 12 volunteers needed for late-January move-back.

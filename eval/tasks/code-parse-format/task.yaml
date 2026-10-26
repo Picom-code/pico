@@ -1,0 +1,13 @@
+id: code-parse-format
+category: coding
+timeout_s: 300
+prompt: |
+  Implement `parse_env(text)` in envparse.py. It parses .env-style text into a dict:
+  - `KEY=value` lines; whitespace around key and value is stripped
+  - blank lines and lines starting with `#` are ignored; ` # comment` after an unquoted value is removed
+  - optional `export ` prefix before the key
+  - values in double quotes keep inner spaces and `#`, and support \n and \" escapes;
+    values in single quotes are taken literally (no escapes)
+  - `${OTHER}` inside unquoted or double-quoted values expands to an earlier key's value ('' if unknown)
+  - a line without `=` raises ValueError mentioning the 1-based line number
+check: python3 "$HIDDEN/test_env.py"

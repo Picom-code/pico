@@ -1,0 +1,538 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( -.- )
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * med | [----------] 0/128k | 72 tok/s
+
+===== typing =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> use a tool and fix calc
+Qwen3-Coder 30B-A3B | * med | [----------] 0/128k | 72 tok/s
+
+===== thinking =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> use a tool and fix calc
+
+  thinking 0.3s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> type to queue… esc to stop
+Qwen3-Coder 30B-A3B | * med | [----------] 0/128k | 72 tok/s
+
+===== working-tree-tail =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> use a tool and fix calc
+
+  * thought 0.5s  ctrl+o
+
+  + 2 steps
+  |- \ npm test  1.0s
+  |  ` > pico@0.1.0 test
+  |    > bun test
+  |    test/unit.test.ts:
+  `- v read src/app.ts  0.2s
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> type to queue… esc to stop
+Qwen3-Coder 30B-A3B | * med | [----------] 0/128k | 72 tok/s
+
+===== done-signoff =====
+
+  + 3 steps
+  |- v npm test  2.1s
+  |- v read src/app.ts  0.2s
+  `- v patch src/app.ts  0.3s
+     * src/app.ts  +13 -2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  * The entry point is src/main.ts
+  * Tests live in test/
+    * nested item
+  1. first
+  2. second
+
+  +- ts ---------------------------------------------------------------------------------------------+
+  | // greet                                                                                         |
+  | export function hi(name: string) {                                                               |
+  |   return `hello ${name}` + 42;                                                                   |
+  | }                                                                                                |
+  +--------------------------------------------------------------------------------------------------+
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) *
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * med | [#---------] 9.1k/128k cached 92% | 142 tok/s
+
+===== ctrl-o-expanded =====
+     127 +   // redraw step 6
+     128 +   // redraw step 7
+     129 +   // redraw step 8
+     130 +   // redraw step 9
+     131 +   // redraw step 10
+     132     render() {
+
+  Summary
+
+  Here is what I found in your project:
+
+  * The entry point is src/main.ts
+  * Tests live in test/
+    * nested item
+  1. first
+  2. second
+
+  +- ts ---------------------------------------------------------------------------------------------+
+  | // greet                                                                                         |
+  | export function hi(name: string) {                                                               |
+  |   return `hello ${name}` + 42;                                                                   |
+  | }                                                                                                |
+  +--------------------------------------------------------------------------------------------------+
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) *
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * med | [#---------] 9.1k/128k cached 92% | 142 tok/s
+
+===== ctrl-o-collapsed =====
+
+  + 3 steps
+  |- v npm test  2.1s
+  |- v read src/app.ts  0.2s
+  `- v patch src/app.ts  0.3s
+     * src/app.ts  +13 -2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  * The entry point is src/main.ts
+  * Tests live in test/
+    * nested item
+  1. first
+  2. second
+
+  +- ts ---------------------------------------------------------------------------------------------+
+  | // greet                                                                                         |
+  | export function hi(name: string) {                                                               |
+  |   return `hello ${name}` + 42;                                                                   |
+  | }                                                                                                |
+  +--------------------------------------------------------------------------------------------------+
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * med | [#---------] 9.1k/128k cached 92% | 142 tok/s
+
+===== effort-high =====
+
+  + 3 steps
+  |- v npm test  2.1s
+  |- v read src/app.ts  0.2s
+  `- v patch src/app.ts  0.3s
+     * src/app.ts  +13 -2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  * The entry point is src/main.ts
+  * Tests live in test/
+    * nested item
+  1. first
+  2. second
+
+  +- ts ---------------------------------------------------------------------------------------------+
+  | // greet                                                                                         |
+  | export function hi(name: string) {                                                               |
+  |   return `hello ${name}` + 42;                                                                   |
+  | }                                                                                                |
+  +--------------------------------------------------------------------------------------------------+
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [#---------] 9.1k/128k cached 92% | 142 tok/s
+
+===== notice =====
+    * nested item
+  1. first
+  2. second
+
+  +- ts ---------------------------------------------------------------------------------------------+
+  | // greet                                                                                         |
+  | export function hi(name: string) {                                                               |
+  |   return `hello ${name}` + 42;                                                                   |
+  | }                                                                                                |
+  +--------------------------------------------------------------------------------------------------+
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+------------------------------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [#---------] 18k/128k cached 92% | 142 tok/s
+
+===== compaction-flash =====
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+------------------------------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+------------------------------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) *
+------------------------------------------------------------------------------------------------------ > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [#---------] 5.4k/128k @ compacted 27k->5.4k | 142 tok/s
+
+===== error =====
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+------------------------------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+------------------------------------------------------------------------------------------------------------------------
+
+> error
+
+  * thought 0.4s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+                                                                                                       /\_/\
+                                                                                                      ( x.x ) !
+------------------------------------------------------------------------------------------------------ > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [#---------] 5.4k/128k @ compacted 27k->5.4k | 142 tok/s
+
+===== undo =====
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+------------------------------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+------------------------------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [----------] 0/128k | 142 tok/s
+
+===== resize-60 =====
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2
+
+------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+                                           /\_/\
+                                          ( o.o )
+------------------------------------------ > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [----------] 0/128k
+
+===== resize-50 =====
+
+  | Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2
+
+--------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+--------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+----------------------------------------- * high -
+> ask anything
+Qwen3-Coder 30B-A3B | * high | [------] 0/128k
+
+===== resize-100 =====
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+----------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+----------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+                                                                                   /\_/\
+                                                                                  ( o.o )
+---------------------------------------------------------------------------------- > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [----------] 0/128k | 142 tok/s
+
+===== redraw =====
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+----------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+----------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+                                                                                   /\_/\
+                                                                                  ( o.o )
+---------------------------------------------------------------------------------- > ^ < -- * high -
+> ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B | * high | [----------] 0/128k | 142 tok/s
+
+===== quit =====
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+----------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+----------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+  session s_1e28us | resume with pico -r s_1e28us
+u
+

@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pico-engine"
+version = "0.1.0"
+description = "Pico engine: local HTTP+SSE API wrapping Hermes Agent as a library"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["aiohttp>=3.9", "pyyaml>=6"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+pico-engine = "pico.server:main"
+
+[tool.setuptools.packages.find]
+include = ["pico*"]
+
+# hermes-agent is NOT a pip dependency yet: it is put on sys.path from PICO_HERMES_PATH
+# (default ~/.hermes/hermes-agent). See pico/agent_bridge.py:ensure_hermes().
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,30 @@
+
+  › compact say hi
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › agents slow say hi
+
+  ● ✻ thought 0.5s
+  │   The user said "agents slow say hi". Let me consider the codebase layout first,
+  │   then decide which tool to use. Effort is medium.
+  │ ⎇ 3 subagents
+  │   ✓ Survey the renderer for flicker      1.4s · 3.1k tok
+  │     ⎿ Renderer only rewrites changed rows; ~40 bytes per spinner frame.
+  │   ✓ Write tests for the context bar      1.0s · 1.8k tok
+  │     ⎿ Added 6 tests covering 49/50/80/95% thresholds.
+  │     ⎿ All pass.
+  │   ✗ Check Windows console fallbacks      1.4s · 960 tok
+  │     ⎿ conhost check needs a Windows box; skipped.
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 4.4s · 142 tok/s
+──────────────────────────────────────────────────────────────────────────────── medium ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · Qwen3-Coder 30B-A3B · ● medium · ━━━━━━━━━━ 36k/128k cached 92% · 142 tok/s

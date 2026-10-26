@@ -1,0 +1,288 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== turn1 =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · 142 tok/s
+
+===== turn2 =====
+  ├─ ✓ read src/app.ts  0.2s
+  ├─ ✓ patch src/app.ts  0.3s
+  │  ✎ src/app.ts  +13 −2  (ctrl+o to see)
+  └─ ✓ write new.txt  0.1s
+     ✎ new.txt  new  +2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.2s · 4 tools · 2 files +15 −2 · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== turn3 =====
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› explain the code
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 142 tok/s
+
+===== resize-70 =====
+──────────────────────────────────────────────────────────────────────
+
+› explain the code
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────╮
+  │ // greet                                                       │
+  │ export function hi(name: string) {                             │
+  │   return `hello ${name}` + 42;                                 │
+  │ }                                                              │
+  ╰────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                     /\_/\
+                                                    ( o.o )
+──────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92%
+
+===== resize-100 =====
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› explain the code
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                     │
+  │ export function hi(name: string) {                                                           │
+  │   return `hello ${name}` + 42;                                                               │
+  │ }                                                                                            │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                                   /\_/\
+                                                                                  ( o.o )
+────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 142 tok/s
+
+===== redraw =====
+────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› explain the code
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                     │
+  │ export function hi(name: string) {                                                           │
+  │   return `hello ${name}` + 42;                                                               │
+  │ }                                                                                            │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                                   /\_/\
+                                                                                  ( •.• )
+────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 142 tok/s
+
+===== narrow-50 =====
+  (^.^)✧ done in 4.2s · 4 tools
+
+──────────────────────────────────────────────────
+
+› explain the code
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────╮
+  │ // greet                                   │
+  │ export function hi(name: string) {         │
+  │   return `hello ${name}` + 42;             │
+  │ }                                          │
+  ╰────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+────────────────────────────────────────── ● med ─
+› ask anything
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱ 27k/128k
+
+===== quit =====
+  (^.^)✧ done in 4.2s · 4 tools
+
+──────────────────────────────────────────────────
+
+› explain the code
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────╮
+  │ // greet                                   │
+  │ export function hi(name: string) {         │
+  │   return `hello ${name}` + 42;             │
+  │ }                                          │
+  ╰────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+  (^.^)ﾉ bye for now · resume with pico -r s_1dkug
+z
+u
+

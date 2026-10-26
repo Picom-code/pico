@@ -1,0 +1,8 @@
+id: long-transcripts-search
+category: long-context
+timeout_s: 420
+prompt: |
+  transcripts/ contains a month of support-call transcripts (one file per day). Find every call where a
+  customer reported the error code "E-4471", and write a JSON file e4471.json: a list of objects
+  {"date": "<YYYY-MM-DD from the file name>", "customer": "<customer name>"} sorted by date.
+check: python3 "$HIDDEN/check.py"

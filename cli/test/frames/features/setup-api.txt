@@ -1,0 +1,221 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== choices =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ╭─ (o.o) set up a model ───────────────────────────────────────────────╮
+  │                                                                      │
+  │ ❯ ChatGPT subscription (login)     use your ChatGPT plan · no key    │
+  │   Any API (endpoint + key)         OpenAI, OpenRouter, Groq, Ollama… │
+  │   Local model (scan my hardware)   private · free · runs here        │
+  │                                                                      │
+  ╰─ ↑↓ move · enter choose · esc cancel ────────────────────────────────╯
+
+===== any-api =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ╭─ (o.o) set up a model ───────────────────────────────────────────────╮
+  │                                                                      │
+  │   ChatGPT subscription (login)     use your ChatGPT plan · no key    │
+  │ ❯ Any API (endpoint + key)         OpenAI, OpenRouter, Groq, Ollama… │
+  │   Local model (scan my hardware)   private · free · runs here        │
+  │                                                                      │
+  ╰─ ↑↓ move · enter choose · esc cancel ────────────────────────────────╯
+
+===== url =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ? base URL  or type a name: openrouter, groq, ollama…                │
+  │   › https://api.openai.com/v1▏                                       │
+  │   OpenAI  OpenRouter  Anthropic  Groq  Together  DeepSeek  Ollama    │
+  │                                                                      │
+  ╰─ ←→ preset · enter next · esc back ──────────────────────────────────╯
+
+===== preset-row =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ? base URL  or type a name: openrouter, groq, ollama…                │
+  │   › https://openrouter.ai/api/v1▏                                    │
+  │   OpenAI  OpenRouter  Anthropic  Groq  Together  DeepSeek  Ollama    │
+  │                                                                      │
+  ╰─ ←→ preset · enter next · esc back ──────────────────────────────────╯
+
+===== typed-name =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ? base URL  or type a name: openrouter, groq, ollama…                │
+  │   › groq▏                                                            │
+  │   OpenAI  OpenRouter  Anthropic  Groq  Together  DeepSeek  Ollama    │
+  │                                                                      │
+  ╰─ ←→ preset · enter next · esc back ──────────────────────────────────╯
+
+===== key =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.groq.com/openai/v1                               │
+  │ ? API key  hidden as you type                                        │
+  │   › ▏                                                                │
+  │                                                                      │
+  ╰─ enter next · esc back ──────────────────────────────────────────────╯
+
+===== key-masked =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.groq.com/openai/v1                               │
+  │ ? API key  hidden as you type                                        │
+  │   › •••••••••••••••••••••▏                                           │
+  │                                                                      │
+  ╰─ enter next · esc back ──────────────────────────────────────────────╯
+
+===== models =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.groq.com/openai/v1                               │
+  │ ✓ key   hidden                                                       │
+  │ ? model  5 available  type to filter                                 │
+  │ ❯ gpt-4.1-mini                                                       │
+  │   gpt-4.1                                                            │
+  │   gpt-4o-mini                                                        │
+  │   o4-mini                                                            │
+  │   text-embedding-3-small                                             │
+  │                                                                      │
+  ╰─ ↑↓ move · enter test + save · esc back ─────────────────────────────╯
+
+===== filter =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.groq.com/openai/v1                               │
+  │ ✓ key   hidden                                                       │
+  │ ? model  5 available  filter: 4.1▏                                   │
+  │ ❯ gpt-4.1                                                            │
+  │   gpt-4.1-mini                                                       │
+  │                                                                      │
+  ╰─ ↑↓ move · enter test + save · esc back ─────────────────────────────╯
+
+===== connected =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.groq.com/openai/v1                               │
+  │ ✓ key   hidden                                                       │
+  │ ✓ model gpt-4.1                                                      │
+  │ ✓ connected · 51 tok/s                                               │
+  │                                                                      │
+  ╰─ enter start chatting ───────────────────────────────────────────────╯
+
+===== back-in-chat =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ model gpt-4.1 · https://api.groq.com/openai/v1
+
+                                                                                                       /\_/\
+                                                                                                      ( -.- )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+gpt-4.1 · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ model gpt-4.1 · https://api.groq.com/openai/v1
+
+  (^.^)ﾉ bye for now
+u
+

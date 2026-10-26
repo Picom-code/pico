@@ -1,0 +1,10 @@
+id: code-write-tests
+category: coding
+timeout_s: 360
+prompt: |
+  money.py has a function `split_bill(total_cents, n)` that splits a bill into n integer-cent shares.
+  Write a thorough unittest file `test_money.py` for it (run with `python3 -m unittest test_money`).
+  The spec: returns a list of n ints summing exactly to total_cents; shares differ by at most 1 cent;
+  larger shares come first; n must be >= 1 and total_cents >= 0, otherwise ValueError.
+  Your tests must pass on the current (correct) implementation. Don't modify money.py.
+check: bash "$HIDDEN/check.sh"

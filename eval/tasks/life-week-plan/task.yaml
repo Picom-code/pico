@@ -1,0 +1,8 @@
+id: life-week-plan
+category: everyday
+timeout_s: 300
+prompt: |
+  Plan my work week into schedule.json using the constraints in constraints.md. Format: a JSON object
+  with keys "mon","tue","wed","thu","fri"; each value is a list of blocks
+  {"start":"HH:MM","end":"HH:MM","what":"<task name exactly as written in constraints.md>"}.
+check: python3 "$HIDDEN/check.py"

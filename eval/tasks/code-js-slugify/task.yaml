@@ -1,0 +1,9 @@
+id: code-js-slugify
+category: coding
+timeout_s: 240
+prompt: |
+  slugify.js is buggy. Users report: "Hello,  World!" gives "hello--world-" instead of "hello-world",
+  and accented letters like "Café Déjà Vu" are dropped instead of becoming "cafe-deja-vu".
+  Fix slugify() so it lowercases, strips accents, collapses any run of non-alphanumerics into a single
+  "-", and trims leading/trailing "-". Keep it CommonJS (module.exports).
+check: node "$HIDDEN/test.js"

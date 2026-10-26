@@ -1,0 +1,7 @@
+id: code-ts-docstring
+category: coding
+timeout_s: 300
+prompt: |
+  Implement the function in intervals.ts according to its doc comment. It's TypeScript run directly
+  by Node 22 (type stripping), so use only erasable type syntax (no enums/namespaces). Keep the export.
+check: node --no-warnings "$HIDDEN/test.mjs"

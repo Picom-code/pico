@@ -1,0 +1,30 @@
+
+
+  › explain this repo
+    second line
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Summary
+  │
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────────────────────────────────────────────╮
+  │ │ // greet                                                                         │
+  │ │ export function hi(name: string) {                                               │
+  │ │   return `hello ${name}` + 42;                                                   │
+  │ │ }                                                                                │
+  │ ╰──────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mo
+
+─────────────────────────────────────────────────────────────────────────────────── low ──
+❯ type to queue… esc to stop
+──────────────────────────────────────────────────────────────────────────────────────────
+  /> <\ · Qwen3-Coder 30B-A3B · ● low · ━━━━━━━━━━ 0/128k · 72 tok/s

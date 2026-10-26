@@ -1,0 +1,37 @@
+[?2026h[?25l[1A[J[0m
+  [1mkeys[22m[0m
+[38;5;246m  enter            send            shift+enter / alt+enter / ctrl+j   newline[39m[0m
+[38;5;246m  shift+tab        cycle effort    off → low → medium → high[39m[0m
+[38;5;246m  esc              stop / close    ctrl+c ×2   quit[39m[0m
+[38;5;246m  ctrl+o           expand diff / thinking / subagents   ↑ ↓  history[39m[0m
+[38;5;246m  @path            attach a file   /           commands[39m[0m
+[38;5;246m  ctrl+l           redraw (/redraw) ctrl+u / ctrl+k / ctrl+w  kill line / to end / word[39m[0m
+[0m
+  [1mcommands[22m[0m
+  [38;5;205m/model          [39m [38;5;242mswitch model[39m[0m
+  [38;5;205m/new            [39m [38;5;242mstart a fresh session[39m[0m
+  [38;5;205m/sessions       [39m [38;5;242mlist recent sessions[39m[0m
+  [38;5;205m/resume         [39m [38;5;242mreopen a past session[39m[0m
+  [38;5;205m/goal           [39m [38;5;242mset a goal the agent works toward[39m[0m
+  [38;5;205m/plan           [39m [38;5;242mplan before doing[39m[0m
+  [38;5;205m/compact        [39m [38;5;242msummarize context to free tokens[39m[0m
+  [38;5;205m/undo           [39m [38;5;242mundo the last turn (restores changed files)[39m[0m
+  [38;5;205m/agents         [39m [38;5;242msubagent settings[39m[0m
+  [38;5;205m/memory         [39m [38;5;242mwhat pico remembers about you[39m[0m
+  [38;5;205m/skills         [39m [38;5;242mlist skills[39m[0m
+  [38;5;205m/search         [39m [38;5;242msearch past chats[39m[0m
+  [38;5;205m/checkin        [39m [38;5;242mscheduled background replies[39m[0m
+  [38;5;205m/connect        [39m [38;5;242mapps & connectors[39m[0m
+  [38;5;205m/update         [39m [38;5;242mcheck for faster models/config[39m[0m
+  [38;5;205m/effort         [39m [38;5;242mset reasoning effort[39m[0m
+  [38;5;205m/clear          [39m [38;5;242mclear the screen[39m[0m
+  [38;5;205m/redraw         [39m [38;5;242mrepaint the screen (after resize / garbled output)[39m[0m
+  [38;5;205m/help           [39m [38;5;242mkeys & commands[39m[0m
+  [38;5;205m/quit           [39m [38;5;242mexit pico[39m[0m
+  [38;5;205m/review         [39m [38;5;242mReview the current diff[39m[0m
+  [38;5;205m/release-notes  [39m [38;5;242mDraft release notes from git log[39m[0m
+[0m
+[38;5;80m──[39m[38;5;80m─────────────────────────────────────────────────────────────────────────────────[39m[38;5;80m[1m low [22m[39m[38;5;80m──[39m[0m
+[38;5;80m❯ [39m[38;5;238mask anything · / for commands · @ to attach[39m[0m
+[38;5;80m──────────────────────────────────────────────────────────────────────────────────────────[39m[0m
+  [38;5;242m/o o\[39m[38;5;238m · [39m[38;5;246mgpt-oss 20B[39m[38;5;238m · [39m[38;5;80m● low[39m[38;5;238m · [39m[38;5;244m━━[39m[38;5;236m━━━━━━━━[39m [38;5;244m27k/128k[39m[38;5;238m cached 92%[39m[38;5;238m · [39m[38;5;242m88 tok/s[39m[0m[2A[2C[?25h[?2026l

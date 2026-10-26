@@ -1,0 +1,11 @@
+id: code-multifile
+category: coding
+timeout_s: 360
+prompt: |
+  This little expense app (models.py, storage.py, cli.py) has no notion of currency. Add one:
+  - `Expense` gets a `currency: str` field defaulting to "USD" (3-letter uppercase code; lowercase
+    input is uppercased; anything not 3 letters raises ValueError)
+  - storage.py's save/load round-trips it; loading an old JSON file without "currency" defaults to USD
+  - `python3 cli.py add <amount> <desc> [--currency EUR]` stores it, and `python3 cli.py total`
+    prints one line per currency, sorted by code, like "EUR 12.50" (two decimals).
+check: python3 "$HIDDEN/test_app.py"

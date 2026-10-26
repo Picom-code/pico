@@ -1,0 +1,94 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # keep in sync with installer/install.sh (PICO_HERMES_REF)
+  HERMES_REF: b222bced94bc1588423022ba59d7336d0e486c89
+
+jobs:
+  engine:
+    name: engine (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - name: Hermes Agent (pinned)
+        run: |
+          git init -q "$RUNNER_TEMP/hermes-agent"
+          cd "$RUNNER_TEMP/hermes-agent"
+          git remote add origin https://github.com/NousResearch/hermes-agent
+          git fetch -q --depth 1 origin "$HERMES_REF"
+          git checkout -q FETCH_HEAD
+      - name: venv (Hermes lockfile + engine)
+        run: |
+          uv venv -q -p 3.12 .venv
+          uv export -q --project "$RUNNER_TEMP/hermes-agent" --frozen --no-dev --no-emit-project --no-hashes --no-header -o "$RUNNER_TEMP/hermes-req.txt"
+          uv pip install -q --python .venv/bin/python --no-deps -r "$RUNNER_TEMP/hermes-req.txt"
+          uv pip install -q --python .venv/bin/python -e "engine[test]"
+      - name: pytest
+        working-directory: engine
+        env:
+          PICO_HERMES_PATH: ${{ runner.temp }}/hermes-agent
+        run: ../.venv/bin/python -m pytest -q tests
+
+  cli:
+    name: cli (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    defaults:
+      run:
+        working-directory: cli
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.13
+      - run: bun install --frozen-lockfile
+      - run: bunx tsc --noEmit
+      - run: bun test
+      - run: bun run build
+
+  web:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - uses: oven-sh/setup-bun@v2
+      - run: npm ci
+      - run: npm run build
+      - run: npm run typecheck
+
+  installer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: shellcheck
+        run: shellcheck -S warning installer/install.sh
+      - name: dry run
+        run: sh installer/install.sh --dry-run --yes

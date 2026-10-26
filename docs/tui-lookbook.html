@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pico · tui lookbook</title>
+<style>
+  :root { --p:#ff2e99; --bg:#0a0a0c; --card:#111115; --line:#24242b; --fg:#e9e9ee; --dim:#6c6c78; --g:#33e08a; --r:#ff4d5e; --a:#ffa800; --c:#00d1ff; --l:#9e66ff; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--fg); font: 14px/1.5 ui-monospace, "SF Mono", Menlo, Consolas, monospace; padding-bottom: 120px; }
+  header { padding: 48px 24px 20px; text-align:center; }
+  .hero { color:var(--p); font-size:22px; line-height:1.15; margin:0 auto 14px; display:inline-block; text-align:left; animation: glow 3.2s ease-in-out infinite; }
+  @keyframes glow { 0%,100% { text-shadow: 0 0 6px var(--p), 0 0 18px color-mix(in srgb, var(--p) 40%, transparent); } 50% { text-shadow: 0 0 10px var(--p), 0 0 36px color-mix(in srgb, var(--p) 70%, transparent); } }
+  h1 { font-size: 20px; margin: 6px 0 4px; letter-spacing: .5px; }
+  h1 b { color: var(--p); }
+  .sub { color: var(--dim); max-width: 640px; margin: 0 auto; }
+  nav { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); padding: 10px 16px; display:flex; gap:6px; flex-wrap: wrap; justify-content:center; }
+  nav a { color: var(--dim); text-decoration: none; padding: 3px 9px; border-radius: 999px; border: 1px solid transparent; font-size: 12px; }
+  nav a:hover { color: var(--fg); border-color: var(--line); }
+  nav a.done { color: var(--p); }
+  nav a.done::after { content: " ✓"; }
+  section { scroll-margin-top: 54px; max-width: 1400px; margin: 0 auto; padding: 34px 20px 6px; }
+  section h2 { font-size: 16px; margin: 0 0 2px; }
+  section h2 .n { color: var(--p); margin-right: 8px; }
+  section .why { color: var(--dim); margin: 0 0 16px; font-size: 13px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .grid.wide { grid-template-columns: repeat(auto-fill, minmax(560px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 0; cursor: pointer; transition: border-color .15s, transform .15s, box-shadow .2s; position: relative; overflow: hidden; }
+  .card:hover { border-color: #3a3a46; transform: translateY(-2px); }
+  .card.sel { border-color: var(--p); box-shadow: 0 0 0 1px var(--p), 0 0 28px -6px var(--p); }
+  .card .top { display:flex; justify-content: space-between; align-items: baseline; padding: 10px 14px 0; gap: 10px; }
+  .card .name { font-weight: 700; }
+  .card .tag { color: var(--dim); font-size: 12px; text-align: right; }
+  .card .badge { display:none; position:absolute; top:10px; right:12px; background: var(--p); color:#000; font-weight:700; font-size: 11px; padding: 1px 8px; border-radius: 999px; }
+  .card.sel .badge { display:block; }
+  .card.sel .tag { visibility: hidden; }
+  .term { margin: 10px 12px 12px; background: #050506; border: 1px solid #1b1b21; border-radius: 8px; padding: 12px 14px; overflow-x: auto; }
+  .term pre { margin:0; font: 13px/1.18 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: var(--fg); white-space: pre; }
+  .dots { display:flex; gap:5px; margin-bottom: 8px; }
+  .dots i { width:8px; height:8px; border-radius:50%; background:#2a2a31; }
+  .p { color: var(--p); } .d { color: var(--dim); } .g { color: var(--g); } .r { color: var(--r); } .a { color: var(--a); } .c { color: var(--c); } .l { color: var(--l); } .w { color:#fff; font-weight:700; }
+  .hp { background: var(--p); color:#000; font-weight:700; } .hd { background:#202027; color:#cfcfd8; } .hg { background: color-mix(in srgb, var(--g) 18%, transparent); } .hr { background: color-mix(in srgb, var(--r) 18%, transparent); }
+  .i { font-style: italic; color: var(--dim); }
+  .sw { display:flex; gap:10px; align-items:center; padding: 14px; }
+  .sw b { width: 38px; height: 38px; border-radius: 10px; display:inline-block; box-shadow: 0 0 22px -4px currentColor; }
+  footer { position: fixed; bottom: 0; left: 0; right: 0; background: color-mix(in srgb, #0d0d10 94%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--line); padding: 12px 20px; display:flex; gap: 14px; align-items:center; justify-content: center; z-index: 9; }
+  footer .count { color: var(--dim); }
+  footer .count b { color: var(--p); }
+  footer input { background:#050506; border:1px solid var(--line); color: var(--fg); border-radius: 8px; padding: 9px 12px; width: min(460px, 40vw); font: inherit; }
+  button { background: var(--p); color: #000; border: 0; border-radius: 8px; padding: 10px 18px; font: 700 14px ui-monospace, Menlo, monospace; cursor: pointer; }
+  button.ghost { background: transparent; color: var(--dim); border: 1px solid var(--line); }
+  #out { display:none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 20; align-items:center; justify-content:center; }
+  #out.on { display:flex; }
+  #out .panel { background: var(--card); border: 1px solid var(--p); border-radius: 14px; padding: 22px; width: min(720px, 92vw); max-height: 86vh; overflow:auto; box-shadow: 0 0 60px -10px var(--p); }
+  #out pre { background:#050506; padding: 14px; border-radius: 8px; white-space: pre-wrap; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <pre class="hero"> /\_/\
+( ^.^ )
+ &gt; ^ &lt;</pre>
+  <h1><b>pico</b> · tui lookbook</h1>
+  <p class="sub">Click the one you like in each section (click again to unpick). Full layouts let you pick several. Picks are saved as you go. Hit submit at the bottom when done.</p>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<footer>
+  <span class="count"><b id="cnt">0</b> / <span id="tot">0</span> sections picked</span>
+  <input id="notes" placeholder="notes for me (optional)">
+  <button class="ghost" onclick="resetAll()">reset</button>
+  <button onclick="submit()">submit picks ✓</button>
+</footer>
+<div id="out"><div class="panel">
+  <h2 style="margin-top:0">picks saved <span class="p">(^.^)✧</span></h2>
+  <p class="d">Downloaded <b>pico-tui-picks.json</b> to your Downloads folder and copied it to your clipboard. Just tell me "submitted" in the terminal.</p>
+  <pre id="json"></pre>
+  <button onclick="document.getElementById('out').classList.remove('on')">close</button>
+</div></div>
+
+<script>
+// ---------- tiny helpers ----------
+const CAT = (e = 'o.o') => [' /\\_/\\ ', '( ' + e + ' )', ' > ^ < '];
+const vis = s => s.replace(/«[^»]*»/g, '').length;
+const pad = (s, w) => s + ' '.repeat(Math.max(0, w - vis(s)));
+const rpad = (s, w) => ' '.repeat(Math.max(0, w - vis(s))) + s;
+const ctr = (s, w) => { const k = Math.max(0, w - vis(s)); return ' '.repeat(k >> 1) + s; };
+const rep = (c, n) => c.repeat(Math.max(0, n));
+const G = { round: '╭╮╰╯─│', sharp: '┌┐└┘─│', double: '╔╗╚╝═║', heavy: '┏┓┗┛━┃' };
+function box(lines, o = {}) {
+  const w = o.w || 56, c = o.c || 'd', g = G[o.style || 'round'];
+  const t = o.title ? ' ' + o.title + ' ' : '', r = o.right ? ' ' + o.right + ' ' : '', f = o.foot ? ' ' + o.foot + ' ' : '';
+  const out = [`«${c}»${g[0]}${g[4]}«/»${t}«${c}»${rep(g[4], w - 3 - vis(t) - vis(r) - (r ? 1 : 0))}«/»${r}${r ? `«${c}»${g[4]}«/»` : ''}«${c}»${g[1]}«/»`];
+  for (const l of lines) out.push(`«${c}»${g[5]}«/» ${pad(l, w - 4)} «${c}»${g[5]}«/»`);
+  out.push(`«${c}»${g[2]}${g[4]}«/»${f}«${c}»${rep(g[4], w - 3 - vis(f))}${g[3]}«/»`);
+  return out;
+}
+const cols = (a, b, w, gap = ' ') => { const n = Math.max(a.length, b.length), o = []; for (let i = 0; i < n; i++) o.push(pad(a[i] || '', w) + gap + (b[i] || '')); return o; };
+function ctxbar(style, p, w = 12) {
+  const n = Math.round(p / 100 * w), col = p > 95 ? 'r' : p > 80 ? 'a' : 'p';
+  switch (style) {
+    case 'line': return `«${col}»${rep('━', Math.max(0, n - 1))}${n ? '╸' : ''}«/»«d»${rep('━', w - n)}«/»`;
+    case 'blocks': return `«${col}»${rep('▰', n)}«/»«d»${rep('▱', w - n)}«/»`;
+    case 'shade': return `«${col}»${rep('█', Math.max(0, n - 1))}${n ? '▓' : ''}«/»«d»${rep('░', w - n)}«/»`;
+    case 'ascii': return `«d»[«/»«${col}»${rep('#', n)}«/»«d»${rep('-', w - n)}]«/»`;
+    case 'braille': return `«${col}»${rep('⣿', n)}«/»«d»${rep('⣀', w - n)}«/»`;
+    case 'dots': return `«${col}»${rep('●', n)}«/»«d»${rep('·', w - n)}«/»`;
+    case 'cat': return `«${col}»${rep('═', n)}«/»«p»(o.o)«/»«d»${rep('┄', w - n)}«/»`;
+    case 'grad': { let s = ''; for (let i = 0; i < w; i++) { const q = (i + 1) / w * 100; s += i < n ? `«${q > 95 ? 'r' : q > 80 ? 'a' : 'p'}»█«/»` : '«d»▁«/»'; } return s; }
+  }
+}
+const k = n => n >= 1000 ? (n / 1000).toFixed(1).replace('.0', '') + 'k' : '' + n;
+const ctxText = p => `${k(Math.round(p / 100 * 128000))}/128k`;
+const BR = '⠋⠙⠹⠸⠼⠴⠦⠧⠇⠏';
+const sp = t => BR[t % BR.length];
+const CTXP = t => [7, 22, 38, 55, 71, 84, 93, 97][Math.floor(t / 10) % 8];
+
+// ---------- sample conversation pieces ----------
+const U = 'fix the off-by-one in calc.py';
+const A1 = 'Found it — the loop stops one short.';
+const A2 = 'Fixed: «c»range(n)«/». It prints «w»5«/» now.';
+
+// ---------- sections ----------
+const S = [];
+
+S.push({ id: 'layout', title: 'Full layouts', multi: true, wide: true,
+  why: 'The whole screen. Pick every one you like; I\'ll blend them.',
+  opts: [
+    { id: 'classic', name: '1 · Classic blocks', tag: 'Hermes-like · today', art: t => [
+      ...cols(CAT('o.o').map(x => '«p»' + x + '«/»'), ['«w»pico«/» «d»v0.1«/»', '«d»deepseek-v4.1-flash«/»', '«d»~/proj«/»'], 9),
+      '',
+      '«d»▍«/»«p»›«/» ' + U,
+      '',
+      '«p»●«/» ' + A1,
+      '«d»│«/» «g»✓«/» read_file «d»calc.py  0.1s«/»',
+      '«d»│«/» «g»✓«/» patch «d»calc.py  0.0s«/»',
+      '«d»│«/»   ✎ calc.py  «g»+1«/» «r»−1«/»',
+      '«d»│«/»   «r»- for i in range(n - 1):«/»',
+      '«d»│«/»   «g»+ for i in range(n):«/»',
+      '«d»│«/» «p»' + sp(t) + '«/» terminal «d»python3 calc.py  0.4s«/»',
+      '«d»│«/»',
+      '«d»│«/» ' + A2,
+      '«d»╰ ✓ 3 tools · 1 file · 210 tok · 4.1s · 51 tok/s«/»',
+      '«d»' + rep('─', 64) + '«/»',
+      '«p»(^.^)✧«/» «d»deepseek · ● med ·«/» ' + ctxbar('line', 7, 10) + ' «d»9k/128k · 51 tok/s«/»',
+      '«p»›«/» █'] },
+    { id: 'minimal', name: '2 · Minimal', tag: 'Pi-like · no chrome', art: () => [
+      '«d»> ' + U + '«/»', '',
+      A1, '',
+      '«d»read calc.py · patched calc.py «/»«g»+1«/» «r»−1«/»«d» · ran python3 calc.py«/»', '',
+      A2, '', '', '',
+      '«p»›«/» █',
+      '«d»' + rep('─', 64) + '«/»',
+      '«p»(o.o)«/» «d»deepseek-v4.1-flash   med   9k/128k   ~/proj«/»'] },
+    { id: 'cards', name: '3 · Boxed cards', tag: 'every turn in a box', art: t => [
+      ...box([U], { title: '«d»you«/»', w: 64 }),
+      ...box(['«g»✓«/» read_file calc.py', '«g»✓«/» patch calc.py  «g»+1«/» «r»−1«/»', '«p»' + sp(t) + '«/» terminal python3 calc.py', '', A1, A2], { title: '«p»(o.o) pico«/»', right: '«d»4.1s«/»', c: 'p', w: 64, foot: '«d»3 tools · 210 tok · 51 tok/s«/»' }),
+      '',
+      ...box(['«p»›«/» █'], { w: 64, foot: '«d»' + ctxbar('blocks', 7, 8) + ' 9k/128k · ● med«/»' })] },
+    { id: 'sidebar', name: '4 · Sidebar', tag: 'cat + stats live on the right', art: t => cols([
+      '«d»▍«/»«p»›«/» ' + U, '',
+      '«p»●«/» ' + A1,
+      '«d»│«/» «g»✓«/» read_file calc.py',
+      '«d»│«/» «g»✓«/» patch calc.py «g»+1«/» «r»−1«/»',
+      '«d»│«/» «p»' + sp(t) + '«/» terminal pytest',
+      '«d»│«/»',
+      '«d»│«/» ' + A2.replace(' It prints «w»5«/» now.', ''),
+      '«d»╰ ✓ 4.1s«/»', '', '', '',
+      '«p»›«/» █'],
+      ['«d»│«/»', ...CAT('>.<').map(x => '«d»│«/»  «p»' + x + '«/»'), '«d»│«/»  «d»working«/»', '«d»│«/»',
+        '«d»│«/» «d»model«/»', '«d»│«/» deepseek', '«d»│«/» «d»context«/»', '«d»│«/» ' + ctxbar('line', 7, 9), '«d»│«/» «d»9k / 128k«/»', '«d»│«/» «d»speed«/» 51 t/s', '«d»│«/» «d»effort«/» «p»● med«/»'], 46) },
+    { id: 'topbar', name: '5 · Top bar', tag: 'status pinned on top', art: t => [
+      '«hp» (o.o) pico «/»«hd» deepseek-v4.1-flash  ● med  ' + ctxText(7) + '  51 tok/s  ~/proj       «/»', '',
+      '«p»you«/»  ' + U, '',
+      '«p»pico«/» ' + A1,
+      '      «g»✓«/» read_file calc.py «d»0.1s«/»',
+      '      «g»✓«/» patch calc.py «g»+1«/» «r»−1«/»',
+      '      «p»' + sp(t) + '«/» terminal python3 calc.py',
+      '      ' + A2, '', '', '',
+      '«d»' + rep('─', 64) + '«/»',
+      '«p»›«/» █'] },
+    { id: 'timeline', name: '6 · Timeline', tag: 'timestamps + rail', art: t => [
+      '«d»14:02«/» «p»┏«/» «w»you«/»   ' + U,
+      '«d»     «/» «p»┃«/»',
+      '«d»14:02«/» «p»┣━«/» read   calc.py            «d»0.1s«/»',
+      '«d»14:02«/» «p»┣━«/» patch  calc.py «g»+1«/» «r»−1«/»      «d»0.0s«/»',
+      '«d»14:02«/» «p»┣━«/» run    python3 calc.py    «p»' + sp(t) + '«/»   «d»0.4s«/»',
+      '«d»     «/» «p»┃«/»',
+      '«d»14:02«/» «p»┗«/» «w»pico«/»  ' + A1,
+      '«d»     «/»         ' + A2,
+      '«d»     «/»         «d»4.1s · 210 tok · 51 tok/s«/»', '', '',
+      '«p»(o.o)«/» «d»' + ctxText(7) + '«/» ' + ctxbar('dots', 7, 10),
+      '«p»›«/» █'] },
+    { id: 'bubbles', name: '7 · Chat bubbles', tag: 'iMessage in a terminal', art: t => [
+      ...box([U], { w: 38, c: 'p' }).map(x => rpad(x, 64)),
+      ...cols(CAT('o.o').map(x => '«p»' + x + '«/»'), box(['«g»✓«/» read · «g»✓«/» patch · «p»' + sp(t) + '«/» run', A1, A2], { w: 50 }), 8).slice(0, 5),
+      '', '', '',
+      '«d»' + rep('─', 64) + '«/»',
+      '«p»›«/» █                                        «d»9k/128k · med«/»'] },
+    { id: 'dense', name: '8 · Dense log', tag: 'one line per event · htop vibe', art: t => [
+      '«d»14:02:11«/» «c»you «/» ' + U,
+      '«d»14:02:12«/» «a»tool«/» read_file calc.py          «g»ok«/»  «d»0.1s«/»',
+      '«d»14:02:13«/» «a»tool«/» patch calc.py «g»+1«/» «r»−1«/»        «g»ok«/»  «d»0.0s«/»',
+      '«d»14:02:13«/» «a»tool«/» terminal python3 calc.py   «p»' + sp(t) + '«/»',
+      '«d»14:02:15«/» «p»pico«/» ' + A1,
+      '«d»14:02:15«/» «p»pico«/» ' + A2,
+      '«d»14:02:15«/» «d»done«/» «d»3 tools · 210 tok · 4.1s · 51 tok/s«/»', '', '', '', '',
+      '«hp» (o.o) «/»«hd» deepseek │ med │ ' + ctxText(7) + ' 7% │ 51 tok/s │ ~/proj  «/»',
+      '«p»›«/» █'] },
+    { id: 'retro', name: '9 · Retro BBS', tag: 'double lines · 90s terminal', art: t => [
+      ...box([
+        '«p»' + CAT('o.o')[0] + '«/»   «w»P I C O«/»   «d»node 1 · 14:02«/»',
+        '«p»' + CAT('o.o')[1] + '«/»   «d»deepseek-v4.1-flash«/»',
+        '«p»' + CAT('o.o')[2] + '«/»   «d»ctx«/» ' + ctxbar('ascii', 7, 10)], { style: 'double', c: 'p', w: 64 }),
+      '«c»YOU«/»  ' + U,
+      '«p»PICO«/» ' + A1,
+      '     «d»[«/»«g»OK«/»«d»]«/» read_file calc.py',
+      '     «d»[«/»«g»OK«/»«d»]«/» patch calc.py «g»+1«/» «r»-1«/»',
+      '     «d»[«/»«p»' + '|/-\\'[t % 4] + '«/»«d»]«/»  terminal python3 calc.py',
+      '     ' + A2, '',
+      '«p»C:\\PICO>«/» █'] },
+    { id: 'zen', name: '10 · Zen', tag: 'centered · lots of air', art: t => [
+      ...CAT(t % 30 > 26 ? '-.-' : 'o.o').map(x => ctr('«p»' + x + '«/»', 64)), '',
+      ctr('«d»' + U + '«/»', 64), '',
+      ctr(A1, 64),
+      ctr('«d»read · patch · «/»«p»' + sp(t) + '«/»«d» run«/»', 64),
+      ctr(A2, 64), '', '',
+      ctr('«d»· · ·«/»', 64), '',
+      ctr('«p»›«/» █                                   ', 64),
+      ctr('«d»' + ctxbar('dots', 7, 10) + '«/»', 64)] },
+  ] });
+
+S.push({ id: 'mascot', title: 'Cat mascot style', why: 'How the Pico Kitty shows up.', opts: [
+  { id: 'classic', name: 'Classic', tag: 'from the app', art: t => CAT(t % 30 > 27 ? '-.-' : 'o.o').map(x => '«p»' + x + '«/»') },
+  { id: 'tail', name: 'Tail flick', tag: 'animated tail', art: t => [' /\\_/\\  ', '( o.o ) ', t % 8 < 4 ? ' > ^ <  ' : ' > ^ < ~'].map(x => '«p»' + x + '«/»') },
+  { id: 'loaf', name: 'Paws', tag: 'sitting cat', art: t => [' /\\_/\\ ', '( ' + (t % 30 > 27 ? '-.-' : 'o.o') + ' )', '(")_(")'].map(x => '«p»' + x + '«/»') },
+  { id: 'face', name: 'Face only', tag: 'one line', art: t => ['«p»(' + (t % 30 > 27 ? '-.-' : 'o.o') + ')«/»'] },
+  { id: 'sig', name: 'Signature', tag: '=^.^=', art: () => ['«p»=^.^=«/»'] },
+  { id: 'perch', name: 'Perched on the bar', tag: 'sits on the status line', art: t => [
+    '                                    «p»' + CAT('o.o')[0] + '«/»',
+    '                                    «p»' + CAT(t % 30 > 27 ? '-.-' : 'o.o')[1] + '«/»',
+    '«d»' + rep('─', 36) + '«/»«p»' + CAT()[2] + '«/»«d»' + rep('─', 6) + '«/»',
+    '«d»deepseek · med · 9k/128k«/»'] },
+] });
+
+const MOODS = [['idle', 'o.o'], ['thinking', 'o.O'], ['working', '>.<'], ['done', '^.^'], ['error', 'x.x'], ['asleep', '-.-']];
+S.push({ id: 'moods', title: 'Cat moods', why: 'Face changes with what Pico is doing. Cycles through all of them.', opts: [
+  { id: 'eyes', name: 'Eyes only', tag: 'clean', art: t => { const m = MOODS[Math.floor(t / 8) % 6]; return [...CAT(m[1]).map(x => '«p»' + x + '«/»'), '«d»' + m[0] + '«/»']; } },
+  { id: 'extras', name: 'With extras', tag: '? ~ ✧ ! zZ', art: t => { const X = ['', ' ?', ' ~', ' ✧', ' !', ' zZ'], i = Math.floor(t / 8) % 6, m = MOODS[i]; const c = CAT(m[1]); c[1] += '«a»' + X[i] + '«/»'; return [...c.map(x => '«p»' + x + '«/»'), '«d»' + m[0] + '«/»']; } },
+  { id: 'color', name: 'Color by mood', tag: 'pink/cyan/amber/green/red', art: t => { const i = Math.floor(t / 8) % 6, m = MOODS[i], col = ['p', 'c', 'a', 'g', 'r', 'd'][i]; return [...CAT(m[1]).map(x => `«${col}»${x}«/»`), '«d»' + m[0] + '«/»']; } },
+] });
+
+S.push({ id: 'status', title: 'Status bar', why: 'The line under the input.', wide: true, opts: [
+  { id: 'hermes', name: 'Hermes line', tag: 'today', art: () => ['«p»(o.o)«/» «d»deepseek-v4.1-flash · «/»«p»● med«/»«d» · «/»' + ctxbar('line', 38, 10) + ' «d»49k/128k cached 92% · 51 tok/s«/»'] },
+  { id: 'power', name: 'Powerline', tag: 'colored blocks', art: () => ['«hp» (o.o) «/»«hd» deepseek «/»«hd» ● med «/»«hd» 49k/128k 38% «/»«hd» 51 t/s «/»«hd» ~/proj ⎇ main «/»'] },
+  { id: 'two', name: 'Two lines', tag: 'stats + key hints', art: () => ['«p»(o.o)«/» deepseek · «p»● med«/» · ' + ctxbar('blocks', 38, 10) + ' 49k/128k · 51 tok/s', '«d»shift+tab effort · ctrl+o expand · ctrl+l redraw · / commands«/»'] },
+  { id: 'right', name: 'Right-aligned', tag: 'quiet, out of the way', art: () => [rpad('«d»deepseek · med · 49k/128k · 51 tok/s«/» «p»(o.o)«/»', 72)] },
+  { id: 'split', name: 'Split ends', tag: 'left = where, right = how much', art: () => ['«p»(o.o)«/» «d»~/proj ⎇ main«/»' + rpad('«d»deepseek · «/»«p»● med«/»«d» · «/»' + ctxbar('braille', 38, 8) + '«d» 38%«/»', 54)] },
+  { id: 'htop', name: 'Full-width bar', tag: 'inverse, htop style', art: () => ['«hd» «/»«hp» (o.o) PICO «/»«hd»  deepseek  │  med  │  ctx 38%  │  51 tok/s  │  ~/proj              «/»'] },
+] });
+
+S.push({ id: 'context', title: 'Context bar', why: 'How full the memory window is. Watch it fill (pink → amber → red).', opts:
+  [['line', 'Thin line', 'Hermes style'], ['blocks', 'Pills', '▰▰▱▱'], ['shade', 'Shaded', '█▓░'], ['grad', 'Heat gradient', 'each cell colors'], ['braille', 'Braille', 'super fine'], ['dots', 'Dots', '●●··'], ['ascii', 'ASCII', '[###---]'], ['cat', 'Cat walk', 'the cat walks along it']]
+  .map(([id, name, tag]) => ({ id, name, tag, art: t => { const p = CTXP(t); return [ctxbar(id, p, 14) + '  «d»' + ctxText(p) + '«/»' + (p > 85 ? '  «a»run /compact«/»' : '')]; } })) });
+
+S.push({ id: 'spinner', title: 'Spinner', why: 'What spins while a tool runs.', opts: [
+  { id: 'braille', name: 'Braille', tag: '⠋⠙⠹', art: t => ['«p»' + sp(t) + '«/» terminal «d»pytest -q«/»'] },
+  { id: 'dots', name: 'Bouncing dots', tag: '∙●∙', art: t => ['«p»' + ['●∙∙', '∙●∙', '∙∙●', '∙●∙'][t % 4] + '«/» terminal «d»pytest -q«/»'] },
+  { id: 'moon', name: 'Moon', tag: '◐◓◑◒', art: t => ['«p»' + '◐◓◑◒'[t % 4] + '«/» terminal «d»pytest -q«/»'] },
+  { id: 'bars', name: 'Equalizer', tag: '▁▃▅▇', art: t => ['«p»' + [0, 1, 2].map(j => '▁▂▃▄▅▆▇▆▅▄▃▂'[(t + j * 3) % 12]).join('') + '«/» terminal «d»pytest -q«/»'] },
+  { id: 'ascii', name: 'Classic', tag: '| / - \\', art: t => ['«p»' + '|/-\\'[t % 4] + '«/» terminal «d»pytest -q«/»'] },
+  { id: 'star', name: 'Twinkle', tag: '✶✸✹', art: t => ['«p»' + '✶✷✸✹✺✹✸✷'[t % 8] + '«/» terminal «d»pytest -q«/»'] },
+  { id: 'catlook', name: 'Cat looking around', tag: 'like the app', art: t => ['«p»(' + ['o.o', '•.o', 'o.•', 'o.o'][Math.floor(t / 3) % 4] + ')«/» terminal «d»pytest -q«/»'] },
+  { id: 'shimmer', name: 'Shimmer text', tag: 'light sweeps the word', art: t => { const w = 'terminal', j = t % (w.length + 4); return [[...w].map((c, i) => Math.abs(i - j) < 2 ? '«w»' + c + '«/»' : '«d»' + c + '«/»').join('') + ' «d»pytest -q«/»']; } },
+] });
+
+S.push({ id: 'tools', title: 'Tool calls', why: 'How each step shows up while it works.', wide: true, opts: [
+  { id: 'check', name: 'Check lines + live tail', tag: 'today', art: t => ['«g»✓«/» read_file «d»calc.py  0.1s«/»', '«g»✓«/» patch «d»calc.py  0.0s«/»', '«p»' + sp(t) + '«/» terminal «d»pytest -q  2.1s«/»', '    «d»tests/test_calc.py ....«/»', '    «d»4 passed in 0.31s«/»'] },
+  { id: 'tags', name: 'Verb tags', tag: 'colored labels', art: t => ['«c»[read]«/»  calc.py', '«a»[edit]«/»  calc.py «g»+1«/» «r»−1«/»', '«p»[run ]«/»  pytest -q «p»' + sp(t) + '«/»'] },
+  { id: 'tree', name: 'Tree', tag: '├─ └─', art: t => ['«d»┬«/» «w»3 steps«/»', '«d»├─«/» «g»✓«/» read calc.py', '«d»├─«/» «g»✓«/» patch calc.py «g»+1«/» «r»−1«/»', '«d»└─«/» «p»' + sp(t) + '«/» pytest -q', '«d»   ╰ 4 passed«/»'] },
+  { id: 'oneline', name: 'One line', tag: 'collapses as it goes', art: t => ['«d»read calc.py · patch calc.py · «/»«p»' + sp(t) + '«/» pytest -q  «d»(3 steps, ctrl+o)«/»'] },
+  { id: 'sentence', name: 'Plain English', tag: 'reads like a story', art: t => ['«d»Read«/» calc.py', '«d»Changed«/» 1 line in calc.py', '«d»Running«/» the tests «p»' + ['.  ', '.. ', '...'][t % 3] + '«/»'] },
+  { id: 'catnarr', name: 'Cat narrates', tag: 'the cat does each step', art: t => ['«p»(o.o)«/» «d»reading«/» calc.py «g»✓«/»', '«p»(>.<)«/» «d»editing«/» calc.py «g»+1«/» «r»−1«/» «g»✓«/»', '«p»(' + ['o.o', '•.o', 'o.•'][Math.floor(t / 3) % 3] + ')«/» «d»running«/» pytest…'] },
+  { id: 'cards', name: 'Mini cards', tag: 'boxed per tool', art: t => cols(box(['«g»✓«/» read', '«d»calc.py«/»'], { w: 16 }), cols(box(['«g»✓«/» patch', '«g»+1«/» «r»−1«/»'], { w: 16 }), box(['«p»' + sp(t) + '«/» run', '«d»pytest«/»'], { w: 16, c: 'p' }), 16), 16) },
+] });
+
+S.push({ id: 'diff', title: 'Diffs', why: 'How file edits look.', wide: true, opts: [
+  { id: 'unified', name: 'Unified + line numbers', tag: 'today', art: () => ['«p»✎«/» calc.py  «g»+1«/» «r»−1«/»', '«d» 3«/»   def total(n):', '«d» 4«/» «r»-     for i in range(n - 1):«/»', '«d» 4«/» «g»+     for i in range(n):«/»', '«d» 5«/»         s += i'] },
+  { id: 'bg', name: 'Tinted rows', tag: 'GitHub-like', art: () => ['«p»✎«/» calc.py  «g»+1«/» «r»−1«/»', '«d» 3«/»   def total(n):', '«hr»«d» 4«/» «r»-«/»     for i in range(n - 1):     «/»', '«hg»«d» 4«/» «g»+«/»     for i in range(n):         «/»', '«d» 5«/»         s += i'] },
+  { id: 'word', name: 'Word-level', tag: 'only the changed bit', art: () => ['«p»✎«/» calc.py:4', '    for i in range(n«r»[- 1]«/»«g»{}«/»):', '«d»    removed «/»«r»- 1«/»'] },
+  { id: 'side', name: 'Side by side', tag: 'needs a wide terminal', art: () => cols(['«d»before«/»', '«r»for i in range(n - 1):«/»'], ['«d»after«/»', '«g»for i in range(n):«/»'], 26, '«d»│«/» ') },
+  { id: 'summary', name: 'Summary only', tag: 'expand with ctrl+o', art: () => ['«p»✎«/» calc.py  «g»+1«/» «r»−1«/»  «d»(ctrl+o to see)«/»'] },
+] });
+
+S.push({ id: 'thinking', title: 'Thinking', why: 'While the model reasons before replying.', opts: [
+  { id: 'timer', name: 'Timer + shimmer', tag: 'today', art: t => { const w = 'thinking', j = t % 12; return [[...w].map((c, i) => Math.abs(i - j) < 2 ? '«p»' + c + '«/»' : '«d»' + c + '«/»').join('') + ' «d»' + (t / 10).toFixed(1) + 's«/»']; } },
+  { id: 'stream', name: 'Live thought preview', tag: 'last line, dim italic', art: t => ['«d»∴ thinking ' + (t / 10).toFixed(1) + 's«/»', '«i»  …so the loop should include n, check the tests next«/»'] },
+  { id: 'bubble', name: 'Cat thought bubble', tag: 'cute', art: t => ['            «d»' + ['o', 'o O', 'o O ( hmm… )'][Math.floor(t / 4) % 3] + '«/»', ...CAT('o.O').map(x => '«p»' + x + '«/»')] },
+  { id: 'quiet', name: 'Quiet', tag: 'only "thought 4.1s" after', art: () => ['«d»∴ thought for 4.1s«/»'] },
+] });
+
+S.push({ id: 'blocks', title: 'Response blocks', why: 'How a reply is framed.', wide: true, opts: [
+  { id: 'gutter', name: 'Dot + guide', tag: 'today', art: () => ['«p»●«/» ' + A1, '«d»│«/» «g»✓«/» patch calc.py', '«d»│«/» ' + A2, '«d»╰ ✓ 4.1s«/»'] },
+  { id: 'catgutter', name: 'Cat gutter', tag: 'cat face starts the reply', art: () => ['«p»(o.o)«/» ' + A1, '«d»  │  «/» «g»✓«/» patch calc.py', '«d»  │  «/» ' + A2, '«d»  ╰ ✓ 4.1s«/»'] },
+  { id: 'rule', name: 'Named rule', tag: '── pico ──', art: () => ['«p»── pico ─────────────────────────────── «d»4.1s«/» ──«/»', A1, '  «g»✓«/» patch calc.py', A2] },
+  { id: 'box', name: 'Box', tag: 'each reply boxed', art: () => box([A1, '«g»✓«/» patch calc.py', A2], { title: '«p»pico«/»', c: 'p', w: 50 }) },
+  { id: 'bar', name: 'Thick left bar', tag: 'Slack quote', art: () => ['«p»▌«/» ' + A1, '«p»▌«/» «g»✓«/» patch calc.py', '«p»▌«/» ' + A2] },
+  { id: 'plain', name: 'Plain', tag: 'just space', art: () => [A1, '', '«d»patched calc.py«/»', '', A2] },
+] });
+
+S.push({ id: 'input', title: 'Input / prompt', why: 'Where you type. Color shows reasoning effort (shift+tab cycles, like Pi).', wide: true, opts: [
+  { id: 'chevron', name: 'Chevron', tag: 'today', art: () => ['«p»›«/» how do i add a flag█'] },
+  { id: 'catprompt', name: 'Cat prompt', tag: '(o.o) ›', art: () => ['«p»(o.o) ›«/» how do i add a flag█'] },
+  { id: 'box', name: 'Input box', tag: 'with hint', art: () => box(['how do i add a flag█'], { c: 'p', w: 58, foot: '«d»enter send · shift+enter newline«/»' }) },
+  { id: 'effort', name: 'Effort-colored rule', tag: 'Pi-style shift+tab', art: t => { const e = [['low', 'c'], ['med', 'p'], ['high', 'a'], ['max', 'r']][Math.floor(t / 12) % 4]; return [`«${e[1]}»${rep('─', 50)} ● ${e[0]} ─«/»`, `«${e[1]}»›«/» how do i add a flag█`]; } },
+  { id: 'path', name: 'Path prompt', tag: 'shell-like', art: () => ['«d»~/proj«/» «p»⎇ main«/» «p»❯«/» how do i add a flag█'] },
+  { id: 'peek', name: 'Cat peeking', tag: 'cat sits on the box', art: () => ['  «p»' + CAT()[0] + '«/»', '  «p»' + CAT('o.o')[1] + '«/»', ...box(['how do i add a flag█'], { c: 'p', w: 58 })] },
+] });
+
+S.push({ id: 'agents', title: 'Subagents', why: 'When Pico sends helpers off in parallel.', wide: true, opts: [
+  { id: 'panel', name: 'Panel', tag: 'today', art: t => ['«p»⎇«/» 3 subagents  «d»1/3 done«/»', '  «p»' + sp(t) + '«/» survey the renderer     «d»reading ui.ts  0.9s«/»', '  «g»✓«/» write context tests    «d»1.0s · 1.8k tok«/»', '  «p»' + sp(t + 3) + '«/» check resize handling  «d»running bun test  0.7s«/»'] },
+  { id: 'cats', name: 'Cat squad', tag: 'one cat per helper', art: t => [...cols(cols(CAT(t % 6 < 3 ? '>.<' : 'o.O').map(x => '«p»' + x + '«/»'), CAT('^.^').map(x => '«g»' + x + '«/»'), 11), CAT(t % 6 < 3 ? 'o.O' : '>.<').map(x => '«p»' + x + '«/»'), 22), '«d»renderer   tests ✓    resize«/»'] },
+  { id: 'bars', name: 'Progress bars', tag: 'per helper', art: t => ['renderer  ' + ctxbar('blocks', (t * 4) % 100, 12) + ' «d»0.9s«/»', 'tests     «g»' + rep('▰', 12) + '«/» «g»✓«/»', 'resize    ' + ctxbar('blocks', (t * 2 + 30) % 100, 12) + ' «d»0.7s«/»'] },
+  { id: 'line', name: 'One line', tag: 'minimal', art: t => ['«p»' + sp(t) + '«/» 3 helpers ' + '«g»●«/»«p»●●«/»' + ' «d»1/3 done · 2.6k tok«/»'] },
+] });
+
+S.push({ id: 'summary', title: 'Turn summary', why: 'The line that closes each reply.', wide: true, opts: [
+  { id: 'line', name: 'Stats line', tag: 'today', art: () => ['«d»╰ ✓ 3 tools · 1 file «/»«g»+1«/» «r»−1«/»«d» · 210 tok · 4.1s · 51 tok/s«/»'] },
+  { id: 'cat', name: 'Cat sign-off', tag: 'cute', art: () => ['«p»(^.^)✧«/» «d»done in 4.1s · 1 file changed · 51 tok/s«/»'] },
+  { id: 'badges', name: 'Badges', tag: 'chips', art: () => ['«hd» 3 tools «/» «hd» «/»«hg»«g» +1 «/»«/»«hr»«r» −1 «/»«/» «hd» 4.1s «/» «hd» 51 t/s «/»'] },
+  { id: 'right', name: 'Right-aligned dim', tag: 'barely there', art: () => [rpad('«d»4.1s · 210 tok · 51 t/s«/»', 64)] },
+  { id: 'none', name: 'None', tag: 'stats only in status bar', art: () => ['«d»(nothing — keeps replies clean)«/»'] },
+] });
+
+const WORD = String.raw`       _
+ _ __ (_) ___ ___
+| '_ \| |/ __/ _ \
+| |_) | | (_| (_) |
+| .__/|_|\___\___/
+|_|`.split('\n');
+S.push({ id: 'welcome', title: 'Welcome screen', why: 'What you see when you open it.', wide: true, opts: [
+  { id: 'catinfo', name: 'Cat + info', tag: 'today', art: () => cols(CAT('^.^').map(x => '«p»' + x + '«/»'), ['«w»pico«/» «d»v0.1«/»', '«d»deepseek-v4.1-flash · ~/proj«/»', '«d»/ for commands · shift+tab effort«/»'], 9) },
+  { id: 'wordmark', name: 'Wordmark', tag: 'big logo + cat', art: () => cols(WORD.map(x => '«p»' + x + '«/»'), ['', '', ...CAT('^.^').map(x => '«p»' + x + '«/»'), '«d»v0.1«/»'], 22) },
+  { id: 'tips', name: 'Cat with tips', tag: 'helpful first run', art: () => [...box(['«p»' + CAT('^.^')[0] + '«/»  «w»welcome back«/»', '«p»' + CAT('^.^')[1] + '«/»  «d»/lean   slim your profile«/»', '«p»' + CAT()[2] + '«/»  «d»/agents helper settings«/»', '         «d»ctrl+o  expand anything«/»'], { c: 'p', w: 50 })] },
+  { id: 'line', name: 'One line', tag: 'no splash', art: () => ['«p»(o.o)«/» «w»pico«/» «d»· deepseek · ~/proj«/»'] },
+  { id: 'quip', name: 'Cat quip', tag: 'random line each launch', art: t => [...cols(CAT('o.o').map(x => '«p»' + x + '«/»'), ['', '«d»"' + ['ready when you are.', 'what are we breaking today?', 'tests first, then snacks.'][Math.floor(t / 25) % 3] + '"«/»'], 9)] },
+] });
+
+const ACC = [['hotpink', '#ff2e99'], ['mint', '#33ff99'], ['cyan', '#00d1ff'], ['lavender', '#9e66ff'], ['amber', '#ffa800'], ['white', '#f5f5f5']];
+S.push({ id: 'accent', title: 'Accent color', why: 'Click one: the whole page recolors so you can see it.', opts: ACC.map(([id, hex]) => ({ id, name: id, tag: hex, swatch: hex, art: () => ['«p»(^.^)«/» ' + ctxbar('line', 55, 12) + ' «p»● med«/»'] })) });
+
+// ---------- render ----------
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const md = s => esc(s).replace(/«\/»/g, '</span>').replace(/«(\w+)»/g, '<span class="$1">');
+const KEY = 'pico-tui-picks';
+let picks = JSON.parse(localStorage.getItem(KEY) || '{}');
+const main = document.getElementById('main'), nav = document.getElementById('nav');
+const live = [];
+S.forEach((sec, si) => {
+  const el = document.createElement('section'); el.id = sec.id;
+  el.innerHTML = `<h2><span class="n">${String(si + 1).padStart(2, '0')}</span>${sec.title}${sec.multi ? ' <span class="d" style="font-weight:400;font-size:12px">(pick any)</span>' : ''}</h2><p class="why">${sec.why}</p>`;
+  const g = document.createElement('div'); g.className = 'grid' + (sec.wide ? ' wide' : ''); el.appendChild(g);
+  sec.opts.forEach(o => {
+    const c = document.createElement('div'); c.className = 'card'; c.dataset.sec = sec.id; c.dataset.id = o.id;
+    c.innerHTML = `<div class="badge">✓ picked</div><div class="top"><span class="name">${o.name}</span><span class="tag">${esc(o.tag || '')}</span></div>` +
+      (o.swatch ? `<div class="sw"><b style="background:${o.swatch};color:${o.swatch}"></b><span class="d">${o.swatch}</span></div>` : '') +
+      `<div class="term">${sec.wide && sec.id === 'layout' ? '<div class="dots"><i></i><i></i><i></i></div>' : ''}<pre></pre></div>`;
+    const pre = c.querySelector('pre');
+    const draw = t => { pre.innerHTML = md([].concat(o.art(t)).join('\n')); };
+    draw(0); live.push(draw);
+    c.onclick = () => toggle(sec, o.id);
+    g.appendChild(c);
+  });
+  main.appendChild(el);
+  const a = document.createElement('a'); a.href = '#' + sec.id; a.textContent = sec.title.toLowerCase(); a.dataset.sec = sec.id; nav.appendChild(a);
+});
+document.getElementById('tot').textContent = S.length;
+function toggle(sec, id) {
+  if (sec.multi) { const cur = new Set(picks[sec.id] || []); cur.has(id) ? cur.delete(id) : cur.add(id); picks[sec.id] = [...cur]; if (!picks[sec.id].length) delete picks[sec.id]; }
+  else picks[sec.id] = picks[sec.id] === id ? undefined : id;
+  if (picks[sec.id] === undefined) delete picks[sec.id];
+  localStorage.setItem(KEY, JSON.stringify(picks)); sync();
+}
+function sync() {
+  document.querySelectorAll('.card').forEach(c => { const v = picks[c.dataset.sec]; c.classList.toggle('sel', Array.isArray(v) ? v.includes(c.dataset.id) : v === c.dataset.id); });
+  document.querySelectorAll('nav a').forEach(a => a.classList.toggle('done', !!picks[a.dataset.sec]));
+  document.getElementById('cnt').textContent = Object.keys(picks).length;
+  const acc = ACC.find(x => x[0] === picks.accent); document.documentElement.style.setProperty('--p', acc ? acc[1] : '#ff2e99');
+}
+function resetAll() { if (confirm('Clear all picks?')) { picks = {}; localStorage.removeItem(KEY); sync(); } }
+function submit() {
+  const named = {};
+  for (const sec of S) { const v = picks[sec.id]; if (!v) continue; const nm = id => (sec.opts.find(o => o.id === id) || {}).name; named[sec.id] = Array.isArray(v) ? v.map(id => ({ id, name: nm(id) })) : { id: v, name: nm(v) }; }
+  const out = { submitted: new Date().toISOString(), picks: named, notes: document.getElementById('notes').value.trim(), skipped: S.filter(s => !picks[s.id]).map(s => s.id) };
+  const txt = JSON.stringify(out, null, 2);
+  document.getElementById('json').textContent = txt;
+  try { navigator.clipboard.writeText(txt); } catch (e) {}
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'application/json' })); a.download = 'pico-tui-picks.json'; a.click();
+  document.getElementById('out').classList.add('on');
+}
+sync();
+let T = 0; setInterval(() => { T++; live.forEach(f => f(T)); }, 110);
+</script>
+</body>
+</html>

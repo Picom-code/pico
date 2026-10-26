@@ -1,0 +1,30 @@
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › remember my dog say hi
+
+  ● ✻ thought 0.5s  ctrl+o
+  │ + remembered: dog is Biscuit
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.6s · 142 tok/s
+  + new skill: deploy-checklist
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › compact say hi
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ↶ undid last turn  no file changes
+──────────────────────────────────────────────────────────────────────────────── medium ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · Qwen3-Coder 30B-A3B · ● medium · ━━━━━━━━━━ 27k/128k cached 92% · 142 tok/s

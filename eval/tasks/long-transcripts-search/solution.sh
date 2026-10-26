@@ -1,0 +1,1 @@
+cd "$SANDBOX" && echo '[{"date":"2026-09-03","customer":"Kenji Sato"},{"date":"2026-09-11","customer":"Fatima Noor"},{"date":"2026-09-19","customer":"Diego Paz"},{"date":"2026-09-26","customer":"Grace Liu"}]' > e4471.json

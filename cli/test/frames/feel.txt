@@ -1,0 +1,604 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== typing-cat =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› hello
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== palette-fuzzy =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› /thm
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+  ❯ /theme  accent color & spinner
+    ↑↓ · tab complete · enter run · esc close
+
+===== palette-all =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› /
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+  ❯ /model                        switch model
+    /new                          start a fresh session
+    /sessions                     list recent sessions
+    /resume [id]                  reopen a past session
+    /goal <goal>                  set a goal the agent works toward
+    /plan <task>                  plan before doing
+    /compact                      summarize context to free tokens
+    /lean                         slim your profile & show the speedup
+    1 of 26 · ↑↓ · tab complete · enter run · esc close
+
+===== help =====
+  /model          switch model
+  /new            start a fresh session
+  /sessions       list recent sessions
+  /resume         reopen a past session
+  /goal           set a goal the agent works toward
+  /plan           plan before doing
+  /compact        summarize context to free tokens
+  /lean           slim your profile & show the speedup
+  /yolo           run commands without asking (toggle)
+  /undo           undo the last turn (restores changed files)
+  /agents         subagent settings
+  /theme          accent color & spinner
+  /memory         what pico remembers about you
+  /skills         list skills
+  /search         search past chats
+  /checkin        scheduled background replies
+  /connect        apps & connectors
+  /update         check for faster models/config
+  /effort         set reasoning effort
+  /copy           copy the last reply to the clipboard
+  /clear          clear the screen
+  /redraw         repaint the screen (after resize / garbled output)
+  /help           keys & commands
+  /quit           exit pico
+
+  skills · 2
+  /review         Review the current diff
+  /release-notes  Draft release notes from git log
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== approval-box =====
+  /memory         what pico remembers about you
+  /skills         list skills
+  /search         search past chats
+  /checkin        scheduled background replies
+  /connect        apps & connectors
+  /update         check for faster models/config
+  /effort         set reasoning effort
+  /copy           copy the last reply to the clipboard
+  /clear          clear the screen
+  /redraw         repaint the screen (after resize / garbled output)
+  /help           keys & commands
+  /quit           exit pico
+
+  skills · 2
+  /review         Review the current diff
+  /release-notes  Draft release notes from git log
+
+
+› approve cleanup
+
+  ✻ thought 0.5s  ctrl+o
+
+  ⠋ working  4.5s · esc to stop
+
+  ╭─ run this? ────────────────────────────────────────────╮
+  │ › rm -rf ./build                                       │
+  │ Delete the build directory to force a clean rebuild.   │
+  ╰─ y allow · n deny · a always ──────────────────────────╯
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to queue… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== approved =====
+
+  ┬ 1 step
+  └─ ✓ rm -rf ./build  0.2s
+
+  Cleaned the build directory.
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== yolo-on =====
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› /yolo
+
+  yolo on: commands run without asking in this chat. /yolo again to turn it off.
+
+  (^.^)✧ done
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · yolo · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== yolo-done =====
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› /yolo
+
+  yolo on: commands run without asking in this chat. /yolo again to turn it off.
+
+  (^.^)✧ done
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · yolo · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== yolo-approve =====
+  ┬ 1 step
+  └─ ✓ rm -rf ./build  0.2s
+     → auto-approved
+
+  Cleaned the build directory.
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 2.2s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ¬.¬ )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · yolo · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== copy =====
+  ┬ 1 step
+  └─ ✓ rm -rf ./build  0.2s
+     → auto-approved
+
+  Cleaned the build directory.
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 2.2s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+✓ copied 333 chars
+
+===== yolo-off =====
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 2.2s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› /yolo off
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+✓ copied 333 chars
+
+===== error =====
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 2.2s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› /yolo off
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+                                                                                                       /\_/\
+                                                                                                      ( x.x ) !
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== stop-ctrlc =====
+
+› /yolo off
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to queue… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== stopped =====
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7
+
+  (-.-) stopped
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 28k/128k cached 92% · 142 tok/s
+
+===== narrow-60 =====
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+────────────────────────────────────────────────────────────
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7
+
+  (-.-) stopped
+
+                                           /\_/\
+                                          ( o.o )
+────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 28k/128k cached 92%
+
+===== wide-120 =====
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7
+
+  (-.-) stopped
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱▱ 28k/128k cached 92% · 142 tok/s
+
+===== bye =====
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7
+
+  (-.-) stopped
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+ctrl+c again to quit
+
+===== quit =====
+
+  yolo off: Pico asks before risky commands again.
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› error
+
+  ✻ thought 0.5s  ctrl+o
+
+  (x.x)! model server crashed (mock)
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7
+
+  (-.-) stopped
+
+  (^.^)ﾉ bye for now · resume with pico -r s_2uglj8
+u
+

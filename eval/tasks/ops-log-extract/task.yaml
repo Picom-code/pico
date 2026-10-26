@@ -1,0 +1,9 @@
+id: ops-log-extract
+category: terminal
+timeout_s: 240
+prompt: |
+  access.log is a JSON-lines web server log. Produce `report.json` containing:
+  {"total_requests": <int>, "errors_5xx": <int>, "top_paths": [the 3 most requested paths, most first],
+   "slowest_request_id": "<id of the request with the highest ms>", "unique_ips": <int>}
+  Lines that aren't valid JSON must be skipped (and not counted). Use jq/awk/python, whatever you like.
+check: python3 "$HIDDEN/check.py"

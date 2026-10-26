@@ -1,0 +1,30 @@
+  │ + allowed: rm -rf ./build
+  │ ✓ terminal `rm -rf ./build`  0.2s
+  │
+  │ Cleaned the build directory.
+  │
+  │ Summary
+  │
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────────────────────────────────────────────╮
+  │ │ // greet                                                                         │
+  │ │ export function hi(name: string) {                                               │
+  │ │   return `hello ${name}` + 42;                                                   │
+  │ │ }                                                                                │
+  │ ╰──────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 123 tok · 6.2s · 142 tok/s
+─────────────────────────────────────────────────────────────────────────────────── low ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · Qwen3-Coder 30B-A3B · ● low · ━━━━━━━━━━ 27k/128k cached 92% · 142 tok/s

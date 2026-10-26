@@ -1,0 +1,30 @@
+  › say hi half
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › say hi fill
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › remember my dog say hi
+
+  ● ✻ thought 0.5s  ctrl+o
+  │ + remembered: dog is Biscuit
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.6s · 142 tok/s
+  + new skill: deploy-checklist
+──────────────────────────────────────────────────────────────────────────────── medium ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · Qwen3-Coder 30B-A3B · ● medium · ━━━━━━━━━╸ 127k/128k cached 92% run /compact

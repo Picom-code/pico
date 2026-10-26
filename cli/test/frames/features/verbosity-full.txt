@@ -1,0 +1,178 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== set =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning full · tools full · summary on
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== thinking =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning full · tools full · summary on
+
+› ponder, then use a tool and fix calc
+
+  thinking 0.5s
+    The test fails on the last element, so the loop bound is suspect.
+    range(n - 1) stops
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== thinking-late =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning full · tools full · summary on
+
+› ponder, then use a tool and fix calc
+
+  thinking 1.0s
+    The test fails on the last element, so the loop bound is suspect.
+    range(n - 1) stops one short; it should be range(n).
+    I will read calc.py, patch the
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== tools-live =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning full · tools full · summary on
+
+› ponder, then use a tool and fix calc
+
+  ✻ thought 1.3s  ctrl+o
+
+  ┬ 2 steps
+  ├─ ⠹ npm test  1.1s
+  │  ╰ > pico@0.1.0 test
+  │    > bun test
+  │    test/unit.test.ts:
+  │    (pass) context bar > thresholds
+  └─ ✓ read src/app.ts  0.2s
+     ╰ 1| // Interactive chat TUI.
+       2| import x
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== done =====
+     128 +   // redraw step 7
+     129 +   // redraw step 8
+     130 +   // redraw step 9
+     131 +   // redraw step 10
+     132     render() {
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.7s · 3 tools · 1 file +13 −2 · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== quit =====
+     128 +   // redraw step 7
+     129 +   // redraw step 8
+     130 +   // redraw step 9
+     131 +   // redraw step 10
+     132     render() {
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.7s · 3 tools · 1 file +13 −2 · 142 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_x5wwk
+u
+

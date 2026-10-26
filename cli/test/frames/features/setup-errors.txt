@@ -1,0 +1,142 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== choices =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ╭─ (o.o) set up a model ───────────────────────────────────────────────╮
+  │                                                                      │
+  │ ❯ ChatGPT subscription (login)     use your ChatGPT plan · no key    │
+  │   Any API (endpoint + key)         OpenAI, OpenRouter, Groq, Ollama… │
+  │   Local model (scan my hardware)   private · free · runs here        │
+  │                                                                      │
+  ╰─ ↑↓ move · enter choose · esc cancel ────────────────────────────────╯
+
+===== url =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ? base URL  or type a name: openrouter, groq, ollama…                │
+  │   › https://api.openai.com/v1▏                                       │
+  │   OpenAI  OpenRouter  Anthropic  Groq  Together  DeepSeek  Ollama    │
+  │                                                                      │
+  ╰─ ←→ preset · enter next · esc back ──────────────────────────────────╯
+
+===== wrong-url-typed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.example.com/nope                                 │
+  │ ? API key  hidden as you type                                        │
+  │   › ▏                                                                │
+  │                                                                      │
+  ╰─ enter next · esc back ──────────────────────────────────────────────╯
+
+===== wrong-url =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ? base URL  or type a name: openrouter, groq, ollama…                │
+  │   › https://api.example.com/nope▏                                    │
+  │   OpenAI  OpenRouter  Anthropic  Groq  Together  DeepSeek  Ollama    │
+  │ ✗ 404 · wrong URL: the server answered but that URL wasn't found …   │
+  │                                                                      │
+  ╰─ ←→ preset · enter next · esc back ──────────────────────────────────╯
+
+===== bad-key-typed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.openai.com/v1                                    │
+  │ ? API key  hidden as you type                                        │
+  │   › ▏                                                                │
+  │                                                                      │
+  ╰─ enter next · esc back ──────────────────────────────────────────────╯
+
+===== bad-key =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● any API ──────────────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ url   https://api.openai.com/v1                                    │
+  │ ? API key  hidden as you type                                        │
+  │   › •••▏                                                             │
+  │ ✗ 401 · bad key: the server rejected the API key                     │
+  │                                                                      │
+  ╰─ enter next · esc back ──────────────────────────────────────────────╯
+
+===== cancel =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  (^.^)ﾉ bye for now
+u
+

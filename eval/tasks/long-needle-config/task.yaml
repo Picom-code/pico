@@ -1,0 +1,10 @@
+id: long-needle-config
+category: long-context
+timeout_s: 360
+prompt: |
+  The docs/ folder holds our ops handbook split over many files. Somewhere in it, the handbook states
+  the maximum number of concurrent export jobs allowed for the Payments team's "settlement" queue
+  (it's an integer), and who approved that limit. Write `<number>,<approver full name>` as the only
+  line of answer.txt.
+check: |
+  test "$(tr -d '\r' < answer.txt | head -1 | sed 's/ *, */,/')" = "17,Ingrid Halvorsen"

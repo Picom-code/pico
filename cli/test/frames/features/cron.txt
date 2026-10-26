@@ -1,0 +1,276 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== list =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │ ❯ ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │     summarize my inbox and calendar                                                │
+  │   ● watch CI          every 30m           next in 11m  last ✗                      │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  ╰─ n new · enter run now · space pause · d delete · esc close ───────────────────────╯
+
+===== down =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │ ❯ ● watch CI          every 30m           next in 11m  last ✗                      │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  ╰─ n new · enter run now · space pause · d delete · esc close ───────────────────────╯
+
+===== paused =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │ ❯ ○ watch CI          every 30m           paused       last ✗                      │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  │                                                                                    │
+  │ paused “watch CI”                                                                  │
+  ╰─ n new · enter run now · space pause · d delete · esc close ───────────────────────╯
+
+===== new-when =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │ ❯ ○ watch CI          every 30m           paused       last ✗                      │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  │                                                                                    │
+  │ ? when?  e.g. every weekday at 8am · every 30m · 0 8 * * 1-5                       │
+  │   › ▏                                                                              │
+  │                                                                                    │
+  ╰─ enter next · esc back ────────────────────────────────────────────────────────────╯
+
+===== when-typed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │ ❯ ○ watch CI          every 30m           paused       last ✗                      │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  │                                                                                    │
+  │ ? when?  e.g. every weekday at 8am · every 30m · 0 8 * * 1-5                       │
+  │   › every weekday at 9am▏                                                          │
+  │                                                                                    │
+  ╰─ enter next · esc back ────────────────────────────────────────────────────────────╯
+
+===== new-what =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │ ❯ ○ watch CI          every 30m           paused       last ✗                      │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  │                                                                                    │
+  │ when: every weekday at 9am                                                         │
+  │ ? what should pico do?                                                             │
+  │   › ▏                                                                              │
+  │                                                                                    │
+  ╰─ enter next · esc back ────────────────────────────────────────────────────────────╯
+
+===== what-typed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 3 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief     every weekday 8:00  next in 3h   last ✓                      │
+  │ ❯ ○ watch CI          every 30m           paused       last ✗                      │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps  mondays 9:00        paused       last —                      │
+  │                                                                                    │
+  │ when: every weekday at 9am                                                         │
+  │ ? what should pico do?                                                             │
+  │   › triage new github issues▏                                                      │
+  │                                                                                    │
+  ╰─ enter next · esc back ────────────────────────────────────────────────────────────╯
+
+===== added =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 4 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │   ● morning brief             every weekday 8:00  next in 3h   last ✓              │
+  │ ❯ ○ watch CI                  every 30m           paused       last ✗              │
+  │     check the CI status of main and tell me if it broke                            │
+  │   ○ dependency bumps          mondays 9:00        paused       last —              │
+  │   ● triage new github issues  every weekday 9:00  next in 60m  last —              │
+  │                                                                                    │
+  │ ✓ added                                                                            │
+  ╰─ n new · enter run now · space pause · d delete · esc close ───────────────────────╯
+
+===== run-now =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ◷ cron · 4 ───────────────────────────────────────────────────────────────────────╮
+  │                                                                                    │
+  │ ❯ ● morning brief             every weekday 8:00  next in 3h   last ⠇              │
+  │     summarize my inbox and calendar                                                │
+  │   ○ watch CI                  every 30m           paused       last ✗              │
+  │   ○ dependency bumps          mondays 9:00        paused       last —              │
+  │   ● triage new github issues  every weekday 9:00  next in 60m  last —              │
+  │                                                                                    │
+  │ ✓ started “morning brief” · result lands in /inbox                                 │
+  ╰─ n new · enter run now · space pause · d delete · esc close ───────────────────────╯
+
+===== closed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ cron triage new github issues  every weekday 9:00
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== inbox-arrives =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ cron triage new github issues  every weekday 9:00
+
+  ✉ morning brief: 3 PRs need review; CI is green.
+
+                                                                                                       /\_/\
+                                                                                                      ( -.- )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · ✉ 1 · 88 tok/s
+
+===== inbox-list =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ cron triage new github issues  every weekday 9:00
+
+  ✉ morning brief: 3 PRs need review; CI is green.
+? Inbox
+❯ morning brief  just now · 3 PRs need review; CI is green.
+    Calendar: standup at 10.
+↑↓ move · enter open its session · ctrl+c close
+
+===== inbox-closed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ cron triage new github issues  every weekday 9:00
+
+  ✉ morning brief: 3 PRs need review; CI is green.
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ cron triage new github issues  every weekday 9:00
+
+  ✉ morning brief: 3 PRs need review; CI is green.
+
+  (^.^)ﾉ bye for now
+u
+

@@ -1,0 +1,269 @@
+===== boot =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+? What will you mostly use Pico for?
+❯ engineer  code, terminals, repos
+  business  email, docs, planning
+  creative  writing, ideas, images
+  marketing  copy, campaigns, research
+  student  learning, notes, explain it
+  general  a bit of everything
+↑↓ move · enter select
+
+===== persona =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+? What will you mostly use Pico for?
+❯ engineer  code, terminals, repos
+  business  email, docs, planning
+  creative  writing, ideas, images
+  marketing  copy, campaigns, research
+  student  learning, notes, explain it
+  general  a bit of everything
+↑↓ move · enter select
+
+===== persona-picked =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+? Where should the model run?
+❯ On this machine  recommended · private · free
+  ChatGPT login  use your ChatGPT plan
+  Custom endpoint  any OpenAI-compatible URL + key
+↑↓ move · enter select
+
+===== provider-picked =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+? Pick a model
+❯ ★ Qwen3-Coder 30B-A3B  30B/3B Q4_K_M · 18.6 GB · ~72 tok/s · 64k ctx
+    Best coding model that fits your 64 GB with room for context.
+    good at: coding, speed
+    gpt-oss 20B  21B/3.6B MXFP4 · 12.1 GB · ~88 tok/s · 128k ctx
+    Gemma 3 12B  12B Q4_K_M · 7.3 GB · ~45 tok/s* · 32k ctx
+↑↓ move · enter select · * estimated · catalog 2026.10.20
+
+===== model-list =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+? Pick a model
+  ★ Qwen3-Coder 30B-A3B  30B/3B Q4_K_M · 18.6 GB · ~72 tok/s · 64k ctx
+❯   gpt-oss 20B  21B/3.6B MXFP4 · 12.1 GB · ~88 tok/s · 128k ctx
+    Faster, longer context, a little weaker at code.
+    good at: speed, writing
+    Gemma 3 12B  12B Q4_K_M · 7.3 GB · ~45 tok/s* · 32k ctx
+↑↓ move · enter select · * estimated · catalog 2026.10.20
+
+===== model-picked =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+? Extras (you can change these later)
+❯ ○ voice  talk & listen
+  ○ images  generate pictures
+  ○ video  heavy · big download
+↑↓ move · space toggle · enter continue
+
+===== features =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+? Extras (you can change these later)
+❯ ◉ voice  talk & listen
+  ○ images  generate pictures
+  ○ video  heavy · big download
+↑↓ move · space toggle · enter continue
+
+===== features-done =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+✓ extras voice
+? Install now?  (y/n)
+
+===== confirm =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+✓ extras voice
+✓ Installing llama.cpp (metal)
+⠦ Downloading Qwen3-Coder 30B-A3B Q4_K_M  download
+  ██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  25%  429.2 MB / 1.7 GB  352.9 MB/s
+
+===== progress =====
+pico  first-time setup
+
+           ╭─ hardware ───────────────────────────────────────────────────╮
+           │ os      macOS 26.3 arm64                                     │
+   .-.     │ cpu     Apple M4 Max · 16 cores                              │
+  (^.^)    │ memory  64 GB unified                                        │
+   |=|     │ gpu     Apple M4 Max GPU (40-core) · 48 GB · metal           │
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+✓ extras voice
+✓ Installing llama.cpp (metal)
+⠏ Downloading Qwen3-Coder 30B-A3B Q4_K_M  download
+  ████████████████████████▍░░░░░░░░░░░░░░░  61%  1.2 GB / 1.7 GB  538.8 MB/s
+
+===== finished =====
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+✓ extras voice
+✓ Installing llama.cpp (metal)
+✓ Downloading Qwen3-Coder 30B-A3B Q4_K_M
+✓ Starting model
+✓ Saying hello
+
+   .-.
+  (^.^)
+   |=|
+  __|__
+  /   \
+  ready. say hi.
+
+
+  .-.   pico v0.1.0 · engine 0.1.0-mock
+ (o.o)  qwen3-coder-30b-a3b · local
+  |=|   ~/Developer/pico/cli
+ __|__  / commands · @ files · shift+tab effort · ? help
+
+──────────────────────────────────────────────────────────────────────────────── medium ──
+› ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  Qwen3-Coder 30B-A3B · ● medium · 64k ctx · 72 tok/s · ~/Developer/pico/cli · new
+
+===== quit =====
+  __|__    │ accel   metal · cpu                                          │
+  /   \    │ disk    412 GB free                                          │
+           │ found   llama_cpp                                            │
+           ╰──────────────────────────────────────────────────────────────╯
+
+✓ persona engineer
+✓ model Qwen3-Coder 30B-A3B  18.6 GB · ~72 tok/s
+✓ extras voice
+✓ Installing llama.cpp (metal)
+✓ Downloading Qwen3-Coder 30B-A3B Q4_K_M
+✓ Starting model
+✓ Saying hello
+
+   .-.
+  (^.^)
+   |=|
+  __|__
+  /   \
+  ready. say hi.
+
+
+  .-.   pico v0.1.0 · engine 0.1.0-mock
+ (o.o)  qwen3-coder-30b-a3b · local
+  |=|   ~/Developer/pico/cli
+ __|__  / commands · @ files · shift+tab effort · ? help
+
+u
+

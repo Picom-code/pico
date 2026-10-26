@@ -1,0 +1,7 @@
+id: code-offbyone
+category: coding
+timeout_s: 240
+prompt: |
+  pager.py has off-by-one bugs: paginate() and page_count() don't match their docstrings.
+  Fix both functions in place. Don't change their signatures.
+check: python3 "$HIDDEN/test_pager.py"

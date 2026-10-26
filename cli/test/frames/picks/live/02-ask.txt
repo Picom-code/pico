@@ -1,0 +1,18 @@
+
+ /\_/\   pico v0.1.0 · engine 0.1.0
+( ^.^ )  deepseek-v4.1-flash · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› say ok
+
+  ok
+
+  (^.^)✧ done in 0.6s · 1003 tok/s
+                                                                                   /\_/\
+                                                                                  ( o.o )
+────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+deepseek-v4.1-flash · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.2k/1024k cached 98% · 1003 tok/s

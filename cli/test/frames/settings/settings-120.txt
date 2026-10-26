@@ -1,0 +1,327 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱┊▱▱ 0/128k · you ▰▰▰▱ 210 · 72 tok/s
+today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== usage-line =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say hi
+
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱┊▱▱ 9k/128k cached 92% · you ▰▰▰▱ 210 · 142 tok/s
+session 9k in · 42 out · cached 92%   today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== status-tab =====
+
+
+ › say hi
+
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ━━━━━━━━──────────────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ version        pico 0.1.0 · engine 0.1.0-mock                                    │
+  │ engine         http://127.0.0.1:7980  ● ready                                    │
+  │ model          Qwen3-Coder 30B-A3B · Local · llama.cpp                           │
+  │ harness        lean                                                              │
+  │ approvals      ask                                                               │
+  │ ChatGPT        not signed in  /login                                             │
+  │ cwd            ~/Developer/pico/cli                                              │
+  │ session        s_1gdda                                                           │
+  │ context        ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92%                                     │
+  │                                                                                  │
+  │ standing prompt  sent with every message                                         │
+  │   profile      210 tok  ▰▰▰▰▰▰▱▱ 210/300                                         │
+  │                  6 about you · 8 memories                                        │
+  │   skills index 420 tok                                                           │
+  │   AGENTS.md    1.2k tok                                                          │
+  │   total        3.4k tok                                                          │
+  │ run /lean to slim it                                                             │
+  │                                                                                  │
+  ╰─ ‹› tabs · esc close ────────────────────────────────────────────────────────────╯
+
+===== config-tab =====
+
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │ ❯ default effort ‹ med ›                                                         │
+  │                Effort for new chats. shift+tab changes only the current chat.    │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   80%                                                               │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== approvals-row =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │ ❯ approvals    ‹ ask ›                                                           │
+  │                ask = confirm risky commands · yolo = run everything without      │
+  │                asking (all chats).                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   80%                                                               │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== approvals-yolo =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │ ❯ approvals    ‹ yolo ›  ✓                                                       │
+  │                ask = confirm risky commands · yolo = run everything without      │
+  │                asking (all chats).                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   80%                                                               │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ✓ saved approvals yolo ─────────────────────────────────────────────────────────╯
+
+===== approvals-ask =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │ ❯ approvals    ‹ ask ›  ✓                                                        │
+  │                ask = confirm risky commands · yolo = run everything without      │
+  │                asking (all chats).                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   80%                                                               │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ✓ saved approvals ask ──────────────────────────────────────────────────────────╯
+
+===== usage-tab =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────━━━━━━━─────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ today    ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱ 144k in · 11k out · 84% cached · 8 turns · 10m 10s     │
+  │ 7 days   ▰▰▰▰▰▰▰▱▱▱▱▱▱▱▱▱ 1.4M in · 106k out · 84% cached · 77 turns             │
+  │ 30 days  ▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰ 3.3M in · 251k out · 84% cached · 214 turns · 4h 24m   │
+  │                                                                                  │
+  │ per day  ▁▁▂▃▃▂▁▂▃▄▅▅▂▁▁▃▆▇▅▃▂▁▂▄▇█▆▃▅▄  peak 340k                               │
+  │          09-27                    today                                          │
+  │                                                                                  │
+  │ model                turns   tokens  tok/s                                       │
+  │ qwen3-coder-30b-a3b    151     2.6M     68  ▰▰▰▰▰▰▱▱                             │
+  │ gpt-5.5                 52     884k     51  ▰▰▱▱▱▱▱▱                             │
+  │ gpt-oss-20b             11      97k      —  ▰▱▱▱▱▱▱▱                             │
+  │                                                                                  │
+  │ harness  lean 75% (160) · hermes 25% (54)                                        │
+  │ 1290 tool calls in 30 days                                                       │
+  │                                                                                  │
+  ╰─ ‹› tabs · esc close ────────────────────────────────────────────────────────────╯
+
+===== look-tab =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │ ❯ accent       ‹ hotpink   ● ○ ○ ○ ○ ○ ›                                         │
+  │                Color of the cat, spinner, prompt, context bar and sign-off.      │
+  │   spinner      braille   ⠼  classic dots                                         │
+  │   reply style  band      ● ○ ○ ○  shaded band + header                           │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │  › fix the off-by-one in calc.py                                                 │
+  │                                                                                  │
+  │ (^.^) pico                                                                       │
+  │   ✓ edit 1  0.1s  ctrl+o                                                         │
+  │                                                                                  │
+  │   Fixed it: range(n - 1) stopped one short.                                      │
+  │                                                                                  │
+  │   (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== closed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say hi
+
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱┊▱▱ 9k/128k cached 92% · you ▰▰▰▱ 210 · 142 tok/s
+session 9k in · 42 out · cached 92%   today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say hi
+
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_1gdda
+u
+

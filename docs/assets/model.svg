@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1044" height="488" viewBox="0 0 1044 488" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.6">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16161b"/><stop offset="1" stop-color="#0c0c0f"/></linearGradient><filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="0.5" y="0.5" width="1043" height="487" rx="12" fill="url(#g)" stroke="#2a2a32"/>
+<circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
+<text x="522.0" y="23" fill="#6c6c78" text-anchor="middle" font-size="12">pico — /model</text>
+<text x="18.0" y="78.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs"> /\_/\ </text>
+<text x="93.6" y="78.5" xml:space="preserve" fill="#d0d0d0" font-weight="700" textLength="33.6" lengthAdjust="spacingAndGlyphs">pico</text>
+<text x="127.2" y="78.5" xml:space="preserve" fill="#6c6c6c" textLength="58.8" lengthAdjust="spacingAndGlyphs"> v0.1.0</text>
+<text x="186.0" y="78.5" xml:space="preserve" fill="#444444" textLength="126.0" lengthAdjust="spacingAndGlyphs"> · engine 0.1.0</text>
+<text x="18.0" y="96.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs">( ^.^ )</text>
+<text x="93.6" y="96.5" xml:space="preserve" fill="#6c6c6c" textLength="159.6" lengthAdjust="spacingAndGlyphs">qwen3-coder-30b-a3b</text>
+<text x="253.2" y="96.5" xml:space="preserve" fill="#444444" textLength="25.2" lengthAdjust="spacingAndGlyphs"> · </text>
+<text x="278.4" y="96.5" xml:space="preserve" fill="#6c6c6c" textLength="92.4" lengthAdjust="spacingAndGlyphs">~/code/shop</text>
+<text x="18.0" y="114.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs"> &gt; ^ &lt; </text>
+<text x="93.6" y="114.5" xml:space="preserve" fill="#6c6c6c" textLength="260.4" lengthAdjust="spacingAndGlyphs">&quot;nothing compiles itself. yet.&quot;</text>
+<text x="18.0" y="150.5" xml:space="preserve" fill="#444444" textLength="537.6" lengthAdjust="spacingAndGlyphs">/ commands · @ files · shift+tab effort · /theme colors · ? help</text>
+<text x="34.8" y="204.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">╭─</text>
+<text x="60.0" y="204.5" xml:space="preserve" fill="#ff0087" font-weight="700" filter="url(#glow)" textLength="8.4" lengthAdjust="spacingAndGlyphs">●</text>
+<text x="68.4" y="204.5" xml:space="preserve" fill="#d7d7d7" font-weight="700" textLength="58.8" lengthAdjust="spacingAndGlyphs"> model </text>
+<text x="127.2" y="204.5" xml:space="preserve" fill="#444444" textLength="562.8" lengthAdjust="spacingAndGlyphs">──────────────────────────────────────────────────────────────────╮</text>
+<text x="34.8" y="222.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="673.2" y="222.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="240.5" xml:space="preserve" fill="#444444" textLength="159.6" lengthAdjust="spacingAndGlyphs">│ Local · llama.cpp</text>
+<text x="673.2" y="240.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="258.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="51.6" y="258.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="8.4" lengthAdjust="spacingAndGlyphs">❯</text>
+<text x="68.4" y="258.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="8.4" lengthAdjust="spacingAndGlyphs">●</text>
+<text x="85.2" y="258.5" xml:space="preserve" fill="#d0d0d0" font-weight="700" textLength="159.6" lengthAdjust="spacingAndGlyphs">Qwen3-Coder 30B-A3B</text>
+<text x="261.6" y="258.5" xml:space="preserve" fill="#6c6c6c" textLength="84.0" lengthAdjust="spacingAndGlyphs">ctx 128k  </text>
+<text x="345.6" y="258.5" xml:space="preserve" fill="#949494" textLength="67.2" lengthAdjust="spacingAndGlyphs">68 tok/s</text>
+<text x="412.8" y="258.5" xml:space="preserve" fill="#444444" textLength="67.2" lengthAdjust="spacingAndGlyphs">  active</text>
+<text x="673.2" y="258.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="276.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="276.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">○</text>
+<text x="85.2" y="276.5" xml:space="preserve" fill="#949494" textLength="92.4" lengthAdjust="spacingAndGlyphs">gpt-oss 20B</text>
+<text x="261.6" y="276.5" xml:space="preserve" fill="#6c6c6c" textLength="84.0" lengthAdjust="spacingAndGlyphs">ctx 128k  </text>
+<text x="345.6" y="276.5" xml:space="preserve" fill="#444444" textLength="75.6" lengthAdjust="spacingAndGlyphs">~88 tok/s</text>
+<text x="673.2" y="276.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="294.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="673.2" y="294.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="312.5" xml:space="preserve" fill="#444444" textLength="184.8" lengthAdjust="spacingAndGlyphs">│ ChatGPT subscription</text>
+<text x="673.2" y="312.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="330.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="330.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">○</text>
+<text x="85.2" y="330.5" xml:space="preserve" fill="#949494" textLength="58.8" lengthAdjust="spacingAndGlyphs">GPT-5.5</text>
+<text x="261.6" y="330.5" xml:space="preserve" fill="#6c6c6c" textLength="84.0" lengthAdjust="spacingAndGlyphs">ctx 272k  </text>
+<text x="345.6" y="330.5" xml:space="preserve" fill="#949494" textLength="67.2" lengthAdjust="spacingAndGlyphs">51 tok/s</text>
+<text x="673.2" y="330.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="348.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="348.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">○</text>
+<text x="85.2" y="348.5" xml:space="preserve" fill="#949494" textLength="84.0" lengthAdjust="spacingAndGlyphs">GPT-5 mini</text>
+<text x="261.6" y="348.5" xml:space="preserve" fill="#6c6c6c" textLength="84.0" lengthAdjust="spacingAndGlyphs">ctx 272k  </text>
+<text x="345.6" y="348.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">—</text>
+<text x="673.2" y="348.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="366.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="673.2" y="366.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="384.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="51.6" y="384.5" xml:space="preserve" fill="#444444" textLength="621.6" lengthAdjust="spacingAndGlyphs">──────────────────────────────────────────────────────────────────────────</text>
+<text x="681.6" y="384.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="34.8" y="402.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="402.5" xml:space="preserve" fill="#949494" textLength="117.6" lengthAdjust="spacingAndGlyphs">default effort</text>
+<text x="219.6" y="402.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="42.0" lengthAdjust="spacingAndGlyphs">● med</text>
+<text x="261.6" y="402.5" xml:space="preserve" fill="#444444" textLength="92.4" lengthAdjust="spacingAndGlyphs">  new chats</text>
+<text x="673.2" y="402.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="420.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="681.6" y="420.5" xml:space="preserve" fill="#444444" textLength="8.4" lengthAdjust="spacingAndGlyphs">│</text>
+<text x="34.8" y="438.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">╰─</text>
+<text x="60.0" y="438.5" xml:space="preserve" fill="#444444" textLength="378.0" lengthAdjust="spacingAndGlyphs">↑↓ move · ←→ effort · enter save · esc cancel</text>
+<text x="446.4" y="438.5" xml:space="preserve" fill="#444444" textLength="243.6" lengthAdjust="spacingAndGlyphs">────────────────────────────╯</text>
+<text x="34.8" y="474.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="159.6" lengthAdjust="spacingAndGlyphs">Qwen3-Coder 30B-A3B</text>
+<text x="194.4" y="474.5" xml:space="preserve" fill="#444444" textLength="25.2" lengthAdjust="spacingAndGlyphs"> · </text>
+<text x="219.6" y="474.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="42.0" lengthAdjust="spacingAndGlyphs">● med</text>
+<text x="261.6" y="474.5" xml:space="preserve" fill="#444444" textLength="25.2" lengthAdjust="spacingAndGlyphs"> · </text>
+<text x="286.8" y="474.5" xml:space="preserve" fill="#585858" textLength="84.0" lengthAdjust="spacingAndGlyphs">▱▱▱▱▱▱▱▱▱▱</text>
+<text x="379.2" y="474.5" xml:space="preserve" fill="#6c6c6c" textLength="50.4" lengthAdjust="spacingAndGlyphs">0/128k</text>
+<text x="429.6" y="474.5" xml:space="preserve" fill="#444444" textLength="25.2" lengthAdjust="spacingAndGlyphs"> · </text>
+<text x="454.8" y="474.5" xml:space="preserve" fill="#6c6c6c" textLength="67.2" lengthAdjust="spacingAndGlyphs">72 tok/s</text>
+</svg>

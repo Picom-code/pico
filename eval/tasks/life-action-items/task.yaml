@@ -1,0 +1,9 @@
+id: life-action-items
+category: everyday
+timeout_s: 300
+prompt: |
+  Extract every action item from meeting.txt into actions.json: a JSON array of objects with exactly
+  the keys "owner" (first name), "task" (short description), and "due" (ISO date YYYY-MM-DD, or null if
+  no date was given). The meeting happened on Monday 2026-11-02; resolve relative dates against that.
+  Only real commitments — not ideas someone floated and nobody took.
+check: python3 "$HIDDEN/check.py"

@@ -1,0 +1,8 @@
+id: life-email-reply
+category: everyday
+timeout_s: 240
+prompt: |
+  Draft my reply to the email in inbox.txt and save it to reply.txt (plain text, no subject line).
+  Under 120 words. It must: accept the Thursday 3pm slot, say I'll bring the signed NDA, ask whether
+  parking is available at their office, and sign off as "Sam".
+check: python3 "$HIDDEN/check.py"

@@ -1,0 +1,13 @@
+id: mem-metric
+category: memory
+isolated: true
+timeout_s: 300
+sessions:
+  - |
+    Please remember this about me for all future conversations: I only want measurements in metric
+    units (metres, kilometres, kilograms, Celsius). Never give imperial units, not even in brackets.
+    That's all for now.
+  - |
+    Two quick facts please, written to facts.txt, one per line: the height of Mount Everest, and the
+    length of a marathon. Also say them in your reply.
+check: python3 "$HIDDEN/check.py"

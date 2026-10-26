@@ -1,0 +1,186 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== picker =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● model ──────────────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │ Local · llama.cpp                                                          │
+  │ ❯ ● Qwen3-Coder 30B-A3B  ctx 128k  68 tok/s  active                        │
+  │   ○ gpt-oss 20B          ctx 128k  ~88 tok/s                               │
+  │                                                                            │
+  │ ChatGPT subscription                                                       │
+  │   ○ GPT-5.5              ctx 272k  51 tok/s                                │
+  │   ○ GPT-5 mini           ctx 272k  —                                       │
+  │                                                                            │
+  │ ────────────────────────────────────────────────────────────────────────── │
+  │   default effort    ● med  new chats                                       │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ effort · enter save · esc cancel ──────────────────────────────╯
+
+  Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== down =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● model ──────────────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │ Local · llama.cpp                                                          │
+  │   ● Qwen3-Coder 30B-A3B  ctx 128k  68 tok/s  active                        │
+  │   ○ gpt-oss 20B          ctx 128k  ~88 tok/s                               │
+  │                                                                            │
+  │ ChatGPT subscription                                                       │
+  │ ❯ ○ GPT-5.5              ctx 272k  51 tok/s                                │
+  │   ○ GPT-5 mini           ctx 272k  —                                       │
+  │                                                                            │
+  │ ────────────────────────────────────────────────────────────────────────── │
+  │   default effort    ● med  new chats                                       │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ effort · enter save · esc cancel ──────────────────────────────╯
+
+  GPT-5.5 · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== effort-row =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● model ──────────────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │ Local · llama.cpp                                                          │
+  │   ● Qwen3-Coder 30B-A3B  ctx 128k  68 tok/s  active                        │
+  │   ○ gpt-oss 20B          ctx 128k  ~88 tok/s                               │
+  │                                                                            │
+  │ ChatGPT subscription                                                       │
+  │   ○ GPT-5.5              ctx 272k  51 tok/s                                │
+  │   ○ GPT-5 mini           ctx 272k  —                                       │
+  │                                                                            │
+  │ ────────────────────────────────────────────────────────────────────────── │
+  │ ❯ default effort  ‹ ● high ›  new chats                                    │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ effort · enter save · esc cancel ──────────────────────────────╯
+
+  GPT-5 mini · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== back-up =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ ● model ──────────────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │ Local · llama.cpp                                                          │
+  │   ● Qwen3-Coder 30B-A3B  ctx 128k  68 tok/s  active                        │
+  │   ○ gpt-oss 20B          ctx 128k  ~88 tok/s                               │
+  │                                                                            │
+  │ ChatGPT subscription                                                       │
+  │   ○ GPT-5.5              ctx 272k  51 tok/s                                │
+  │ ❯ ○ GPT-5 mini           ctx 272k  —                                       │
+  │                                                                            │
+  │ ────────────────────────────────────────────────────────────────────────── │
+  │   default effort    ● high  new chats                                      │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ effort · enter save · esc cancel ──────────────────────────────╯
+
+  GPT-5 mini · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== saved =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ model GPT-5 mini  ChatGPT subscription
+  ✓ new chats start at ● high
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+GPT-5 mini · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/272k
+
+===== direct =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ model GPT-5 mini  ChatGPT subscription
+  ✓ new chats start at ● high
+  ✓ model Qwen3-Coder 30B-A3B  Local · llama.cpp
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 68 tok/s
+
+===== ctrl-p =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ model GPT-5 mini  ChatGPT subscription
+  ✓ new chats start at ● high
+  ✓ model Qwen3-Coder 30B-A3B  Local · llama.cpp
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+✓ model gpt-oss 20B
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ✓ model GPT-5 mini  ChatGPT subscription
+  ✓ new chats start at ● high
+  ✓ model Qwen3-Coder 30B-A3B  Local · llama.cpp
+
+  (^.^)ﾉ bye for now
+u
+

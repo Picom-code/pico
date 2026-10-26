@@ -1,0 +1,8 @@
+id: life-summary-bullets
+category: everyday
+timeout_s: 240
+prompt: |
+  Summarise memo.md into exactly 5 bullet points (each line starting with "- ", no other lines, each
+  bullet at most 25 words) and save them to summary.md. Make sure the budget figure and the new
+  deadline are among the bullets.
+check: python3 "$HIDDEN/check.py"

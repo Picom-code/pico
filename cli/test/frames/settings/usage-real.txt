@@ -1,0 +1,115 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0
+( ^.^ )  deepseek-v4.1-flash · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+deepseek-v4.1-flash · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/1024k
+today 16k · 9 turns   30d 183k ▁▁▁▁▁█▂
+
+===== reply =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0
+( ^.^ )  deepseek-v4.1-flash · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say ok
+
+(^.^) pico
+  ok
+
+  (^.^)✧ done in 1.2s · 3 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ¬.¬ )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+deepseek-v4.1-flash · ● high · yolo · ▰▱▱▱▱▱▱▱▱▱ 2.1k/1024k cached 25% · 3 tok/s
+session 3.1k in · 6 out · cached 33%   today 18k · 10 turns   30d 185k ▁▁▁▁▁█▂
+
+===== settings-status =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0
+( ^.^ )  deepseek-v4.1-flash · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say ok
+
+(^.^) pico
+  ok
+
+  (^.^)✧ done in 1.2s · 3 tok/s
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ━━━━━━━━──────────────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ version        pico 0.1.0 · engine 0.1.0                                         │
+  │ engine         http://127.0.0.1:7878  ● ready                                    │
+  │ model          deepseek-v4.1-flash · my-gpu-box                                  │
+  │ harness        lean                                                              │
+  │ approvals      yolo (all chats)                                                  │
+  │ ChatGPT        not signed in  /login                                             │
+  │ cwd            ~/Developer/pico/cli                                              │
+  │ session        s_977c01e18da7450f                                                │
+  │ context        ▰▱▱▱▱▱▱▱▱▱ 2.1k/1024k cached 25%                                  │
+  │                                                                                  │
+  │ standing prompt  sent with every message                                         │
+  │ engine does not report it yet                                                    │
+  │                                                                                  │
+  ╰─ ‹› tabs · esc close ────────────────────────────────────────────────────────────╯
+
+===== closed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0
+( ^.^ )  deepseek-v4.1-flash · 1024k ctx · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say ok
+
+(^.^) pico
+  ok
+
+  (^.^)✧ done in 1.2s · 3 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ¬.¬ )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+deepseek-v4.1-flash · ● high · yolo · ▰▱▱▱▱▱▱▱▱▱ 2.1k/1024k cached 25% · 3 tok/s
+session 3.1k in · 6 out · cached 33%   today 18k · 10 turns   30d 185k ▁▁▁▁▁█▂
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0
+( ^.^ )  deepseek-v4.1-flash · 1024k ctx · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+ › say ok
+
+(^.^) pico
+  ok
+
+  (^.^)✧ done in 1.2s · 3 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_977c01e18da7450f
+u
+

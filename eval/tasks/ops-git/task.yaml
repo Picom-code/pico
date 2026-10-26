@@ -1,0 +1,11 @@
+id: ops-git
+category: terminal
+timeout_s: 300
+prompt: |
+  This folder is a git repo. Do the following with git:
+  1. The most recent commit on main ("tweak: set retries to 0") broke things — revert it with a new
+     revert commit (don't rewrite history).
+  2. Create a branch `feature/greeting` from the result, and on it change greet.py so greet("Ada")
+     returns "Hello, Ada!" (currently "Hi Ada"). Commit with message "feat: friendlier greeting".
+  3. Switch back to main at the end. Leave the working tree clean.
+check: bash "$HIDDEN/check.sh"

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pico · desktop lookbook</title>
+<style>
+  :root { --p:#ff2e99; --bg:#0a0a0c; --card:#111115; --line:#24242b; --fg:#e9e9ee; --dim:#6c6c78; --g:#33e08a; --r:#ff4d5e; --a:#ffa800; --c:#00d1ff;
+          --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace; --sans: -apple-system, "Inter", "Segoe UI", system-ui, sans-serif; }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--bg); color:var(--fg); font: 14px/1.5 var(--mono); padding-bottom: 110px; }
+  header { padding: 46px 24px 18px; text-align:center; }
+  .hero { color:var(--p); font: 22px/1.15 var(--mono); margin:0 auto 12px; display:inline-block; text-align:left; animation: glow 3.2s ease-in-out infinite; }
+  @keyframes glow { 0%,100% { text-shadow: 0 0 6px var(--p), 0 0 18px color-mix(in srgb, var(--p) 40%, transparent); } 50% { text-shadow: 0 0 10px var(--p), 0 0 36px color-mix(in srgb, var(--p) 70%, transparent); } }
+  h1 { font-size: 20px; margin: 4px 0; } h1 b { color: var(--p); }
+  .sub { color: var(--dim); max-width: 680px; margin: 0 auto; }
+  nav { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); padding: 10px 16px; display:flex; gap:6px; flex-wrap: wrap; justify-content:center; }
+  nav a { color: var(--dim); text-decoration: none; padding: 3px 9px; border-radius: 999px; border: 1px solid transparent; font-size: 12px; }
+  nav a:hover { color: var(--fg); border-color: var(--line); }
+  nav a.done { color: var(--p); } nav a.done::after { content: " ✓"; }
+  section { scroll-margin-top: 54px; max-width: 1500px; margin: 0 auto; padding: 32px 20px 4px; }
+  section h2 { font-size: 16px; margin: 0 0 2px; } section h2 .n { color: var(--p); margin-right: 8px; }
+  section .why { color: var(--dim); margin: 0 0 14px; font-size: 13px; }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; cursor: pointer; transition: border-color .15s, transform .15s, box-shadow .2s; position: relative; overflow: hidden; }
+  .card:hover { border-color: #3a3a46; transform: translateY(-2px); }
+  .card.sel { border-color: var(--p); box-shadow: 0 0 0 1px var(--p), 0 0 28px -6px var(--p); }
+  .card .top { display:flex; justify-content: space-between; align-items: baseline; padding: 10px 14px 0; gap: 10px; }
+  .card .name { font-weight: 700; } .card .tag { color: var(--dim); font-size: 12px; text-align: right; }
+  .card .badge { display:none; position:absolute; top:10px; right:12px; background: var(--p); color:#000; font-weight:700; font-size: 11px; padding: 1px 8px; border-radius: 999px; z-index: 3; }
+  .card.sel .badge { display:block; } .card.sel .tag { visibility: hidden; }
+  .stage { padding: 10px 12px 12px; }
+
+  /* ---------- mini desktop window kit ---------- */
+  .win { height: 250px; border-radius: 10px; overflow: hidden; border: 1px solid #1d1d24; background: #0c0c0f; display:flex; flex-direction:column; font: 11px/1.4 var(--sans); color: #d8d8e0; position: relative; }
+  .tb { height: 24px; flex: none; display:flex; align-items:center; gap: 6px; padding: 0 10px; border-bottom: 1px solid #18181e; color: #7a7a86; font-size: 10px; }
+  .tb i { width:8px; height:8px; border-radius:50%; background:#2a2a31; display:inline-block; }
+  .tb .ttl { flex:1; text-align:center; margin-right: 34px; }
+  .body { flex:1; display:flex; min-height: 0; }
+  .side { width: 112px; flex:none; border-right: 1px solid #18181e; padding: 8px 7px; display:flex; flex-direction:column; gap: 3px; background: #0a0a0d; }
+  .side .it { padding: 3px 6px; border-radius: 5px; color: #9a9aa6; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size: 10px; }
+  .side .it.on { background: color-mix(in srgb, var(--p) 16%, transparent); color: #fff; }
+  .side .h { color:#55555f; font-size: 9px; text-transform: uppercase; letter-spacing: .6px; margin: 6px 4px 1px; }
+  .main { flex:1; display:flex; flex-direction:column; min-width:0; }
+  .chat { flex:1; padding: 10px 14px; display:flex; flex-direction:column; gap: 7px; overflow:hidden; }
+  .u { align-self:flex-end; background: color-mix(in srgb, var(--p) 18%, #16161b); padding: 5px 9px; border-radius: 10px; max-width: 70%; }
+  .a { max-width: 92%; text-wrap: pretty; }
+  .dim { color:#6c6c78; } .pk { color: var(--p); } .gr { color: var(--g); } .rd { color: var(--r); } .am { color: var(--a); } .cy { color: var(--c); }
+  .mono { font-family: var(--mono); }
+  .cat { font: 9px/1.05 var(--mono); color: var(--p); margin:0; white-space: pre; text-shadow: 0 0 8px color-mix(in srgb, var(--p) 60%, transparent); }
+  .cat.big { font-size: 15px; } .cat.huge { font-size: 22px; }
+  .comp { margin: 8px 12px 10px; border: 1px solid #23232b; border-radius: 10px; padding: 7px 10px; color:#6c6c78; display:flex; align-items:center; gap:8px; background:#101014; }
+  .comp .send { margin-left:auto; width: 18px; height:18px; border-radius: 6px; background: var(--p); display:inline-block; }
+  .chip { display:inline-flex; align-items:center; gap:4px; border:1px solid #26262e; border-radius: 999px; padding: 1px 7px; font-size: 9.5px; color:#a0a0ac; background:#121217; }
+  .chip.p { border-color: color-mix(in srgb, var(--p) 50%, transparent); color: var(--p); }
+  .bar { height: 3px; border-radius: 3px; background:#1f1f26; overflow:hidden; } .bar b { display:block; height:100%; background: var(--p); }
+  .tool { border: 1px solid #1f1f27; border-radius: 8px; padding: 5px 8px; background:#0f0f13; font: 10px/1.5 var(--mono); }
+  .row { display:flex; align-items:center; gap: 6px; }
+  .spin { display:inline-block; width:8px; height:8px; border-radius:50%; border: 1.5px solid var(--p); border-right-color: transparent; animation: sp .8s linear infinite; }
+  @keyframes sp { to { transform: rotate(360deg); } }
+  .code { background:#07070a; border:1px solid #1d1d24; border-radius: 6px; padding: 5px 8px; font: 10px/1.4 var(--mono); }
+  .pane { width: 46%; border-left: 1px solid #18181e; background: #09090c; padding: 8px 10px; }
+  .ghost { color:#3c3c46; }
+  .glass { background: rgba(255,255,255,.04); backdrop-filter: blur(10px); }
+
+  footer { position: fixed; bottom: 0; left: 0; right: 0; background: color-mix(in srgb, #0d0d10 94%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--line); padding: 12px 20px; display:flex; gap: 14px; align-items:center; justify-content: center; z-index: 9; }
+  footer .count { color: var(--dim); } footer .count b { color: var(--p); }
+  footer input { background:#050506; border:1px solid var(--line); color: var(--fg); border-radius: 8px; padding: 9px 12px; width: min(460px, 40vw); font: inherit; }
+  button { background: var(--p); color: #000; border: 0; border-radius: 8px; padding: 10px 18px; font: 700 14px var(--mono); cursor: pointer; }
+  button.ghostb { background: transparent; color: var(--dim); border: 1px solid var(--line); }
+  #out { display:none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 20; align-items:center; justify-content:center; }
+  #out.on { display:flex; }
+  #out .panel { background: var(--card); border: 1px solid var(--p); border-radius: 14px; padding: 22px; width: min(720px, 92vw); max-height: 86vh; overflow:auto; box-shadow: 0 0 60px -10px var(--p); }
+  #out pre { background:#050506; padding: 14px; border-radius: 8px; white-space: pre-wrap; font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <pre class="hero"> /\_/\
+( o.o )
+ &gt; ^ &lt;</pre>
+  <h1><b>pico</b> · desktop lookbook</h1>
+  <p class="sub">5 candidates per piece of the desktop app. Click one per section (click again to unpick). Window layouts let you pick several. Picks save as you go — hit submit at the bottom.</p>
+</header>
+<nav id="nav"></nav>
+<main id="main"></main>
+<footer>
+  <span class="count"><b id="cnt">0</b> / <span id="tot">0</span> sections picked</span>
+  <input id="notes" placeholder="notes for me (optional)">
+  <button class="ghostb" onclick="resetAll()">reset</button>
+  <button onclick="submit()">submit picks ✓</button>
+</footer>
+<div id="out"><div class="panel">
+  <h2 style="margin-top:0">picks saved <span style="color:var(--p)">(^.^)✧</span></h2>
+  <p style="color:var(--dim)">Downloaded <b>pico-desktop-picks.json</b> and copied it to your clipboard. Paste it to me in the terminal.</p>
+  <pre id="json"></pre>
+  <button onclick="document.getElementById('out').classList.remove('on')">close</button>
+</div></div>
+
+<script>
+const CAT = (e = 'o.o') => ' /\\_/\\ \n( ' + e + ' )\n > ^ < ';
+const cat = (e, cls = '') => `<pre class="cat ${cls}">${CAT(e).replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>`;
+const tb = (t = 'pico', extra = '') => `<div class="tb"><i></i><i></i><i></i><span class="ttl">${t}</span>${extra}</div>`;
+const win = (inner, o = {}) => `<div class="win" style="${o.style || ''}">${o.notb ? '' : tb(o.title, o.tbx)}<div class="body">${inner}</div></div>`;
+const SIDE = (on = 1) => `<div class="side"><div class="it" style="color:var(--p)">＋ new chat</div><div class="h">today</div>
+  <div class="it ${on ? 'on' : ''}">fix calc bug</div><div class="it">installer plan</div><div class="h">yesterday</div><div class="it">trip packing list</div><div class="it">regex cheatsheet</div></div>`;
+const U = `<div class="u">fix the off-by-one in calc.py</div>`;
+const TOOLS = `<div class="tool"><div class="row"><span class="gr">✓</span> read calc.py <span class="dim" style="margin-left:auto">0.1s</span></div>
+  <div class="row"><span class="gr">✓</span> edit calc.py <span class="gr">+1</span><span class="rd">−1</span><span class="dim" style="margin-left:auto">0.0s</span></div>
+  <div class="row"><span class="spin"></span> python3 calc.py <span class="dim" style="margin-left:auto">0.4s</span></div></div>`;
+const A = `<div class="a">Found it — the loop stopped one short. Fixed <span class="mono pk">range(n)</span>, it prints <b>5</b> now.</div>`;
+const SUM = `<div class="dim" style="font-size:9.5px">✓ 3 tools · 1 file +1 −1 · 4.1s · 51 tok/s</div>`;
+const COMP = (x = '') => `<div class="comp">${x}<span>Ask anything…</span><span class="send"></span></div>`;
+const CTX = (p = 38) => `<div class="bar" style="margin:0 14px 8px"><b style="width:${p}%"></b></div>`;
+const MAIN = (chat, comp = COMP()) => `<div class="main"><div class="chat">${chat}</div>${comp}</div>`;
+const STD = U + TOOLS + A + SUM;
+
+const S = [];
+
+S.push({ id: 'layout', title: 'Window layout', multi: true, why: 'The whole window. Pick any you like — I can blend them.', opts: [
+  { id: 'classic', name: 'Classic sidebar', tag: 'ChatGPT / Hermes desktop', html: () => win(SIDE() + MAIN(STD, COMP() ) ) },
+  { id: 'rail', name: 'Icon rail', tag: 'slim rail, chats on hover', html: () => win(`<div class="side" style="width:36px;align-items:center;gap:10px;padding-top:10px">${cat('o.o').replace('class="cat ', 'class="cat " style="font-size:5px"')}<span class="pk">＋</span><span class="dim">◷</span><span class="dim">◎</span><span class="dim">⚙</span></div>` + MAIN(STD)) },
+  { id: 'focus', name: 'Focus', tag: 'no sidebar · ⌘K for everything', html: () => win(`<div class="main" style="align-items:center"><div class="chat" style="width:78%">${STD}</div><div style="width:78%">${COMP('<span class="chip">⌘K</span>')}</div></div>`, { title: 'fix calc bug' }) },
+  { id: 'split', name: 'Split + artifacts', tag: 'chat left · files/diffs right', html: () => win(SIDE() + `<div class="main"><div class="chat">${U + A + SUM}</div>${COMP()}</div><div class="pane mono" style="font-size:9.5px"><div class="dim">calc.py</div><div class="rd">- for i in range(n - 1):</div><div class="gr">+ for i in range(n):</div><div class="dim" style="margin-top:8px">terminal</div><div>$ python3 calc.py</div><div class="gr">5</div></div>`) },
+  { id: 'spot', name: 'Spotlight mini', tag: 'floating ⌥Space quick-ask bar', html: () => `<div class="win" style="background:linear-gradient(135deg,#15151b,#0a0a0c);align-items:center;justify-content:center"><div style="width:84%;border:1px solid color-mix(in srgb,var(--p) 50%,transparent);border-radius:14px;padding:10px 12px;background:#0d0d11;box-shadow:0 20px 50px -10px #000,0 0 30px -12px var(--p)"><div class="row">${cat('o.o').replace('class="cat ', 'class="cat " style="font-size:6px"')}<span style="font-size:13px">fix the off-by-one in calc.py</span><span class="chip" style="margin-left:auto">↵</span></div><div style="border-top:1px solid #1d1d24;margin-top:8px;padding-top:8px">${A}</div></div></div>` },
+] });
+
+S.push({ id: 'sidebar', title: 'Sidebar', why: 'How past chats are listed.', opts: [
+  { id: 'byday', name: 'Grouped by day', tag: 'today / yesterday', html: () => win(SIDE() + MAIN(U + A)) },
+  { id: 'preview', name: 'With previews', tag: 'title + last line', html: () => win(`<div class="side" style="width:150px">${['fix calc bug|Fixed range(n), prints 5', 'installer plan|3/5 steps done', 'trip packing list|tent, headlamp, wool socks…'].map((x, i) => { const [a, b] = x.split('|'); return `<div class="it ${i ? '' : 'on'}" style="white-space:normal"><div style="color:#ddd">${a}</div><div class="dim" style="font-size:9px">${b}</div></div>`; }).join('')}</div>` + MAIN(U + A)) },
+  { id: 'projects', name: 'Projects + pinned', tag: 'chats live in folders', html: () => win(`<div class="side" style="width:140px"><div class="h">pinned</div><div class="it">📌 weekly plan</div><div class="h">projects</div><div class="it">▾ pico</div><div class="it on" style="padding-left:16px">fix calc bug</div><div class="it" style="padding-left:16px">installer</div><div class="it">▸ HermesMobile</div><div class="it">▸ gym</div></div>` + MAIN(U + A)) },
+  { id: 'catheader', name: 'Cat header', tag: 'cat + model up top', html: () => win(`<div class="side" style="width:130px;align-items:flex-start">${cat('o.o')}<div class="dim" style="font-size:9px;margin:2px 0 6px">deepseek · ● med</div><div class="it" style="color:var(--p)">＋ new chat</div><div class="it on">fix calc bug</div><div class="it">installer plan</div><div class="it">trip packing list</div></div>` + MAIN(U + A)) },
+  { id: 'search', name: 'Search-first', tag: 'search box + filters', html: () => win(`<div class="side" style="width:140px"><div class="comp" style="margin:0 0 6px;padding:4px 7px">⌕ search chats</div><div class="row" style="gap:3px;margin-bottom:4px"><span class="chip p">all</span><span class="chip">goals</span><span class="chip">crons</span></div><div class="it on">fix calc bug</div><div class="it">installer plan</div><div class="it">trip packing list</div></div>` + MAIN(U + A)) },
+] });
+
+S.push({ id: 'messages', title: 'Message style', why: 'How your messages and Pico\'s replies look.', opts: [
+  { id: 'bubbles', name: 'Bubbles + plain reply', tag: 'today', html: () => win(MAIN(STD)) },
+  { id: 'doc', name: 'Document', tag: 'no bubbles, reads like notes', html: () => win(MAIN(`<div class="dim" style="font-size:9.5px">YOU</div><div>fix the off-by-one in calc.py</div><div class="dim" style="font-size:9.5px;margin-top:4px">PICO</div>${A}${SUM}`)) },
+  { id: 'avatar', name: 'Cat avatar', tag: 'mini cat on every reply', html: () => win(MAIN(U + `<div class="row" style="align-items:flex-start;gap:8px">${cat('^.^').replace('class="cat ', 'class="cat " style="font-size:6px;margin-top:2px"')}<div><div class="pk" style="font-size:9.5px;font-weight:700">pico</div>${TOOLS}<div style="margin-top:5px">${A}</div></div></div>`)) },
+  { id: 'leftbar', name: 'Left accent bar', tag: 'blocks with a pink edge', html: () => win(MAIN(`<div style="border-left:2px solid #333;padding-left:8px">fix the off-by-one in calc.py</div><div style="border-left:2px solid var(--p);padding-left:8px">${TOOLS}<div style="margin-top:5px">${A}</div>${SUM}</div>`)) },
+  { id: 'term', name: 'Terminal in a window', tag: 'same look as the TUI', html: () => win(`<div class="main mono" style="font-size:10px;padding:10px 14px;gap:3px;display:flex;flex-direction:column"><div><span class="pk">›</span> fix the off-by-one in calc.py</div><div class="dim">┬ 3 steps</div><div class="dim">├─ <span class="gr">✓</span> read calc.py</div><div class="dim">├─ <span class="gr">✓</span> edit calc.py <span class="gr">+1</span> <span class="rd">−1</span></div><div class="dim">└─ <span class="spin"></span> python3 calc.py</div><div style="margin-top:4px">Found it — fixed range(n), prints 5.</div><div><span class="pk">(^.^)✧</span> <span class="dim">done in 4.1s</span></div><div style="margin-top:auto;border-top:1px solid #333;padding-top:4px"><span class="pk">›</span> <span class="dim">█</span></div></div>`) },
+] });
+
+S.push({ id: 'composer', title: 'Composer', why: 'Where you type.', opts: [
+  { id: 'pill', name: 'Floating pill', tag: 'rounded, hovers over chat', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div style="margin:0 auto 12px;width:80%;border-radius:999px;border:1px solid #2a2a33;background:#121217;padding:7px 12px;display:flex;gap:8px;box-shadow:0 10px 30px -10px #000" class="dim">＋ <span>Ask anything…</span><span class="chip" style="margin-left:auto">● med</span><span class="send" style="width:16px;height:16px;border-radius:50%;background:var(--p)"></span></div></div>`) },
+  { id: 'chips', name: 'Box with chips', tag: 'model · effort · attach · yolo', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div class="comp" style="flex-direction:column;align-items:stretch;gap:6px"><span>Ask anything…</span><div class="row"><span class="chip">＋ attach</span><span class="chip">deepseek ▾</span><span class="chip p">● med</span><span class="chip">yolo</span><span class="send"></span></div></div></div>`) },
+  { id: 'effort', name: 'Effort-colored edge', tag: 'Pi-style, shift+tab recolors', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div class="comp" style="border-color:var(--a);box-shadow:0 0 18px -8px var(--a)"><span class="am">›</span><span>Ask anything…</span><span class="am" style="margin-left:auto;font-size:9.5px">● high</span></div></div>`) },
+  { id: 'catperch', name: 'Cat perched on box', tag: 'like the terminal', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div style="position:relative;margin:0 12px 10px"><div style="position:absolute;right:26px;top:-27px">${cat('o.O').replace('class="cat ', 'class="cat " style="font-size:8px"')}</div>${COMP().replace('class="comp"', 'class="comp" style="margin:0"')}</div></div>`) },
+  { id: 'line', name: 'Minimal line', tag: 'just an underline', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div style="margin:0 16px 14px;border-bottom:1px solid var(--p);padding:5px 0;display:flex" class="dim"><span class="pk">›&nbsp;</span>Ask anything…<span style="margin-left:auto;font-size:9.5px">↵</span></div></div>`) },
+] });
+
+S.push({ id: 'tools', title: 'Tool calls', why: 'How Pico\'s steps appear while it works.', opts: [
+  { id: 'card', name: 'Stacked card', tag: 'today', html: () => win(MAIN(U + TOOLS + A)) },
+  { id: 'tree', name: 'Tree', tag: 'matches the terminal', html: () => win(MAIN(U + `<div class="mono dim" style="font-size:10px"><div>┬ 3 steps</div><div>├─ <span class="gr">✓</span> read calc.py</div><div>├─ <span class="gr">✓</span> edit calc.py <span class="gr">+1</span> <span class="rd">−1</span></div><div>└─ <span class="spin"></span> python3 calc.py</div><div>&nbsp;&nbsp;&nbsp;╰ 4 passed</div></div>` + A)) },
+  { id: 'chips', name: 'Inline chips', tag: 'one row of pills', html: () => win(MAIN(U + `<div class="row" style="flex-wrap:wrap;gap:4px"><span class="chip"><span class="gr">✓</span> read calc.py</span><span class="chip"><span class="gr">✓</span> edit <span class="gr">+1</span><span class="rd">−1</span></span><span class="chip p"><span class="spin"></span> running tests</span></div>` + A)) },
+  { id: 'timeline', name: 'Timeline', tag: 'dots on a rail', html: () => win(MAIN(U + `<div style="border-left:1px solid #2a2a33;margin-left:4px;padding-left:10px;display:flex;flex-direction:column;gap:3px;font-size:10px">${['<span class="gr">●</span> read calc.py', '<span class="gr">●</span> edited calc.py <span class="gr">+1</span> <span class="rd">−1</span>', '<span class="pk">◉</span> running python3 calc.py…'].map(x => `<div style="margin-left:-15px">${x}</div>`).join('')}</div>` + A)) },
+  { id: 'collapsed', name: 'Collapsed summary', tag: 'one line, click to open', html: () => win(MAIN(U + `<div class="row dim" style="font-size:10px"><span class="spin"></span> Working · read 1 · edited 1 · running 1 <span class="pk" style="margin-left:6px">show ▾</span></div>` + A)) },
+] });
+
+S.push({ id: 'diffs', title: 'File edits', why: 'How changed files show up.', opts: [
+  { id: 'inline', name: 'Inline diff card', tag: 'red/green rows in chat', html: () => win(MAIN(U + `<div class="code"><div class="dim">calc.py <span class="gr">+1</span> <span class="rd">−1</span></div><div style="background:#ff4d5e22" class="rd">- for i in range(n - 1):</div><div style="background:#33e08a22" class="gr">+ for i in range(n):</div></div>` + A)) },
+  { id: 'chip', name: 'File chip', tag: 'click opens diff', html: () => win(MAIN(U + `<div class="row"><span class="chip">📄 calc.py <span class="gr">+1</span><span class="rd">−1</span></span><span class="chip">📄 test_calc.py <span class="gr">+12</span></span></div>` + A)) },
+  { id: 'pane', name: 'Side pane', tag: 'opens on the right', html: () => win(`<div class="main"><div class="chat">${U + A}</div>${COMP()}</div><div class="pane mono" style="font-size:9.5px"><div class="dim">calc.py · 1 change</div><div class="rd">- for i in range(n - 1):</div><div class="gr">+ for i in range(n):</div></div>`) },
+  { id: 'sbs', name: 'Side by side', tag: 'before | after', html: () => win(MAIN(U + `<div class="code" style="display:flex;gap:8px"><div style="flex:1"><div class="dim">before</div><div class="rd">range(n - 1)</div></div><div style="flex:1;border-left:1px solid #222;padding-left:8px"><div class="dim">after</div><div class="gr">range(n)</div></div></div>` + A)) },
+  { id: 'review', name: 'Review bar', tag: 'all edits + Keep / Undo', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div class="row" style="margin:0 12px 6px;padding:6px 9px;border:1px solid #23232b;border-radius:8px;background:#0f0f13;font-size:10px">2 files changed <span class="gr">+13</span> <span class="rd">−1</span><span class="chip" style="margin-left:auto">Undo</span><span class="chip p">Keep</span></div>${COMP()}</div>`) },
+] });
+
+S.push({ id: 'context', title: 'Context bar', why: 'How full the memory window is.', opts: [
+  { id: 'thin', name: 'Thin line on composer', tag: 'Hermes-style', html: () => win(`<div class="main"><div class="chat">${U + A}</div>${CTX(38)}<div class="dim" style="margin:-6px 14px 0;font-size:9px;text-align:right">49k / 128k · cached 92%</div>${COMP()}</div>`) },
+  { id: 'pills', name: 'Pills', tag: '▰▰▱▱ like the terminal', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div class="mono" style="margin:0 14px;font-size:10px"><span class="pk">▰▰▰▰</span><span class="dim">▱▱▱▱▱▱ 49k/128k</span></div>${COMP()}</div>`) },
+  { id: 'ring', name: 'Ring gauge', tag: 'small donut in composer', html: () => win(MAIN(U + A, COMP(`<span style="width:16px;height:16px;border-radius:50%;background:conic-gradient(var(--p) 38%,#26262e 0);display:inline-block;-webkit-mask:radial-gradient(circle 5px,transparent 98%,#000)"></span>`))) },
+  { id: 'top', name: 'Top edge', tag: 'glow line across the window', html: () => `<div class="win">${tb('fix calc bug')}<div class="bar" style="border-radius:0;height:2px"><b style="width:38%;box-shadow:0 0 10px var(--p)"></b></div><div class="body">${MAIN(U + A)}</div></div>` },
+  { id: 'text', name: 'Text only', tag: '38% · in the corner', html: () => win(MAIN(U + A, COMP('<span class="dim" style="font-size:9.5px">38%</span>'))) },
+] });
+
+S.push({ id: 'mascot', title: 'Where the cat lives', why: 'The Pico Kitty in the desktop app.', opts: [
+  { id: 'titlebar', name: 'Title bar', tag: 'tiny face, reacts', html: () => win(MAIN(U + A), { title: '<span class="pk">(o.O)</span> pico' }) },
+  { id: 'perch', name: 'Perched on composer', tag: 'like the terminal', html: () => win(`<div class="main"><div class="chat">${U + A}</div><div style="position:relative;margin:0 12px 10px"><div style="position:absolute;right:26px;top:-27px">${cat('>.<').replace('class="cat ', 'class="cat " style="font-size:8px"')}</div>${COMP().replace('class="comp"', 'class="comp" style="margin:0"')}</div></div>`) },
+  { id: 'avatar', name: 'Reply avatar', tag: 'on every Pico message', html: () => win(MAIN(U + `<div class="row" style="align-items:flex-start;gap:8px">${cat('^.^').replace('class="cat ', 'class="cat " style="font-size:6px"')}${A}</div>`)) },
+  { id: 'corner', name: 'Corner buddy', tag: 'sits bottom-right, sleeps when idle', html: () => win(`<div class="main" style="position:relative"><div class="chat">${U + A}</div>${COMP()}<div style="position:absolute;right:14px;top:8px;text-align:center">${cat('-.-').replace('class="cat ', 'class="cat " style="font-size:8px"')}<div class="am" style="font-size:9px">zZ</div></div></div>`) },
+  { id: 'home', name: 'Home screen only', tag: 'big cat on empty chats, hidden after', html: () => win(`<div class="main" style="align-items:center;justify-content:center">${cat('o.o', 'huge')}<div class="dim" style="margin-top:8px">"what are we breaking today?"</div></div>`) },
+] });
+
+S.push({ id: 'home', title: 'New chat screen', why: 'What a fresh chat looks like.', opts: [
+  { id: 'quip', name: 'Cat + quip', tag: 'matches terminal welcome', html: () => win(`<div class="main" style="align-items:center;justify-content:center;gap:6px">${cat('^.^', 'big')}<div class="dim">"tests first, then snacks."</div><div style="width:70%">${COMP()}</div></div>`) },
+  { id: 'suggest', name: 'Suggestions', tag: '4 starter cards', html: () => win(`<div class="main" style="align-items:center;justify-content:center;gap:8px">${cat('o.o')}<div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;width:78%">${['Fix a bug', 'Plan my week', 'Explain this repo', 'Set a cron'].map(x => `<div class="tool" style="font-family:var(--sans)">${x}</div>`).join('')}</div><div style="width:78%">${COMP()}</div></div>`) },
+  { id: 'dash', name: 'Dashboard', tag: 'goals · crons · usage', html: () => win(`<div class="main" style="padding:12px;gap:6px;display:flex;flex-direction:column"><div class="row">${cat('o.o').replace('class="cat ', 'class="cat " style="font-size:6px"')}<b>good evening, pico</b></div><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">${['◎ goal|ship installer 3/5', '↻ crons|2 active · next 8:00', '▰ usage|212k tok today'].map(x => { const [a, b] = x.split('|'); return `<div class="tool" style="font-family:var(--sans)"><div class="pk">${a}</div><div class="dim">${b}</div></div>`; }).join('')}</div><div class="dim" style="font-size:9.5px">recent</div><div class="it">fix calc bug · installer plan · trip packing list</div><div style="margin-top:auto">${COMP().replace('class="comp"', 'class="comp" style="margin:0"')}</div></div>`) },
+  { id: 'bare', name: 'Just the box', tag: 'centered composer, nothing else', html: () => win(`<div class="main" style="align-items:center;justify-content:center"><div style="width:76%">${COMP()}</div></div>`) },
+  { id: 'wordmark', name: 'Wordmark', tag: 'big ascii "pico"', html: () => win(`<div class="main" style="align-items:center;justify-content:center;gap:6px"><pre class="cat" style="font-size:10px">       _\n _ __ (_) ___ ___\n| '_ \\| |/ __/ _ \\\n| |_) | | (_| (_) |\n| .__/|_|\\___\\___/\n|_|</pre><div style="width:70%">${COMP()}</div></div>`) },
+] });
+
+S.push({ id: 'background', title: 'Background & surface', why: 'The overall feel of the window.', opts: [
+  { id: 'black', name: 'Pure black', tag: 'OLED, max contrast', html: () => win(MAIN(STD), { style: 'background:#000' }) },
+  { id: 'charcoal', name: 'Charcoal', tag: 'soft dark grey', html: () => win(MAIN(STD), { style: 'background:#16161a' }) },
+  { id: 'glass', name: 'Frosted glass', tag: 'macOS vibrancy blur', html: () => `<div style="border-radius:10px;padding:0;background:radial-gradient(circle at 20% 20%,#ff2e9955,transparent 45%),radial-gradient(circle at 80% 70%,#00d1ff33,transparent 50%),#0b0b10">${win(MAIN(STD), { style: 'background:rgba(16,16,22,.55);backdrop-filter:blur(14px)' })}</div>` },
+  { id: 'grid', name: 'Faint grid', tag: 'blueprint dots', html: () => win(MAIN(STD), { style: 'background:#0b0b0e radial-gradient(#ffffff14 1px,transparent 1px) 0 0/12px 12px' }) },
+  { id: 'crt', name: 'CRT scanlines', tag: 'subtle retro glow', html: () => win(MAIN(STD), { style: 'background:#08080a repeating-linear-gradient(0deg,#ffffff06 0 1px,transparent 1px 3px);box-shadow:inset 0 0 40px #ff2e9918' }) },
+] });
+
+S.push({ id: 'type', title: 'Typography', why: 'Fonts for the app.', opts: [
+  { id: 'mono', name: 'Mono everywhere', tag: 'terminal feel', html: () => win(MAIN(STD), { style: 'font-family:var(--mono);font-size:10.5px' }) },
+  { id: 'sans', name: 'Sans + mono code', tag: 'clean, readable', html: () => win(MAIN(STD)) },
+  { id: 'rounded', name: 'Rounded', tag: 'friendly, soft', html: () => win(MAIN(STD), { style: 'font-family:ui-rounded,"SF Pro Rounded","Nunito",system-ui' }) },
+  { id: 'serif', name: 'Serif replies', tag: 'reads like a book', html: () => win(MAIN(U + TOOLS + A.replace('class="a"', 'class="a" style="font-family:Georgia,serif;font-size:12px"'))) },
+  { id: 'big', name: 'Large + airy', tag: 'bigger text, more spacing', html: () => win(MAIN(U + A), { style: 'font-size:13px;line-height:1.6' }) },
+] });
+
+S.push({ id: 'model', title: 'Model switcher', why: 'Where you pick the model + default effort.', opts: [
+  { id: 'composer', name: 'Chip in composer', tag: 'click → dropdown', html: () => win(`<div class="main" style="position:relative"><div class="chat">${U}</div><div class="tool" style="position:absolute;left:14px;bottom:44px;width:190px;font-family:var(--sans)"><div class="dim" style="font-size:9px">SPARK</div><div class="pk">● deepseek-v4.1-flash <span class="dim">51 t/s</span></div><div class="dim" style="font-size:9px;margin-top:3px">CHATGPT</div><div>gpt-5.5</div><div style="border-top:1px solid #222;margin-top:4px;padding-top:3px" class="dim">default effort ‹ <span class="pk">● med</span> ›</div></div>${COMP('<span class="chip p">deepseek ▾</span>')}</div>`) },
+  { id: 'topbar', name: 'Title-bar picker', tag: 'center of the window', html: () => win(MAIN(U + A), { title: '<span class="chip">deepseek-v4.1-flash ▾ · ● med</span>' }) },
+  { id: 'palette', name: 'Command palette', tag: '⌘K → "model"', html: () => win(`<div class="main" style="align-items:center;justify-content:flex-start;padding-top:22px;background:#0006"><div class="tool" style="width:78%;font-family:var(--sans)"><div class="row"><span class="dim">⌕</span> model</div><div style="border-top:1px solid #222;margin:4px 0"></div><div class="pk">● deepseek-v4.1-flash <span class="dim" style="float:right">1M · 51 t/s</span></div><div>gpt-5.5 <span class="dim" style="float:right">400k · —</span></div><div>qwen3.5-9b (local) <span class="dim" style="float:right">128k · 18 t/s</span></div></div></div>`) },
+  { id: 'cards', name: 'Model cards', tag: 'big cards in settings', html: () => win(`<div class="main" style="padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:6px;align-content:start">${['deepseek-v4.1-flash|Spark · 1M · 51 t/s|1', 'gpt-5.5|ChatGPT · 400k|0', 'qwen3.5-9b|local · 18 t/s|0', '＋ add model|endpoint or login|0'].map(x => { const [a, b, on] = x.split('|'); return `<div class="tool" style="font-family:var(--sans);${on === '1' ? 'border-color:var(--p)' : ''}"><div class="${on === '1' ? 'pk' : ''}">${a}</div><div class="dim">${b}</div></div>`; }).join('')}<div class="dim" style="grid-column:1/3">default effort ‹ <span class="pk">● med</span> ›</div></div>`) },
+  { id: 'sidefoot', name: 'Sidebar footer', tag: 'always visible, bottom-left', html: () => win(`<div class="side">${SIDE().replace('<div class="side">', '').replace(/<\/div>$/, '')}<div style="margin-top:auto;border-top:1px solid #1d1d24;padding-top:5px;font-size:9.5px"><span class="pk">●</span> deepseek ▴<div class="dim">med · 38% ctx</div></div></div>` + MAIN(U + A)) },
+] });
+
+S.push({ id: 'settings', title: 'Settings', why: 'How settings are laid out.', opts: [
+  { id: 'tabs', name: 'Side tabs', tag: 'macOS preferences', html: () => win(`<div class="side"><div class="it on">General</div><div class="it">Models</div><div class="it">Look &amp; feel</div><div class="it">Helpers</div><div class="it">Crons</div><div class="it">Connections</div></div><div class="main" style="padding:12px;gap:8px;display:flex;flex-direction:column"><b>General</b><div class="row">Approvals <span class="chip p" style="margin-left:auto">ask</span><span class="chip">yolo</span></div><div class="row">Default effort <span class="chip p" style="margin-left:auto">● med</span></div><div class="row">Reasoning shown <span class="chip" style="margin-left:auto">timer ▾</span></div></div>`) },
+  { id: 'scroll', name: 'One long page', tag: 'scroll, sticky headers', html: () => win(`<div class="main" style="padding:12px;gap:5px;display:flex;flex-direction:column"><div class="pk" style="font-size:9.5px">MODEL</div><div class="row">deepseek-v4.1-flash <span class="chip" style="margin-left:auto">change</span></div><div class="pk" style="font-size:9.5px;margin-top:4px">LOOK &amp; FEEL</div><div class="row">Accent <span style="margin-left:auto;display:flex;gap:3px">${['#ff2e99', '#33ff99', '#00d1ff', '#9e66ff', '#ffa800'].map(c => `<i style="width:10px;height:10px;border-radius:50%;background:${c}"></i>`).join('')}</span></div><div class="row">Spinner <span class="chip" style="margin-left:auto">braille ⠹</span></div><div class="pk" style="font-size:9.5px;margin-top:4px">HELPERS</div><div class="row">Max at once <span class="mono" style="margin-left:auto">‹ 3 ›</span></div></div>`) },
+  { id: 'modal', name: 'Modal cards', tag: 'pops over the chat', html: () => win(`<div class="main" style="align-items:center;justify-content:center;background:#0008"><div class="tool" style="width:72%;font-family:var(--sans);padding:10px;box-shadow:0 0 30px -10px var(--p)"><b>Settings</b><div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;margin-top:6px">${['Models', 'Look & feel', 'Helpers', 'Crons', 'Memory', 'Connections'].map(x => `<div class="chip" style="justify-content:center;border-radius:6px;padding:4px">${x}</div>`).join('')}</div></div></div>`) },
+  { id: 'popover', name: 'Inline popovers', tag: 'click any chip to change it', html: () => win(`<div class="main" style="position:relative"><div class="chat">${U + A}</div><div class="tool" style="position:absolute;right:14px;bottom:44px;width:150px;font-family:var(--sans)"><div class="dim" style="font-size:9px">reasoning shown</div><div>hidden</div><div class="pk">● timer</div><div>preview</div><div>full</div></div>${COMP('<span class="chip">deepseek</span><span class="chip p">● med</span><span class="chip">timer ▾</span>')}</div>`) },
+  { id: 'tui', name: 'Terminal-style', tag: 'same boxes as /theme', html: () => win(`<div class="main mono" style="align-items:center;justify-content:center;font-size:10px"><pre style="margin:0;color:#ccc">╭─ <span class="pk">look &amp; feel</span> ─────────────╮
+│ ❯ accent    ‹ <span class="pk">hotpink</span> ›      │
+│   spinner   ‹ braille ⠹ ›    │
+│   reasoning ‹ timer ›        │
+│   tools     ‹ normal ›       │
+╰─ <span class="dim">↑↓ move · ←→ change</span> ──────╯</pre></div>`) },
+] });
+
+S.push({ id: 'motion', title: 'Motion & feedback', why: 'How alive it feels.', opts: [
+  { id: 'calm', name: 'Calm', tag: 'fades only, nothing bounces', html: () => win(MAIN(U + A + `<div class="dim" style="font-size:9.5px">replies fade in · no glow</div>`)) },
+  { id: 'glow', name: 'Neon glow', tag: 'breathing pink glow while working', html: () => win(`<div class="main"><div class="chat">${U + A}</div>${COMP().replace('class="comp"', 'class="comp" style="border-color:var(--p);animation:glow2 2s ease-in-out infinite"')}</div><style>@keyframes glow2{50%{box-shadow:0 0 22px -4px var(--p)}}</style>`) },
+  { id: 'shimmer', name: 'Shimmer', tag: 'light sweeps text while thinking', html: () => win(MAIN(U + `<div style="background:linear-gradient(90deg,#555 30%,#fff 50%,#555 70%);background-size:200% 100%;-webkit-background-clip:text;color:transparent;animation:sh 1.6s linear infinite;width:max-content">thinking 4.1s</div><style>@keyframes sh{from{background-position:200% 0}to{background-position:-200% 0}}</style>`)) },
+  { id: 'typewriter', name: 'Typewriter', tag: 'text streams with a pink caret', html: () => win(MAIN(U + `<div class="a">Found it — the loop stopped one short<span style="display:inline-block;width:6px;height:11px;background:var(--p);vertical-align:-2px;margin-left:2px;animation:bl 1s steps(2) infinite"></span></div><style>@keyframes bl{50%{opacity:0}}</style>`)) },
+  { id: 'confetti', name: 'Celebrations', tag: 'sparkles when a goal/test passes', html: () => win(`<div class="main" style="align-items:center;justify-content:center;gap:4px"><div class="am" style="letter-spacing:6px">✧ · ✦ · ✧</div>${cat('^.^', 'big')}<div class="gr">goal reached</div></div>`) },
+] });
+
+const ACC = [['hotpink', '#ff2e99'], ['mint', '#33ff99'], ['cyan', '#00d1ff'], ['lavender', '#9e66ff'], ['amber', '#ffa800']];
+S.push({ id: 'accent', title: 'Default accent', why: 'Click one and the whole page recolors (all of them stay available in settings).', opts: ACC.map(([id, hex]) => ({ id, name: id, tag: hex, html: () => win(MAIN(U + A, COMP('<span class="chip p">● med</span>'))) })) });
+
+// ---------- render + picks ----------
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const KEY = 'pico-desktop-picks';
+let picks = JSON.parse(localStorage.getItem(KEY) || '{}');
+const main = document.getElementById('main'), nav = document.getElementById('nav');
+S.forEach((sec, si) => {
+  const el = document.createElement('section'); el.id = sec.id;
+  el.innerHTML = `<h2><span class="n">${String(si + 1).padStart(2, '0')}</span>${sec.title}${sec.multi ? ' <span style="color:var(--dim);font-weight:400;font-size:12px">(pick any)</span>' : ''}</h2><p class="why">${sec.why}</p>`;
+  const g = document.createElement('div'); g.className = 'grid'; el.appendChild(g);
+  sec.opts.forEach(o => {
+    const c = document.createElement('div'); c.className = 'card'; c.dataset.sec = sec.id; c.dataset.id = o.id;
+    c.innerHTML = `<div class="badge">✓ picked</div><div class="top"><span class="name">${o.name}</span><span class="tag">${esc(o.tag || '')}</span></div><div class="stage" ${sec.id === 'accent' ? `style="--p:${o.tag}"` : ''}>${o.html()}</div>`;
+    c.onclick = () => toggle(sec, o.id);
+    g.appendChild(c);
+  });
+  main.appendChild(el);
+  const a = document.createElement('a'); a.href = '#' + sec.id; a.textContent = sec.title.toLowerCase(); a.dataset.sec = sec.id; nav.appendChild(a);
+});
+document.getElementById('tot').textContent = S.length;
+function toggle(sec, id) {
+  if (sec.multi) { const cur = new Set(picks[sec.id] || []); cur.has(id) ? cur.delete(id) : cur.add(id); picks[sec.id] = [...cur]; if (!picks[sec.id].length) delete picks[sec.id]; }
+  else { if (picks[sec.id] === id) delete picks[sec.id]; else picks[sec.id] = id; }
+  localStorage.setItem(KEY, JSON.stringify(picks)); sync();
+}
+function sync() {
+  document.querySelectorAll('.card').forEach(c => { const v = picks[c.dataset.sec]; c.classList.toggle('sel', Array.isArray(v) ? v.includes(c.dataset.id) : v === c.dataset.id); });
+  document.querySelectorAll('nav a').forEach(a => a.classList.toggle('done', !!picks[a.dataset.sec]));
+  document.getElementById('cnt').textContent = Object.keys(picks).length;
+  const acc = ACC.find(x => x[0] === picks.accent); document.documentElement.style.setProperty('--p', acc ? acc[1] : '#ff2e99');
+}
+function resetAll() { if (confirm('Clear all picks?')) { picks = {}; localStorage.removeItem(KEY); sync(); } }
+function submit() {
+  const named = {};
+  for (const sec of S) { const v = picks[sec.id]; if (!v) continue; const nm = id => (sec.opts.find(o => o.id === id) || {}).name; named[sec.id] = Array.isArray(v) ? v.map(id => ({ id, name: nm(id) })) : { id: v, name: nm(v) }; }
+  const out = { kind: 'desktop', submitted: new Date().toISOString(), picks: named, notes: document.getElementById('notes').value.trim(), skipped: S.filter(s => !picks[s.id]).map(s => s.id) };
+  const txt = JSON.stringify(out, null, 2);
+  document.getElementById('json').textContent = txt;
+  try { navigator.clipboard.writeText(txt); } catch (e) {}
+  const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([txt], { type: 'application/json' })); a.download = 'pico-desktop-picks.json'; a.click();
+  document.getElementById('out').classList.add('on');
+}
+sync();
+</script>
+</body>
+</html>

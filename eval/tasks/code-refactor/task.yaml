@@ -1,0 +1,10 @@
+id: code-refactor
+category: coding
+timeout_s: 300
+prompt: |
+  report.py's build_report() repeats the same row-formatting code three times. Refactor it:
+  extract a module-level helper `format_row(label, amount, width=30)` that returns one formatted line,
+  and make build_report() use it. Output must stay byte-for-byte identical — the tests in
+  test_report.py must keep passing (run them with `python3 -m unittest`).
+check: |
+  python3 -m unittest -q test_report 2>&1 && python3 "$HIDDEN/check_refactor.py"

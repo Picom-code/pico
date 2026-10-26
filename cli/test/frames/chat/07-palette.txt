@@ -1,0 +1,30 @@
+  │
+  │ Summary
+  │
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────────────────────────────────────────────╮
+  │ │ // greet                                                                         │
+  │ │ export function hi(name: string) {                                               │
+  │ │   return `hello ${name}` + 42;                                                   │
+  │ │ }                                                                                │
+  │ ╰──────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 116 tok · 1.9s · 142 tok/s
+─────────────────────────────────────────────────────────────────────────────────── low ──
+❯ /se
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · Qwen3-Coder 30B-A3B · ● low · ╸━━━━━━━━━ 9.1k/128k cached 92% · 142 tok/s
+  ❯ /search <query>    search past chats
+    /sessions          list recent sessions
+    /release-notes     skill · Draft release notes from git log
+    /resume [id]       reopen a past session

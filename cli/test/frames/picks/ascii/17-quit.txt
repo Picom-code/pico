@@ -1,0 +1,31 @@
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)* done in 4.0s | 3 tools | 1 file +13 -2 | 142 tok/s
+
+----------------------------------------------------------------------------------------------------
+
+> remember my dog say hi
+
+  * thought 0.5s  ctrl+o
+
+  + remembered: dog is Biscuit
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+----------------------------------------------------------------------------------------------------
+
+> compact say hi
+
+  * thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+  session s_1e28us | resume with pico -r s_1e28us
+u

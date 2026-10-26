@@ -1,0 +1,12 @@
+id: mem-tabs
+category: memory
+isolated: true
+timeout_s: 300
+sessions:
+  - |
+    A standing preference for all future work: I indent Python code with tabs, never spaces. Please
+    remember this. Nothing else to do now.
+  - |
+    Write fizzbuzz.py that prints FizzBuzz for 1..15, one item per line, using a function `fizzbuzz(n)`
+    that returns the string for n.
+check: python3 "$HIDDEN/check.py"

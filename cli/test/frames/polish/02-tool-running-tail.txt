@@ -1,0 +1,24 @@
+
+    ___     pico v0.1.0 · engine 0.1.0-mock
+   /o o\    qwen3-coder-30b-a3b · local
+   \_^_/    ~/Developer/pico/cli
+    |=|
+   /|=|\    / commands · @ files · shift+tab effort · ? help
+   _/ \_
+
+
+  › run the tool please
+
+  ● ✻ thought 0.5s  ctrl+o
+  │ ⠙ terminal `npm test`  0.8s
+  │   ⎿ > pico@0.1.0 test
+  │     > bun test
+  │     test/unit.test.ts:
+  │ ✓ read_file `src/app.ts`  0.2s
+  │   ⎿ 1| // Interactive chat TUI.
+  │     … +1 line
+
+──────────────────────────────────────────────────────────────────────────────── medium ──
+❯ type to queue… esc to stop
+──────────────────────────────────────────────────────────────────────────────────────────
+  /> <\ · Qwen3-Coder 30B-A3B · ● medium · ━━━━━━━━━━ 0/128k · 72 tok/s

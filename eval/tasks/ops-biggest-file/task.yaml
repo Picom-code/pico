@@ -1,0 +1,8 @@
+id: ops-biggest-file
+category: terminal
+timeout_s: 180
+prompt: |
+  Somewhere under ./data there's a file eating disk space. Find the single largest file (by bytes)
+  under ./data, including hidden directories, and write its path relative to this folder
+  (like `data/x/y.bin`) as the only line of `answer.txt`. Don't delete anything.
+check: bash "$HIDDEN/check.sh"

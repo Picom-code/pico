@@ -1,0 +1,9 @@
+id: code-cli-flag
+category: coding
+timeout_s: 240
+prompt: |
+  wc.py is a tiny word-count CLI. Add a `--top N` option (default: off) that, instead of the normal
+  output, prints the N most frequent words, one per line as "<word> <count>", most frequent first,
+  ties broken alphabetically. Words are lowercased and split on non-letters. Also keep `-l/--lines`
+  working as before.
+check: bash "$HIDDEN/check.sh"

@@ -1,0 +1,268 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== open =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │ ❯ accent    ‹ hotpink   ● ○ ○ ○ ○ ○ ›                                      │
+  │               Color of the cat, spinner, prompt, context bar and sign-off. │
+  │   spinner     braille   ⠸  classic dots                                    │
+  │   reasoning   timer     ○ ● ○ ○  thinking 4.1s                             │
+  │   tools       normal    ○ ● ○  tree + 4-line tail                          │
+  │   summary     ● on                                                         │
+  │                                                                            │
+  │ preview                                                                    │
+  │ ┬ 2 steps                                                                  │
+  │ ├─ ✓ read calc.py  0.1s                                                    │
+  │ └─ ⠸ pytest -q  1.4s                                                       │
+  │    ╰ 4 passed                                                              │
+  │ (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                    │
+  │ ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · › prompt                                   │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== reasoning-row =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   accent      hotpink   ● ○ ○ ○ ○ ○                                        │
+  │   spinner     braille   ⠏  classic dots                                    │
+  │ ❯ reasoning ‹ timer     ○ ● ○ ○  thinking 4.1s ›                           │
+  │               hidden · timer · preview (last thought line) · full (stream  │
+  │               it, folds when the answer starts).                           │
+  │   tools       normal    ○ ● ○  tree + 4-line tail                          │
+  │   summary     ● on                                                         │
+  │                                                                            │
+  │ preview                                                                    │
+  │   thinking 2.1s                                                            │
+  │                                                                            │
+  │   ┬ 3 steps                                                                │
+  │   ├─ ✓ read calc.py  0.1s                                                  │
+  │   ├─ ✓ patch calc.py  0.0s                                                 │
+  │   │  ✎ calc.py  +1 −1  (ctrl+o to see)                                     │
+  │   └─ ⠏ pytest -q  1.4s                                                     │
+  │      ╰ test_calc.py ....                                                   │
+  │        4 passed in 0.02s                                                   │
+  │                                                                            │
+  │   Fixed the off-by-one.                                                    │
+  │   (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                  │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== reasoning-preview =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   accent      hotpink   ● ○ ○ ○ ○ ○                                        │
+  │   spinner     braille   ⠼  classic dots                                    │
+  │ ❯ reasoning ‹ preview   ○ ○ ● ○  + last line ›                             │
+  │               hidden · timer · preview (last thought line) · full (stream  │
+  │               it, folds when the answer starts).                           │
+  │   tools       normal    ○ ● ○  tree + 4-line tail                          │
+  │   summary     ● on                                                         │
+  │                                                                            │
+  │ preview                                                                    │
+  │   thinking 2.1s                                                            │
+  │     range(n - 1) should be range(n); check the tests next.                 │
+  │                                                                            │
+  │   ┬ 3 steps                                                                │
+  │   ├─ ✓ read calc.py  0.1s                                                  │
+  │   ├─ ✓ patch calc.py  0.0s                                                 │
+  │   │  ✎ calc.py  +1 −1  (ctrl+o to see)                                     │
+  │   └─ ⠼ pytest -q  1.4s                                                     │
+  │      ╰ test_calc.py ....                                                   │
+  │        4 passed in 0.02s                                                   │
+  │                                                                            │
+  │   Fixed the off-by-one.                                                    │
+  │   (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                  │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== reasoning-full =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   accent      hotpink   ● ○ ○ ○ ○ ○                                        │
+  │   spinner     braille   ⠏  classic dots                                    │
+  │ ❯ reasoning ‹ full      ○ ○ ○ ●  stream it all ›                           │
+  │               hidden · timer · preview (last thought line) · full (stream  │
+  │               it, folds when the answer starts).                           │
+  │   tools       normal    ○ ● ○  tree + 4-line tail                          │
+  │   summary     ● on                                                         │
+  │                                                                            │
+  │ preview                                                                    │
+  │   thinking 2.1s                                                            │
+  │     The loop stops one short.                                              │
+  │     range(n - 1) should be range(n); check the tests next.                 │
+  │                                                                            │
+  │   ┬ 3 steps                                                                │
+  │   ├─ ✓ read calc.py  0.1s                                                  │
+  │   ├─ ✓ patch calc.py  0.0s                                                 │
+  │   │  ✎ calc.py  +1 −1  (ctrl+o to see)                                     │
+  │   └─ ⠏ pytest -q  1.4s                                                     │
+  │      ╰ test_calc.py ....                                                   │
+  │        4 passed in 0.02s                                                   │
+  │                                                                            │
+  │   Fixed the off-by-one.                                                    │
+  │   (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                  │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== tools-row =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   accent      hotpink   ● ○ ○ ○ ○ ○                                        │
+  │   spinner     braille   ⠴  classic dots                                    │
+  │   reasoning   full      ○ ○ ○ ●  stream it all                             │
+  │ ❯ tools     ‹ normal    ○ ● ○  tree + 4-line tail ›                        │
+  │               quiet (one line: read 2 · edit 1) · normal (tree + 4-line    │
+  │               tail) · full (20 lines + diffs).                             │
+  │   summary     ● on                                                         │
+  │                                                                            │
+  │ preview                                                                    │
+  │   thinking 2.1s                                                            │
+  │     The loop stops one short.                                              │
+  │     range(n - 1) should be range(n); check the tests next.                 │
+  │                                                                            │
+  │   ┬ 3 steps                                                                │
+  │   ├─ ✓ read calc.py  0.1s                                                  │
+  │   ├─ ✓ patch calc.py  0.0s                                                 │
+  │   │  ✎ calc.py  +1 −1  (ctrl+o to see)                                     │
+  │   └─ ⠴ pytest -q  1.4s                                                     │
+  │      ╰ test_calc.py ....                                                   │
+  │        4 passed in 0.02s                                                   │
+  │                                                                            │
+  │   Fixed the off-by-one.                                                    │
+  │   (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                  │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== tools-quiet =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   accent      hotpink   ● ○ ○ ○ ○ ○                                        │
+  │   spinner     braille   ⠋  classic dots                                    │
+  │   reasoning   full      ○ ○ ○ ●  stream it all                             │
+  │ ❯ tools     ‹ quiet     ● ○ ○  one line per turn ›                         │
+  │               quiet (one line: read 2 · edit 1) · normal (tree + 4-line    │
+  │               tail) · full (20 lines + diffs).                             │
+  │   summary     ● on                                                         │
+  │                                                                            │
+  │ preview                                                                    │
+  │   thinking 2.1s                                                            │
+  │     The loop stops one short.                                              │
+  │     range(n - 1) should be range(n); check the tests next.                 │
+  │                                                                            │
+  │   ⠋ read 1 · edit 1 · ran 1  1.5s                                          │
+  │                                                                            │
+  │   Fixed the off-by-one.                                                    │
+  │   (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                  │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== summary-off =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) look & feel ────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   accent      hotpink   ● ○ ○ ○ ○ ○                                        │
+  │   spinner     braille   ⠴  classic dots                                    │
+  │   reasoning   full      ○ ○ ○ ●  stream it all                             │
+  │   tools       quiet     ● ○ ○  one line per turn                           │
+  │ ❯ summary   ‹ ○ off ›                                                      │
+  │               The cat's sign-off line under each reply.                    │
+  │                                                                            │
+  │ preview                                                                    │
+  │   thinking 2.1s                                                            │
+  │     The loop stops one short.                                              │
+  │     range(n - 1) should be range(n); check the tests next.                 │
+  │                                                                            │
+  │   ⠴ read 1 · edit 1 · ran 1  1.5s                                          │
+  │                                                                            │
+  │   Fixed the off-by-one.                                                    │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯
+
+===== cancel =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  (^.^)ﾉ bye for now
+u
+

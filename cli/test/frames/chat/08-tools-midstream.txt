@@ -1,0 +1,30 @@
+  │ ╰──────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 116 tok · 1.9s · 142 tok/s
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › use a tool and todo please
+
+  ● ✻ thought 1.1s  ctrl+o
+  │ ⠼ terminal `npm test`  1.4s
+  │   ⎿ > bun test
+  │     test/unit.test.ts:
+  │     (pass) context bar > thresholds
+  │     (pass) diff renderer > truncation
+  │ ✓ read_file `src/app.ts`  0.2s
+  │   ⎿ 1| // Interactive chat TUI.
+  │     … +1 line
+
+  todo 1/3
+  ✓ Read the project layout
+  ▸ Write the failing test
+  ○ Fix the bug
+
+─────────────────────────────────────────────────────────────────────────────────── low ──
+❯ type to queue… esc to stop
+──────────────────────────────────────────────────────────────────────────────────────────
+  /> <\ · Qwen3-Coder 30B-A3B · ● low · ╸━━━━━━━━━ 9.1k/128k cached 92% · 142 tok/s

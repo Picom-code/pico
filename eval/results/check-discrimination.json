@@ -1,0 +1,8 @@
+[
+ {
+  "id": "code-write-tests",
+  "noop_fails": true,
+  "oracle_passes": true,
+  "ok": true
+ }
+]

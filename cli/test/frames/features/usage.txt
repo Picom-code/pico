@@ -1,0 +1,73 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "small diffs, big naps."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== card =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "small diffs, big naps."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) usage ────────────────────────────────────────────────────────────────╮
+  │                                                                              │
+  │ today    8 turns · 144k in · 11k out · 84% cached · 10m 10s                  │
+  │ 30 days  214 turns · 3.3M in · 251k out · 84% cached · 4h 24m                │
+  │                                                                              │
+  │ tokens   ▁▁▂▃▃▂▁▂▃▄▅▅▂▁▁▃▆▇▅▃▂▁▂▄▇█▆▃▅▄  peak 340k/day                       │
+  │          09-26                    today                                      │
+  │                                                                              │
+  │ model                 turns       in      out   tok/s                        │
+  │ ─────────────────────────────────────────────────────                        │
+  │ qwen3-coder-30b-a3b     151     2.4M     180k      68                        │
+  │ gpt-5.5                  52     820k      64k      51                        │
+  │ gpt-oss-20b              11      90k       7k       —                        │
+  │                                                                              │
+  ╰─ 1290 tool calls · last 30 days ─────────────────────────────────────────────╯
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "small diffs, big naps."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) usage ────────────────────────────────────────────────────────────────╮
+  │                                                                              │
+  │ today    8 turns · 144k in · 11k out · 84% cached · 10m 10s                  │
+  │ 30 days  214 turns · 3.3M in · 251k out · 84% cached · 4h 24m                │
+  │                                                                              │
+  │ tokens   ▁▁▂▃▃▂▁▂▃▄▅▅▂▁▁▃▆▇▅▃▂▁▂▄▇█▆▃▅▄  peak 340k/day                       │
+  │          09-26                    today                                      │
+  │                                                                              │
+  │ model                 turns       in      out   tok/s                        │
+  │ ─────────────────────────────────────────────────────                        │
+  │ qwen3-coder-30b-a3b     151     2.4M     180k      68                        │
+  │ gpt-5.5                  52     820k      64k      51                        │
+  │ gpt-oss-20b              11      90k       7k       —                        │
+  │                                                                              │
+  ╰─ 1290 tool calls · last 30 days ─────────────────────────────────────────────╯
+
+  (^.^)ﾉ bye for now
+u
+

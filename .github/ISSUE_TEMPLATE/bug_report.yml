@@ -1,0 +1,43 @@
+name: Bug report
+description: Something broke or looks wrong
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got. Screenshots or a copy of the terminal help a lot.
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. pico --yolo\n2. /plan ...\n3. ..."
+  - type: input
+    id: version
+    attributes:
+      label: pico version
+      description: Output of `pico --version`
+    validations: { required: true }
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where
+      options: [terminal, desktop app, web app, installer, engine]
+    validations: { required: true }
+  - type: input
+    id: os
+    attributes:
+      label: OS and terminal
+      placeholder: macOS 26 / Ghostty, Ubuntu 24.04 / kitty, Windows 11 / Windows Terminal
+  - type: input
+    id: model
+    attributes:
+      label: Model / provider
+      placeholder: ChatGPT gpt-5.5, OpenRouter …, local qwen3-coder
+  - type: textarea
+    id: doctor
+    attributes:
+      label: pico doctor
+      description: Output of `pico doctor` (remove anything private)
+      render: text

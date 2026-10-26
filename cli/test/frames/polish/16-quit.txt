@@ -1,0 +1,27 @@
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › remember my dog say hi
+
+  ● ✻ thought 0.5s  ctrl+o
+  │ + remembered: dog is Biscuit
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.6s · 142 tok/s
+  + new skill: deploy-checklist
+
+  ──────────────────────────────────────────────────────────────────────────────────────
+
+  › compact say hi
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Hi! 👋
+  ╰ ✓ 42 tok · 0.5s · 142 tok/s
+
+  ↶ undid last turn  no file changes
+  session s_b2cu3 · resume with pico -r s_b2cu3
+u

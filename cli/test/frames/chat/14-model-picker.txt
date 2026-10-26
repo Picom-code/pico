@@ -1,0 +1,24 @@
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────────────────────────────────────────────╮
+  │ │ // greet                                                                         │
+  │ │ export function hi(name: string) {                                               │
+  │ │   return `hello ${name}` + 42;                                                   │
+  │ │ }                                                                                │
+  │ ╰──────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 123 tok · 6.2s · 142 tok/s
+? Model
+❯ ● Qwen3-Coder 30B-A3B  local · 128k ctx · 72 tok/s
+    gpt-oss 20B          local · 128k ctx · 88 tok/s
+    GPT-5 (ChatGPT)      openai · 272k ctx
+↑↓ move · enter select

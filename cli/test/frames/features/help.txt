@@ -1,0 +1,39 @@
+ /\_/\ 
+( o.o )  pico v0.1.0  your own AI, on your own machine
+ > ^ < 
+
+usage  pico [flags] · every launch opens a new chat unless you -c / -r
+
+chat
+  --yolo                    new chat with /yolo on (runs commands without asking)
+  --model <id>              switch model before the first turn
+  --effort low|med|high     effort for this launch (default: /model → default effort)
+  --verbose <level>         quiet | normal | verbose | full · or reasoning=preview tools=full
+  --cwd <dir>               work in another directory
+  --harness lean|hermes     agent harness for this launch
+  --plan "task"             start by planning; enter go to run it
+  --goal "text"             start with a goal pinned above the input
+  --loop <every> "prompt"   start a loop: 5m, 1h, until-done
+  -c, --continue            resume the last chat
+  -r, --resume [id]         resume a chat (picker without an id)
+
+scripts
+  -p, --print "prompt"      print one answer to stdout and exit (- reads stdin)
+  --json                    with -p: one JSON event per line
+
+setup
+  --setup                   choose a model: ChatGPT login, any API, or local
+  --login                   sign in with ChatGPT
+  pico doctor               health, hardware and model status
+  pico sessions             list chats
+  -v, --version             print version
+
+examples
+  pico --yolo                       fresh chat, no approval prompts
+  pico -c                           pick up where you left off
+  pico --model gpt-5.5 --effort highflags combine
+  pico --plan "add a --json flag"   plan first, then go
+  pico --loop 10m "check CI on main"keep an eye on something
+  git diff | pico -p "review this"  one-shot from a pipe
+
+env  PICO_URL (http://127.0.0.1:7979)  PICO_HOME (/var/folders/9f/6pr5z1pj37z_wgvwk2lf2fww0000gn/T/tmp.TPcu6ssHNj)  PICO_VERBOSE  NO_COLOR

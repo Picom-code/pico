@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pico</title>
+<style>
+  :root { --p: #ff2e99; }
+  html, body { margin: 0; height: 100%; background: #16161a; color: #e9e9ee; overflow: hidden;
+    font: 14px/1.5 -apple-system, "Inter", "Segoe UI", system-ui, sans-serif; -webkit-user-select: none; user-select: none; cursor: default; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; }
+  .drag { position: fixed; inset: 0 0 auto 0; height: 38px; }
+  pre { margin: 0; color: var(--p); font: 600 30px/1.12 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    animation: glow 3.2s ease-in-out infinite; }
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 8px var(--p), 0 0 22px rgba(255, 46, 153, .35); }
+    50% { text-shadow: 0 0 12px var(--p), 0 0 44px rgba(255, 46, 153, .65); }
+  }
+  #s { color: #7a7a86; font-size: 13px; letter-spacing: .01em;
+    background: linear-gradient(90deg, #6c6c78 30%, #f2f2f5 50%, #6c6c78 70%); background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent; animation: sh 1.8s linear infinite; }
+  @keyframes sh { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+</style>
+</head>
+<body>
+<div class="drag" data-tauri-drag-region></div>
+<pre id="cat"> /\_/\
+( -.- )
+ &gt; ^ &lt;</pre>
+<div id="s">waking up…</div>
+<script>
+  const cat = document.getElementById('cat'), s = document.getElementById('s');
+  const face = (e) => { cat.textContent = ' /\\_/\\\n( ' + e + ' )\n > ^ < '; };
+  setTimeout(() => face('o.o'), 700);
+  window.picoStatus = (m) => { s.textContent = m; if (m === 'ready') face('^.^'); else if (/couldn|didn/.test(m)) face('x.x'); };
+</script>
+</body>
+</html>

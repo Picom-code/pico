@@ -1,0 +1,20 @@
+name: Feature request
+description: An idea that would make pico better
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What are you trying to do, and what gets in the way?
+    validations: { required: true }
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: How should it work? Mock frames welcome.
+  - type: textarea
+    id: lean
+    attributes:
+      label: Cost
+      description: Does it add prompt tokens, dependencies or startup time? pico tries hard to stay lean.

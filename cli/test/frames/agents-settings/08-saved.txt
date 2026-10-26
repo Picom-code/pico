@@ -1,0 +1,13 @@
+
+    ___     pico v0.1.0 · engine 0.1.0-mock
+   /o o\    qwen3-coder-30b-a3b · local
+   \_^_/    ~/Developer/pico/cli
+    |=|
+   /|=|\    / commands · @ files · shift+tab effort · ? help
+   _/ \_
+
+  ✓ subagents on · 8 parallel · GPT-5 (ChatGPT) · off · 1 min
+──────────────────────────────────────────────────────────────────────────────── medium ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · Qwen3-Coder 30B-A3B · ● medium · ━━━━━━━━━━ 0/128k · 72 tok/s

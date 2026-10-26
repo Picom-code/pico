@@ -1,0 +1,66 @@
+===== boot =====
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+  ◇ plan ready  enter go · e edit · esc cancel
+
+  ◎ goal  ship the installer  ▰▰▰▱▱ 3/5
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 60 tok/s
+
+===== quit =====
+ > ^ <   "nothing compiles itself. yet."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_15ov0h
+u
+

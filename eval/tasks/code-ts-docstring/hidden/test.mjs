@@ -1,0 +1,10 @@
+import assert from "node:assert/strict";
+const { mergeIntervals } = await import(process.env.SANDBOX + "/intervals.ts");
+assert.deepEqual(mergeIntervals([[8,10],[1,3],[2,6],[15,18],[18,20]]), [[1,6],[8,10],[15,20]]);
+assert.deepEqual(mergeIntervals([]), []);
+assert.deepEqual(mergeIntervals([[5,1],[6,7]]), [[1,5],[6,7]]);
+assert.deepEqual(mergeIntervals([[1,10],[2,3],[4,5]]), [[1,10]]);
+assert.deepEqual(mergeIntervals([[-3,-1],[-1,0]]), [[-3,0]]);
+const inp = [[3,4],[1,2]]; const copy = JSON.stringify(inp); mergeIntervals(inp);
+assert.equal(JSON.stringify(inp), copy, "mutated input");
+console.log("ok");

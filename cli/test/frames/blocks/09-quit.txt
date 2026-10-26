@@ -1,0 +1,32 @@
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 4 tools · 2 files (+15 −2) · 116 tok · 4.2s
+
+  ──────────────────────────────────────────────
+
+  › explain the code
+
+  ● ✻ thought 0.5s  ctrl+o
+  │
+  │ Summary
+  │
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────╮
+  │ │ // greet                                 │
+  │ │ export function hi(name: string) {       │
+  │ │   return `hello ${name}` + 42;           │
+  │ │ }                                        │
+  │ ╰──────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 116 tok · 1.8s · 142 tok/s
+  session s_ucmhs · resume with pico -r s_ucmhs
+u

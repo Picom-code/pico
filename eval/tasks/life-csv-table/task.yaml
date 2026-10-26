@@ -1,0 +1,8 @@
+id: life-csv-table
+category: everyday
+timeout_s: 240
+prompt: |
+  Convert plants.csv into a GitHub-flavoured markdown table saved as plants.md. Keep the columns in the
+  original order with the same header names, sort rows by "price" from highest to lowest, and format
+  price with two decimals and a leading "$". Nothing else in the file except the table.
+check: python3 "$HIDDEN/check.py"

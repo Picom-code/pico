@@ -1,0 +1,30 @@
+  │       ┄ export class App {
+  │   122 +   // redraw step 1
+  │   123 +   // redraw step 2
+  │       … +9 more (ctrl+o)
+  │
+  │ Summary
+  │
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────────────────────────────────────────────╮
+  │ │ // greet                                                                         │
+  │ │ export function hi(name: string) {                                               │
+  │ │   return `hello ${name}` + 42;                                                   │
+  │ │ }                                                                                │
+  │ ╰──────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 3 tools · 1 file (+13 −2) · 116 tok · 3.9s · 142 tok/s
+──────────────────────────────────────────────────────────────────────────────── medium ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /^ ^\ ✧ · Qwen3-Coder 30B-A3B · ● medium · ╸━━━━━━━━━ 8.8k/128k cached 92% · 142 tok/s

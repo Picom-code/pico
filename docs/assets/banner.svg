@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#1c1820"/>
+      <stop offset="0.55" stop-color="#121115"/>
+      <stop offset="1" stop-color="#0a0a0c"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ff2e99" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#ff2e99" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" result="b2"/>
+      <feMerge><feMergeNode in="b1"/><feMergeNode in="b2"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.025"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="420" rx="20" fill="url(#bg)"/>
+  <rect width="1280" height="420" rx="20" fill="url(#scan)"/>
+  <ellipse cx="370" cy="214" rx="240" ry="160" fill="url(#halo)"/>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" fill="#ff2e99" filter="url(#glow)" font-size="62" font-weight="700">
+    <text x="370" y="164" text-anchor="middle" xml:space="preserve"> /\_/\ </text>
+    <text x="370" y="226" text-anchor="middle" xml:space="preserve">( o.o )</text>
+    <text x="370" y="286" text-anchor="middle" xml:space="preserve"> &gt; ^ &lt; </text>
+  </g>
+
+  <g font-family="'Inter Display','Inter','SF Pro Display',-apple-system,ui-sans-serif,'Segoe UI',Helvetica,Arial,sans-serif">
+    <text x="570" y="194" fill="#f5f2f4" font-size="132" font-weight="800" letter-spacing="-4">pico<tspan fill="#ff2e99" filter="url(#soft)">.</tspan></text>
+    <text x="576" y="258" fill="#b3acb2" font-size="28" font-weight="500">the lean agent harness.</text>
+    <text x="576" y="296" fill="#b3acb2" font-size="28" font-weight="500"><tspan fill="#ff5fb0">your</tspan> models, <tspan fill="#ff5fb0">your</tspan> machine.</text>
+  </g>
+
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="16" fill="#9a95a0">
+    <text x="578" y="336" xml:space="preserve">terminal · desktop · web  <tspan fill="#4a4550">│</tspan>  built on hermes agent</text>
+  </g>
+  <rect x="0.5" y="0.5" width="1279" height="419" rx="20" fill="none" stroke="#2a2530"/>
+</svg>

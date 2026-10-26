@@ -1,0 +1,9 @@
+id: code-rename
+category: coding
+timeout_s: 300
+prompt: |
+  Rename the function `get_usr` to `get_user` everywhere in this project (definition, all call sites,
+  imports, tests, and the mention in README.md). Don't leave a compatibility alias. The separate
+  function `get_usrs_page` must NOT be renamed. All tests (`python3 -m unittest discover -s tests -t .`)
+  must pass afterwards.
+check: bash "$HIDDEN/check.sh"

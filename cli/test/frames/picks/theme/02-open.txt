@@ -1,0 +1,24 @@
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) theme ──────────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │ ❯ accent    ‹ hotpink   ● ○ ○ ○ ○ ○ ›                                      │
+  │               Color of the cat, spinner, prompt, context bar and sign-off. │
+  │   spinner     braille   ⠼  classic dots                                    │
+  │               What spins while a tool runs.                                │
+  │                                                                            │
+  │ preview                                                                    │
+  │ ┬ 2 steps                                                                  │
+  │ ├─ ✓ read calc.py  0.1s                                                    │
+  │ └─ ⠼ pytest -q  1.4s                                                       │
+  │    ╰ 4 passed                                                              │
+  │ (^.^)✧ done in 4.1s · 3 tools · 1 file +1 −1 · 51 tok/s                    │
+  │ ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · › prompt                                   │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯

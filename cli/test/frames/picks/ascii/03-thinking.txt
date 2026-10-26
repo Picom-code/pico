@@ -1,0 +1,17 @@
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> use a tool and fix calc
+
+  thinking 0.3s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> type to queue… esc to stop
+Qwen3-Coder 30B-A3B | * med | [----------] 0/128k | 72 tok/s

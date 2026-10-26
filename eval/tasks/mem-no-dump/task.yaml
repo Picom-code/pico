@@ -1,0 +1,14 @@
+id: mem-no-dump
+category: memory
+isolated: true
+timeout_s: 240
+memory:
+  - {text: "User's dog is called Biscuit, a 6-year-old beagle.", target: user}
+  - {text: "User is training for the Lisbon half marathon in April.", target: user}
+  - {text: "User's sister Priya lives in Toronto and works as a dentist.", target: user}
+  - {text: "User drinks oat-milk flat whites, no sugar.", target: user}
+  - {text: "User's car is a blue 2019 Subaru Outback with a cracked tail light.", target: user}
+  - "Office wifi network is pico-guest; the router is in the supply closet."
+prompt: |
+  What's 17 × 23? Put just the number in answer.txt and reply in one short sentence.
+check: python3 "$HIDDEN/check.py"

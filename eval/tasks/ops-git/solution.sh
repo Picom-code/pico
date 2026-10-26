@@ -1,0 +1,1 @@
+cd "$SANDBOX" && git revert --no-edit HEAD >/dev/null && git checkout -qb feature/greeting && printf 'def greet(name):\n    return f"Hello, {name}!"\n' > greet.py && git commit -qam "feat: friendlier greeting" && git checkout -q main

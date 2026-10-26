@@ -1,0 +1,259 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== set =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+  ◎ goal  ship the installer  ▰▰▰▱▱ 3/5
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== expanded =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+  ╭─ ◎ goal ───────────────────────────────────────────────────────────────────╮
+  │ ship the installer  ▰▰▰▱▱ 3/5                                              │
+  │                                                                            │
+  │ ✓ package the CLI binary                                                   │
+  │ ✓ write the install script                                                 │
+  │ ✓ sign + notarize                                                          │
+  │ ▸ test on a clean machine                                                  │
+  │ ○ publish release notes                                                    │
+  ╰─ ctrl+o close · /goal clear ───────────────────────────────────────────────╯
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== collapsed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+  ◎ goal  ship the installer  ▰▰▰▱▱ 3/5
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== step =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ◎ goal  ship the installer  ▰▰▰▰▱ 4/5
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · 142 tok/s
+
+===== reached =====
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  (^.^)✧ goal reached  · ship the installer
+
+  ◎ goal reached  ship the installer  ▰▰▰▰▰ 5/5
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== fading =====
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  (^.^)✧ goal reached  · ship the installer
+
+  ◎ goal  ship the installer  ▰▰▰▰▰ 5/5
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== gone =====
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  (^.^)✧ goal reached  · ship the installer
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== quit =====
+› /goal ship the installer
+
+  Goal set: ship the installer
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› goal step say hi
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  (^.^)✧ goal reached  · ship the installer
+
+  (^.^)ﾉ bye for now · resume with pico -r s_ggpae
+u
+

@@ -1,0 +1,13 @@
+id: mem-codename
+category: memory
+isolated: true
+timeout_s: 300
+sessions:
+  - |
+    Quick note so you remember it in future chats: my project's codename is Falcon, and our public
+    launch date is 14 March 2027. No need to do anything else right now.
+  - |
+    Create a file called launch.md with a one-line markdown heading announcing the launch, using my
+    project's codename and the launch date. Then tell me what you wrote.
+check: |
+  test -f launch.md && grep -qi 'falcon' launch.md && grep -Eqi '(14 March 2027|March 14,? 2027|2027-03-14|14/03/2027|03/14/2027)' launch.md

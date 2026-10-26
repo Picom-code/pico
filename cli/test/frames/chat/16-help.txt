@@ -1,0 +1,30 @@
+  ctrl+l           redraw (/redraw) ctrl+u / ctrl+k / ctrl+w  kill line / to end / word
+
+  commands
+  /model           switch model
+  /new             start a fresh session
+  /sessions        list recent sessions
+  /resume          reopen a past session
+  /goal            set a goal the agent works toward
+  /plan            plan before doing
+  /compact         summarize context to free tokens
+  /undo            undo the last turn (restores changed files)
+  /agents          subagent settings
+  /memory          what pico remembers about you
+  /skills          list skills
+  /search          search past chats
+  /checkin         scheduled background replies
+  /connect         apps & connectors
+  /update          check for faster models/config
+  /effort          set reasoning effort
+  /clear           clear the screen
+  /redraw          repaint the screen (after resize / garbled output)
+  /help            keys & commands
+  /quit            exit pico
+  /review          Review the current diff
+  /release-notes   Draft release notes from git log
+
+─────────────────────────────────────────────────────────────────────────────────── low ──
+❯ ask anything · / for commands · @ to attach
+──────────────────────────────────────────────────────────────────────────────────────────
+  /o o\ · gpt-oss 20B · ● low · ━━━━━━━━━━ 27k/128k cached 92% · 88 tok/s

@@ -1,0 +1,210 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "tests first, then snacks."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( -.- )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== planning =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "tests first, then snacks."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/4
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+
+  ⠙ working  0.6s · esc to stop
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› type to steer… esc to stop
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 88 tok/s
+
+===== waiting =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "tests first, then snacks."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+  ◇ plan ready  enter go · e edit · esc cancel
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 60 tok/s
+
+===== go =====
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› go
+
+  ◇ plan · add a --json flag  1/5
+    ✓ 1  read the arg parser
+    ⠏ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  ⠏ working  1.4s · esc to stop
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› type to steer… esc to stop
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 60 tok/s
+
+===== active =====
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› go
+
+  ◇ plan · add a --json flag  2/5
+    ✓ 1  read the arg parser
+    ✓ 2  add a --json flag
+    ⠏ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  ⠏ working  2.2s · esc to stop
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› type to steer… esc to stop
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 60 tok/s
+
+===== done =====
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› go
+
+  ◇ plan · add a --json flag  5/5
+    ✓ 1  read the arg parser
+    ✓ 2  add a --json flag
+    ✓ 3  emit one JSON event per line
+    ✓ 4  write tests
+    ✓ 5  update the README
+
+  Done: --json emits one event per line; tests pass.
+
+  (^.^)✧ done in 3.1s · 64 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 64 tok/s
+
+===== quit =====
+
+› /plan add a --json flag
+
+  ◇ plan · add a --json flag  0/5
+    ○ 1  read the arg parser
+    ○ 2  add a --json flag
+    ○ 3  emit one JSON event per line
+    ○ 4  write tests
+    ○ 5  update the README
+
+  Here is the plan. Say go to start, or tell me what to change.
+
+  (^.^)✧ done in 1.2s · 60 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+› go
+
+  ◇ plan · add a --json flag  5/5
+    ✓ 1  read the arg parser
+    ✓ 2  add a --json flag
+    ✓ 3  emit one JSON event per line
+    ✓ 4  write tests
+    ✓ 5  update the README
+
+  Done: --json emits one event per line; tests pass.
+
+  (^.^)✧ done in 3.1s · 64 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_ppfvi
+u
+

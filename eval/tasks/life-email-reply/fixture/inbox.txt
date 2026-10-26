@@ -1,0 +1,10 @@
+From: Rosa Lindqvist <rosa@northwind.example>
+Subject: Kickoff meeting
+
+Hi Sam,
+
+Great to have you on board for the Northwind redesign. Could we meet for the kickoff at our office
+(22 Harbour Road)? I can do Tuesday 10am or Thursday 3pm. Please bring the signed NDA if you can.
+
+Best,
+Rosa

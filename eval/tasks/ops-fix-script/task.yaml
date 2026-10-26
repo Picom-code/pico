@@ -1,0 +1,8 @@
+id: ops-fix-script
+category: terminal
+timeout_s: 240
+prompt: |
+  backup.sh is supposed to copy every *.txt file from ./notes (including names with spaces) into a
+  new folder ./backup/<YYYY-MM-DD>/ and print "backed up N files". It's broken. Fix the script (keep
+  it bash) so `bash backup.sh` works, then leave it in place. Don't hardcode the file names or the date.
+check: bash "$HIDDEN/check.sh"

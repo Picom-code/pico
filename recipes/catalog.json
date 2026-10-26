@@ -1,0 +1,4231 @@
+{
+ "schema": 1,
+ "version": "2026.10.25",
+ "generated": "2026-10-25T18:08:35Z",
+ "notes": "file_gb = summed HF file bytes (1e9). est_tps: 'measured' = cited llama.cpp result for that exact quant on that hardware; 'est' = bandwidth model (engine/pico/recipes.py). Benchmarks are vendor self-reported. Speculative-decoding gains are not included unless the runtime enables recipe.spec.",
+ "reference_hardware": {
+  "cpu-16": {
+   "gpus": [],
+   "ram_gb": 16,
+   "usable_gb": 0.0,
+   "bandwidth_gbps": 45.0
+  },
+  "rtx3060-12": {
+   "gpus": [
+    "NVIDIA GeForce RTX 3060"
+   ],
+   "ram_gb": 32,
+   "usable_gb": 11.4,
+   "bandwidth_gbps": 360.0
+  },
+  "rtx4070s-12+64": {
+   "gpus": [
+    "NVIDIA GeForce RTX 4070 SUPER"
+   ],
+   "ram_gb": 64,
+   "usable_gb": 11.4,
+   "bandwidth_gbps": 504.0
+  },
+  "rtx5060ti-16": {
+   "gpus": [
+    "NVIDIA GeForce RTX 5060 Ti"
+   ],
+   "ram_gb": 32,
+   "usable_gb": 15.4,
+   "bandwidth_gbps": 448.0
+  },
+  "rtx4090-24": {
+   "gpus": [
+    "NVIDIA GeForce RTX 4090"
+   ],
+   "ram_gb": 64,
+   "usable_gb": 23.4,
+   "bandwidth_gbps": 1008.0
+  },
+  "rtx5090-32": {
+   "gpus": [
+    "NVIDIA GeForce RTX 5090"
+   ],
+   "ram_gb": 64,
+   "usable_gb": 31.4,
+   "bandwidth_gbps": 1792.0
+  },
+  "2x3090-48": {
+   "gpus": [
+    "NVIDIA GeForce RTX 3090",
+    "NVIDIA GeForce RTX 3090"
+   ],
+   "ram_gb": 128,
+   "usable_gb": 46.8,
+   "bandwidth_gbps": 936.0
+  },
+  "mac-m4-16": {
+   "gpus": [
+    "Apple M4"
+   ],
+   "ram_gb": 16,
+   "usable_gb": 11.2,
+   "bandwidth_gbps": 120.0
+  },
+  "mac-m3pro-18": {
+   "gpus": [
+    "Apple M3 Pro"
+   ],
+   "ram_gb": 18,
+   "usable_gb": 12.6,
+   "bandwidth_gbps": 150.0
+  },
+  "mac-m4pro-24": {
+   "gpus": [
+    "Apple M4 Pro"
+   ],
+   "ram_gb": 24,
+   "usable_gb": 16.8,
+   "bandwidth_gbps": 273.0
+  },
+  "mac-m4max-36": {
+   "gpus": [
+    "Apple M4 Max"
+   ],
+   "ram_gb": 36,
+   "usable_gb": 25.2,
+   "bandwidth_gbps": 546.0
+  },
+  "mac-m4pro-48": {
+   "gpus": [
+    "Apple M4 Pro"
+   ],
+   "ram_gb": 48,
+   "usable_gb": 36.0,
+   "bandwidth_gbps": 273.0
+  },
+  "mac-m4max-64": {
+   "gpus": [
+    "Apple M4 Max"
+   ],
+   "ram_gb": 64,
+   "usable_gb": 48.0,
+   "bandwidth_gbps": 546.0
+  },
+  "mac-m3ultra-96": {
+   "gpus": [
+    "Apple M3 Ultra"
+   ],
+   "ram_gb": 96,
+   "usable_gb": 72.0,
+   "bandwidth_gbps": 819.0
+  },
+  "mac-m4max-128": {
+   "gpus": [
+    "Apple M4 Max"
+   ],
+   "ram_gb": 128,
+   "usable_gb": 96.0,
+   "bandwidth_gbps": 546.0
+  },
+  "mac-m3ultra-192": {
+   "gpus": [
+    "Apple M3 Ultra"
+   ],
+   "ram_gb": 192,
+   "usable_gb": 144.0,
+   "bandwidth_gbps": 819.0
+  },
+  "dgx-spark-128": {
+   "gpus": [
+    "NVIDIA GB10"
+   ],
+   "ram_gb": 128,
+   "usable_gb": 120.0,
+   "bandwidth_gbps": 273.0
+  }
+ },
+ "recipes": [
+  {
+   "id": "qwen3.5-4b-q4",
+   "name": "Qwen3.5 4B",
+   "family": "qwen3.5",
+   "quant": "Q4_K_M",
+   "params_b": 4.7,
+   "active_b": 4.7,
+   "ctx": 32768,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 32,
+   "kv_fixed_gb": 0.05,
+   "license": "apache-2.0",
+   "strengths": [
+    "speed",
+    "vision"
+   ],
+   "scores": {
+    "coding": 38,
+    "writing": 52,
+    "reasoning": 58
+   },
+   "why": "Small, current Qwen that runs on almost anything, including CPU-only laptops.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Qwen3.5-4B-GGUF",
+    "file": "Qwen3.5-4B-Q4_K_M.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.5-4B-Q4_K_M.gguf",
+      "size": 2740937888,
+      "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
+     }
+    ],
+    "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4",
+    "mmproj": {
+     "repo": "unsloth/Qwen3.5-4B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.67,
+     "sha256": "cd88edcf8d031894960bb0c9c5b9b7e1fea6ebee02b9f7ce925a00d12891f864"
+    }
+   },
+   "file_gb": 2.74,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.5-4B",
+   "status": "available",
+   "bench_source": null,
+   "speeds": [],
+   "min_mem_gb": 3.8,
+   "est_tps": {
+    "cpu-16": {
+     "tps": 8.8,
+     "source": "est",
+     "mode": "cpu",
+     "ctx": 32768
+    },
+    "rtx3060-12": {
+     "tps": 81.6,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4070s-12+64": {
+     "tps": 105.6,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5060ti-16": {
+     "tps": 96.7,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4090-24": {
+     "tps": 167.1,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 224.2,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 159.9,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m4-16": {
+     "tps": 28.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3pro-18": {
+     "tps": 35.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-24": {
+     "tps": 59.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 103.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 59.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 103.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 137.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 103.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 137.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 59.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "gemma-4-e4b-q4",
+   "name": "Gemma 4 E4B",
+   "family": "gemma-4-small",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 8.0,
+   "active_b": 4.0,
+   "ctx": 32768,
+   "ctx_max": 131072,
+   "kv_kib_per_token": 16,
+   "kv_fixed_gb": 0.15,
+   "license": "apache-2.0",
+   "strengths": [
+    "speed",
+    "writing"
+   ],
+   "scores": {
+    "coding": 25,
+    "writing": 64,
+    "reasoning": 55
+   },
+   "why": "Google's on-device Gemma 4: friendly writer, tiny footprint, fine on CPU.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/gemma-4-E4B-it-GGUF",
+    "file": "gemma-4-E4B-it-UD-Q4_K_XL.gguf",
+    "parts": [
+     {
+      "file": "gemma-4-E4B-it-UD-Q4_K_XL.gguf",
+      "size": 5126306944,
+      "sha256": "3cf61de12daa015ee0f7b68e7b7c541405bf220e1e942bad8b47cab827d7df80"
+     }
+    ],
+    "sha256": "3cf61de12daa015ee0f7b68e7b7c541405bf220e1e942bad8b47cab827d7df80"
+   },
+   "file_gb": 5.13,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/google/gemma-4-E4B-it",
+   "status": "available",
+   "bench_source": null,
+   "speeds": [],
+   "min_mem_gb": 6.3,
+   "est_tps": {
+    "cpu-16": {
+     "tps": 9.4,
+     "source": "est",
+     "mode": "cpu",
+     "ctx": 32768
+    },
+    "rtx3060-12": {
+     "tps": 86.0,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4070s-12+64": {
+     "tps": 110.8,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5060ti-16": {
+     "tps": 101.6,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4090-24": {
+     "tps": 173.5,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 230.7,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 166.3,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m4-16": {
+     "tps": 30.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3pro-18": {
+     "tps": 37.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-24": {
+     "tps": 62.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 108.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 62.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 108.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 143.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 108.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 143.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 62.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.5-9b-q4",
+   "name": "Qwen3.5 9B",
+   "family": "qwen3.5",
+   "quant": "Q4_K_M",
+   "params_b": 9.7,
+   "active_b": 9.7,
+   "ctx": 32768,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 32,
+   "kv_fixed_gb": 0.2,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "vision"
+   ],
+   "scores": {
+    "coding": 50,
+    "writing": 62,
+    "reasoning": 68
+   },
+   "speeds": [
+    {
+     "hw": "Apple M3 Pro 18GB",
+     "match": "m3 pro",
+     "tps": 15.6,
+     "source": "measured",
+     "url": "https://github.com/robertkarl/local-qwen-first-10-minutes",
+     "quant": "Q5_K_M",
+     "file_gb": 6.58,
+     "note": "llama-server b8190, full offload",
+     "spec": false
+    }
+   ],
+   "why": "Best general model for 8 GB cards and 16 GB Macs; vision included.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Qwen3.5-9B-GGUF",
+    "file": "Qwen3.5-9B-Q4_K_M.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.5-9B-Q4_K_M.gguf",
+      "size": 5680522464,
+      "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8"
+     }
+    ],
+    "sha256": "03b74727a860a56338e042c4420bb3f04b2fec5734175f4cb9fa853daf52b7e8",
+    "mmproj": {
+     "repo": "unsloth/Qwen3.5-9B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.92,
+     "sha256": "f70dc3509053962b0d0d3ee8a7eacebf5d60aa560cad78254ae8698516ae029f"
+    }
+   },
+   "file_gb": 5.68,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.5-9B",
+   "status": "available",
+   "bench_source": null,
+   "min_mem_gb": 6.9,
+   "est_tps": {
+    "cpu-16": {
+     "tps": 4.3,
+     "source": "est",
+     "mode": "cpu",
+     "ctx": 32768
+    },
+    "rtx3060-12": {
+     "tps": 44.0,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4070s-12+64": {
+     "tps": 59.0,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5060ti-16": {
+     "tps": 53.3,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4090-24": {
+     "tps": 102.8,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 152.4,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 97.3,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m4-16": {
+     "tps": 14.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3pro-18": {
+     "tps": 18.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-24": {
+     "tps": 31.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 57.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 31.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 57.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 80.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 57.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 80.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 31.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "gemma-4-12b-qat",
+   "name": "Gemma 4 12B (QAT)",
+   "family": "gemma-4",
+   "quant": "QAT Q4_0",
+   "params_b": 12.0,
+   "active_b": 12.0,
+   "ctx": 32768,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.35,
+   "license": "apache-2.0",
+   "strengths": [
+    "writing",
+    "vision",
+    "speed"
+   ],
+   "scores": {
+    "coding": 40,
+    "writing": 78,
+    "reasoning": 70
+   },
+   "speeds": [
+    {
+     "hw": "RTX 4090",
+     "match": "4090",
+     "tps": 98.1,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5090",
+     "match": "5090",
+     "tps": 142.0,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5070 Ti",
+     "match": "5070 ti",
+     "tps": 87.6,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 3060 12GB",
+     "match": "3060",
+     "tps": 38.5,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    }
+   ],
+   "why": "Google's quantization-aware 4-bit Gemma 4: natural writer, vision, fits 12 GB with room.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "google/gemma-4-12B-it-qat-q4_0-gguf",
+    "file": "gemma-4-12b-it-qat-q4_0.gguf",
+    "parts": [
+     {
+      "file": "gemma-4-12b-it-qat-q4_0.gguf",
+      "size": 6975879296,
+      "sha256": "93567e57a8fe10b23569b9d9ec38cd005deedf71e29477c421a4b83f418a538b"
+     }
+    ],
+    "sha256": "93567e57a8fe10b23569b9d9ec38cd005deedf71e29477c421a4b83f418a538b",
+    "mmproj": {
+     "repo": "google/gemma-4-12B-it-qat-q4_0-gguf",
+     "file": "mmproj-gemma-4-12b-it-qat-q4_0.gguf",
+     "size_gb": 0.18,
+     "sha256": "cb018338a7538a9814d994bfe54644c71eb7ed54e31eae2f721e45fd3c260da7"
+    }
+   },
+   "file_gb": 6.98,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/google/gemma-4-12B-it",
+   "status": "available",
+   "bench_source": null,
+   "min_mem_gb": 8.6,
+   "est_tps": {
+    "cpu-16": {
+     "tps": 3.5,
+     "source": "est",
+     "mode": "cpu",
+     "ctx": 32768
+    },
+    "rtx3060-12": {
+     "tps": 38.5,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4070s-12+64": {
+     "tps": 49.4,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5060ti-16": {
+     "tps": 44.5,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4090-24": {
+     "tps": 98.1,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 142.0,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 82.9,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m4-16": {
+     "tps": 11.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3pro-18": {
+     "tps": 14.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-24": {
+     "tps": 25.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 48.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 25.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 48.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 68.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 48.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 68.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 25.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "measured"
+  },
+  {
+   "id": "qwen3.8-27b-gsq-iq3xxs",
+   "name": "Qwen3.8 27B (3-bit GSQ)",
+   "family": "qwen3.8",
+   "quant": "GSQ-RCO IQ3_XXS (+MTP head)",
+   "params_b": 27.8,
+   "active_b": 27.8,
+   "ctx": 32768,
+   "ctx_min": 8192,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.3,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "vision"
+   ],
+   "scores": {
+    "coding": 85,
+    "writing": 75,
+    "reasoning": 87
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 73.0,
+    "SWE-bench Pro": 61.7,
+    "GPQA Diamond": 89.2
+   },
+   "spec": {
+    "type": "draft-mtp",
+    "builtin": true,
+    "gain": 1.6,
+    "flags": [
+     "--spec-type",
+     "draft-mtp",
+     "--spec-draft-n-max",
+     "2"
+    ]
+   },
+   "why": "The strongest dense coder, squeezed to ~10 GB with near-lossless 3-bit research quant.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+    "file": "Qwen3.8-27B-GSQ-RCO-IQ3_XXS-mtp.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.8-27B-GSQ-RCO-IQ3_XXS-mtp.gguf",
+      "size": 10442827840,
+      "sha256": "63f29a2189a6b4cc31f81e093d3856ad293a5583114439f41ae1ed7af4093262"
+     }
+    ],
+    "sha256": "63f29a2189a6b4cc31f81e093d3856ad293a5583114439f41ae1ed7af4093262",
+    "mmproj": {
+     "repo": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+     "file": "mmproj-Qwen3.8-27B-BF16.gguf",
+     "size_gb": 0.93,
+     "sha256": "13cb7bebccbd04afc8f4090cb949ecf8937cdf7377c5799b1a0c594e7c0d3e16"
+    }
+   },
+   "file_gb": 10.44,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+   "status": "available",
+   "bench_source": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 12.0,
+   "est_tps": {
+    "rtx5060ti-16": {
+     "tps": 30.9,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx4090-24": {
+     "tps": 63.4,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 100.3,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 59.5,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m3pro-18": {
+     "tps": 9.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 16384
+    },
+    "mac-m4pro-24": {
+     "tps": 17.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 33.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 17.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 33.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 48.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 33.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 48.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 17.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.8-27b-gsq-iq3s",
+   "name": "Qwen3.8 27B (3.5-bit GSQ)",
+   "family": "qwen3.8",
+   "quant": "GSQ-RCO IQ3_S (+MTP head)",
+   "params_b": 27.8,
+   "active_b": 27.8,
+   "ctx": 65536,
+   "ctx_min": 8192,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.3,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "vision"
+   ],
+   "scores": {
+    "coding": 87,
+    "writing": 77,
+    "reasoning": 88
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 73.0,
+    "SWE-bench Pro": 61.7,
+    "GPQA Diamond": 89.2
+   },
+   "spec": {
+    "type": "draft-mtp",
+    "builtin": true,
+    "gain": 1.6,
+    "flags": [
+     "--spec-type",
+     "draft-mtp",
+     "--spec-draft-n-max",
+     "2"
+    ]
+   },
+   "why": "Qwen3.8 27B at 3.5 bits: card reports 99.8% of BF16 task average in 11.8 GB.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+    "file": "Qwen3.8-27B-GSQ-RCO-IQ3_S-mtp.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.8-27B-GSQ-RCO-IQ3_S-mtp.gguf",
+      "size": 12120016960,
+      "sha256": "58fd826723939933dc86f45b7fe04545cbc2de1c70f6fe2cdd3858c87a98c12f"
+     }
+    ],
+    "sha256": "58fd826723939933dc86f45b7fe04545cbc2de1c70f6fe2cdd3858c87a98c12f",
+    "mmproj": {
+     "repo": "ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+     "file": "mmproj-Qwen3.8-27B-BF16.gguf",
+     "size_gb": 0.93,
+     "sha256": "13cb7bebccbd04afc8f4090cb949ecf8937cdf7377c5799b1a0c594e7c0d3e16"
+    }
+   },
+   "file_gb": 12.12,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF",
+   "status": "available",
+   "bench_source": "https://huggingface.co/ISTA-DASLab/Qwen3.8-27B-GSQ-RCO-GGUF (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 13.7,
+   "est_tps": {
+    "rtx5060ti-16": {
+     "tps": 26.9,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 49152
+    },
+    "rtx4090-24": {
+     "tps": 55.8,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "rtx5090-32": {
+     "tps": 89.5,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "2x3090-48": {
+     "tps": 52.4,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "mac-m4pro-24": {
+     "tps": 15.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-36": {
+     "tps": 29.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4pro-48": {
+     "tps": 15.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-64": {
+     "tps": 29.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-96": {
+     "tps": 42.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-128": {
+     "tps": 29.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-192": {
+     "tps": 42.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "dgx-spark-128": {
+     "tps": 15.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "gpt-oss-20b",
+   "name": "gpt-oss 20B",
+   "family": "gpt-oss",
+   "quant": "MXFP4 (native)",
+   "params_b": 21.0,
+   "active_b": 3.6,
+   "moe": true,
+   "ctx": 65536,
+   "ctx_max": 131072,
+   "kv_kib_per_token": 24,
+   "kv_fixed_gb": 0.05,
+   "n_layers": 24,
+   "dense_frac": 0.09,
+   "active_dense_frac": 0.34,
+   "license": "apache-2.0",
+   "strengths": [
+    "speed",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 48,
+    "writing": 60,
+    "reasoning": 72
+   },
+   "speeds": [
+    {
+     "hw": "RTX 5090",
+     "match": "5090",
+     "tps": 282.5,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "llama-bench tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 4090",
+     "match": "4090",
+     "tps": 221.9,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "llama-bench tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5080",
+     "match": "5080",
+     "tps": 204.9,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "llama-bench tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5070 Ti",
+     "match": "5070 ti",
+     "tps": 189.5,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "llama-bench tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 3090",
+     "match": "3090",
+     "tps": 161.8,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "llama-bench tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 4070 Ti",
+     "match": "4070 ti",
+     "tps": 163.1,
+     "source": "measured",
+     "url": "https://github.com/geerlingguy/ai-benchmarks",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "Geerling ai-benchmarks #45",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5060 Ti 16GB",
+     "match": "5060 ti",
+     "tps": 111.5,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "llama-bench tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 3060 12GB",
+     "match": "3060",
+     "tps": 84.0,
+     "source": "measured",
+     "url": "https://github.com/geerlingguy/ai-benchmarks",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "Geerling ai-benchmarks #40",
+     "spec": false
+    },
+    {
+     "hw": "Apple M2 Ultra",
+     "match": "m2 ultra",
+     "tps": 116.1,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/4167",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "",
+     "spec": false
+    },
+    {
+     "hw": "Apple M3 Ultra",
+     "match": "m3 ultra",
+     "tps": 115.5,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "",
+     "spec": false
+    },
+    {
+     "hw": "Apple M4 Max",
+     "match": "m4 max",
+     "tps": 92.4,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "",
+     "spec": false
+    },
+    {
+     "hw": "Apple M1 Max",
+     "match": "m1 max",
+     "tps": 75.2,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "",
+     "spec": false
+    },
+    {
+     "hw": "DGX Spark (GB10)",
+     "match": "gb10",
+     "tps": 88.0,
+     "source": "measured",
+     "url": "https://github.com/geerlingguy/ai-benchmarks",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "Geerling ai-benchmarks #34",
+     "spec": false
+    }
+   ],
+   "why": "OpenAI's open MoE: very fast, solid reasoning, full 128K context on 16 GB.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ggml-org/gpt-oss-20b-GGUF",
+    "file": "gpt-oss-20b-MXFP4.gguf",
+    "parts": [
+     {
+      "file": "gpt-oss-20b-MXFP4.gguf",
+      "size": 12109566624,
+      "sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901"
+     }
+    ],
+    "sha256": "27cd6c432c7672cb812a92f611cf3ba7bbc35928262bb1e1253ff4ee6ae35901"
+   },
+   "file_gb": 12.11,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/openai/gpt-oss-20b",
+   "status": "available",
+   "bench_source": null,
+   "min_mem_gb": 13.3,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 51.1,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4070s-12+64": {
+     "tps": 56.0,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx5060ti-16": {
+     "tps": 111.5,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "rtx4090-24": {
+     "tps": 221.9,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "rtx5090-32": {
+     "tps": 282.5,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "2x3090-48": {
+     "tps": 161.8,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "mac-m4pro-24": {
+     "tps": 74.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-36": {
+     "tps": 92.4,
+     "source": "measured",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4pro-48": {
+     "tps": 74.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-64": {
+     "tps": 92.4,
+     "source": "measured",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-96": {
+     "tps": 115.5,
+     "source": "measured",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-128": {
+     "tps": 92.4,
+     "source": "measured",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-192": {
+     "tps": 115.5,
+     "source": "measured",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "dgx-spark-128": {
+     "tps": 88.0,
+     "source": "measured",
+     "mode": "unified",
+     "ctx": 65536
+    }
+   },
+   "tps_source": "measured"
+  },
+  {
+   "id": "gemma-4-26b-a4b-iq4xs",
+   "name": "Gemma 4 26B-A4B",
+   "family": "gemma-4-moe",
+   "quant": "UD-IQ4_XS",
+   "params_b": 25.8,
+   "active_b": 3.8,
+   "moe": true,
+   "ctx": 32768,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 40,
+   "kv_fixed_gb": 0.25,
+   "n_layers": 30,
+   "dense_frac": 0.12,
+   "active_dense_frac": 0.62,
+   "license": "apache-2.0",
+   "strengths": [
+    "writing",
+    "speed",
+    "vision"
+   ],
+   "scores": {
+    "coding": 50,
+    "writing": 84,
+    "reasoning": 80
+   },
+   "benchmarks": {
+    "LiveCodeBench v6": 77.1,
+    "GPQA Diamond": 82.3
+   },
+   "speeds": [
+    {
+     "hw": "RTX 4090",
+     "match": "4090",
+     "tps": 164.0,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5090",
+     "match": "5090",
+     "tps": 235.0,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    }
+   ],
+   "why": "Gemma 4's fast MoE: strong writing at small-model speed, vision included.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/gemma-4-26B-A4B-it-GGUF",
+    "file": "gemma-4-26B-A4B-it-UD-IQ4_XS.gguf",
+    "parts": [
+     {
+      "file": "gemma-4-26B-A4B-it-UD-IQ4_XS.gguf",
+      "size": 13597177568,
+      "sha256": "babd1e389d386352f71600765d37390f7dc993fbfad6725caccf996ffe34aecf"
+     }
+    ],
+    "sha256": "babd1e389d386352f71600765d37390f7dc993fbfad6725caccf996ffe34aecf",
+    "mmproj": {
+     "repo": "unsloth/gemma-4-26B-A4B-it-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 1.19,
+     "sha256": "418a6d8723067cd712235facbbc5cba6c8fbbd413fc1292d2aace5a027d5a42f"
+    }
+   },
+   "file_gb": 13.6,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/google/gemma-4-26B-A4B-it",
+   "status": "available",
+   "bench_source": "https://huggingface.co/google/gemma-4-26B-A4B-it (self-reported)",
+   "min_mem_gb": 15.1,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 58.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 32768
+    },
+    "rtx4070s-12+64": {
+     "tps": 65.5,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 32768
+    },
+    "rtx5060ti-16": {
+     "tps": 121.5,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 16384
+    },
+    "rtx4090-24": {
+     "tps": 164.0,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 235.0,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 190.7,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m4pro-24": {
+     "tps": 77.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 129.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 77.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 129.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 166.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 129.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 166.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 77.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "measured"
+  },
+  {
+   "id": "flint-40b-iq3xxs",
+   "name": "Flint 40B-A2.5B (3-bit)",
+   "family": "flint",
+   "quant": "UD-IQ3_XXS",
+   "params_b": 39.8,
+   "active_b": 2.5,
+   "moe": true,
+   "ctx": 65536,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 28,
+   "kv_fixed_gb": 0.1,
+   "n_layers": 49,
+   "dense_frac": 0.05,
+   "active_dense_frac": 0.63,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "speed"
+   ],
+   "scores": {
+    "coding": 78,
+    "writing": 48,
+    "reasoning": 68
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 54.9,
+    "SWE-bench Verified": 74.2
+   },
+   "why": "Recursive's coding-agent MoE (Oct 2026): tiny active size, very fast, built for repos.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/flint-GGUF",
+    "file": "flint-UD-IQ3_XXS.gguf",
+    "parts": [
+     {
+      "file": "flint-UD-IQ3_XXS.gguf",
+      "size": 14535427520,
+      "sha256": "7a0a095dde1d931063a5d571e19497d997edbc783eb1ed6b86529bfab9d94804"
+     }
+    ],
+    "sha256": "7a0a095dde1d931063a5d571e19497d997edbc783eb1ed6b86529bfab9d94804"
+   },
+   "file_gb": 14.54,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/RecursiveSI/flint",
+   "status": "available",
+   "bench_source": "https://huggingface.co/RecursiveSI/flint (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 15.9,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 110.0,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4070s-12+64": {
+     "tps": 120.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx5060ti-16": {
+     "tps": 162.7,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4090-24": {
+     "tps": 273.1,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "rtx5090-32": {
+     "tps": 317.1,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "2x3090-48": {
+     "tps": 266.6,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "mac-m4pro-24": {
+     "tps": 137.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-36": {
+     "tps": 204.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4pro-48": {
+     "tps": 137.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-64": {
+     "tps": 204.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-96": {
+     "tps": 244.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-128": {
+     "tps": 204.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-192": {
+     "tps": 244.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "dgx-spark-128": {
+     "tps": 137.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.8-27b-q4",
+   "name": "Qwen3.8 27B",
+   "family": "qwen3.8",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 27.8,
+   "active_b": 27.8,
+   "ctx": 131072,
+   "ctx_min": 16384,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.3,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "vision",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 88,
+    "writing": 78,
+    "reasoning": 89
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 73.0,
+    "SWE-bench Pro": 61.7,
+    "GPQA Diamond": 89.2,
+    "LiveCodeBench v6": 90.3
+   },
+   "spec": {
+    "type": "draft-mtp",
+    "draft": {
+     "repo": "unsloth/Qwen3.8-27B-GGUF",
+     "file": "MTP/mtp-Qwen3.8-27B-Q4_0.gguf"
+    },
+    "draft_gb": 1.37,
+    "gain": 1.8,
+    "flags": [
+     "--spec-type",
+     "draft-mtp",
+     "--spec-draft-n-max",
+     "2"
+    ]
+   },
+   "speeds": [
+    {
+     "hw": "RTX 3090",
+     "match": "3090",
+     "tps": 40.4,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": "Q4_K_M",
+     "file_gb": 16.46,
+     "note": "OpenJet, llama.cpp, no spec",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5090",
+     "match": "5090",
+     "tps": 75.2,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": "Q4_K_M",
+     "file_gb": 16.46,
+     "note": "llm-speed, no spec",
+     "spec": false
+    },
+    {
+     "hw": "RTX 4090",
+     "match": "4090",
+     "tps": 125.0,
+     "source": "measured",
+     "url": "https://llamabench.ai/r/1063",
+     "quant": "UD-Q4_K_XL",
+     "file_gb": null,
+     "note": "b10538, MTP+ngram, 128K q8 KV",
+     "spec": true
+    }
+   ],
+   "why": "Best coding model for a 24 GB card: Terminal-Bench 2.1 73.0 (self-reported), 128K context.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Qwen3.8-27B-GGUF",
+    "file": "Qwen3.8-27B-UD-Q4_K_XL.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.8-27B-UD-Q4_K_XL.gguf",
+      "size": 17559178144,
+      "sha256": "3f227079003add2511437e5b1e94812e363385225bf6a9b47b0054a72bc8b01e"
+     }
+    ],
+    "sha256": "3f227079003add2511437e5b1e94812e363385225bf6a9b47b0054a72bc8b01e",
+    "mmproj": {
+     "repo": "unsloth/Qwen3.8-27B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.93,
+     "sha256": "cbb841a9ee0636b2ec172f5bb8df2ea8dfeb01e90fe7c6126581d662a0b4e43e"
+    }
+   },
+   "file_gb": 17.56,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+   "status": "available",
+   "bench_source": "https://huggingface.co/Qwen/Qwen3.8-27B (self-reported)",
+   "min_mem_gb": 21.0,
+   "est_tps": {
+    "rtx4090-24": {
+     "tps": 40.3,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "rtx5090-32": {
+     "tps": 70.5,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 37.9,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "mac-m4max-36": {
+     "tps": 20.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4pro-48": {
+     "tps": 10.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-64": {
+     "tps": 20.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 30.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 20.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 30.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 10.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.6-35b-a3b-q4",
+   "name": "Qwen3.6 35B-A3B",
+   "family": "qwen3.6",
+   "quant": "UD-Q4_K_M",
+   "params_b": 35.0,
+   "active_b": 3.0,
+   "moe": true,
+   "ctx": 65536,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 20,
+   "kv_fixed_gb": 0.2,
+   "n_layers": 40,
+   "dense_frac": 0.08,
+   "active_dense_frac": 0.6,
+   "license": "apache-2.0",
+   "strengths": [
+    "speed",
+    "coding",
+    "vision"
+   ],
+   "scores": {
+    "coding": 78,
+    "writing": 72,
+    "reasoning": 84
+   },
+   "benchmarks": {
+    "SWE-bench Verified": 73.4,
+    "Terminal-Bench 2.0": 51.5,
+    "GPQA Diamond": 86.0
+   },
+   "speeds": [
+    {
+     "hw": "RTX 4090",
+     "match": "4090",
+     "tps": 160.6,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": "Q4_K_M",
+     "file_gb": 22.13,
+     "note": "llm-speed",
+     "spec": false
+    },
+    {
+     "hw": "RTX 3090",
+     "match": "3090",
+     "tps": 146.0,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128, 146-153",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5090",
+     "match": "5090",
+     "tps": 258.0,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    }
+   ],
+   "why": "Fast all-rounder MoE: SWE-bench Verified 73.4 (self-reported) at 3B-active speed; offloads well.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Qwen3.6-35B-A3B-GGUF",
+    "file": "Qwen3.6-35B-A3B-UD-Q4_K_M.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.6-35B-A3B-UD-Q4_K_M.gguf",
+      "size": 22134528992,
+      "sha256": "ac0e2c1189e055faa36eff361580e79c5bd6f8e76bffb4ce547f167d53e31a61"
+     }
+    ],
+    "sha256": "ac0e2c1189e055faa36eff361580e79c5bd6f8e76bffb4ce547f167d53e31a61",
+    "mmproj": {
+     "repo": "unsloth/Qwen3.6-35B-A3B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.9,
+     "sha256": "8971ee4f331ff0a4c609374f32984b3d4e6dc086c0aa35f1d637fad1829e887f"
+    }
+   },
+   "file_gb": 22.13,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+   "status": "available",
+   "bench_source": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B (self-reported)",
+   "min_mem_gb": 23.7,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 47.2,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4070s-12+64": {
+     "tps": 50.6,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx5060ti-16": {
+     "tps": 59.1,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4090-24": {
+     "tps": 155.7,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx5090-32": {
+     "tps": 258.0,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "2x3090-48": {
+     "tps": 146.0,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "mac-m4max-36": {
+     "tps": 134.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4pro-48": {
+     "tps": 80.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-64": {
+     "tps": 134.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-96": {
+     "tps": 172.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-128": {
+     "tps": 134.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-192": {
+     "tps": 172.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "dgx-spark-128": {
+     "tps": 80.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    }
+   },
+   "tps_source": "measured"
+  },
+  {
+   "id": "gemma-4-31b-q4",
+   "name": "Gemma 4 31B",
+   "family": "gemma-4",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 31.0,
+   "active_b": 31.0,
+   "ctx": 32768,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 80,
+   "kv_fixed_gb": 0.9,
+   "license": "apache-2.0",
+   "strengths": [
+    "writing",
+    "vision",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 62,
+    "writing": 88,
+    "reasoning": 84
+   },
+   "benchmarks": {
+    "LiveCodeBench v6": 80.0,
+    "GPQA Diamond": 84.3
+   },
+   "speeds": [
+    {
+     "hw": "RTX 4090",
+     "match": "4090",
+     "tps": 43.8,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    },
+    {
+     "hw": "RTX 5090",
+     "match": "5090",
+     "tps": 70.0,
+     "source": "measured",
+     "url": "https://dev.to/rigbase/what-gpu-do-you-need-for-qwen38-qwen36-gemma-4-and-gpt-oss-locally-measured-oct-2026-1eg6",
+     "quant": null,
+     "file_gb": null,
+     "note": "tg128",
+     "spec": false
+    }
+   ],
+   "why": "Best writer that fits 24 GB: Gemma 4's flagship dense model, with vision.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/gemma-4-31B-it-GGUF",
+    "file": "gemma-4-31B-it-UD-Q4_K_XL.gguf",
+    "parts": [
+     {
+      "file": "gemma-4-31B-it-UD-Q4_K_XL.gguf",
+      "size": 18822970304,
+      "sha256": "9e92cb6236044c6a9870af406029c74a76e0571c157a6f95df724dcc8c7a1575"
+     }
+    ],
+    "sha256": "9e92cb6236044c6a9870af406029c74a76e0571c157a6f95df724dcc8c7a1575",
+    "mmproj": {
+     "repo": "unsloth/gemma-4-31B-it-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 1.2,
+     "sha256": "6edcca228213c28d3567a35d22f849eea52d8360875093851959adf5d2f270eb"
+    }
+   },
+   "file_gb": 18.82,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/google/gemma-4-31B-it",
+   "status": "available",
+   "bench_source": "https://huggingface.co/google/gemma-4-31B-it (self-reported)",
+   "min_mem_gb": 21.3,
+   "est_tps": {
+    "rtx4090-24": {
+     "tps": 43.8,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "rtx5090-32": {
+     "tps": 70.0,
+     "source": "measured",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "2x3090-48": {
+     "tps": 35.4,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 32768
+    },
+    "mac-m4max-36": {
+     "tps": 19.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4pro-48": {
+     "tps": 9.9,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-64": {
+     "tps": 19.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-96": {
+     "tps": 28.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m4max-128": {
+     "tps": 19.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 28.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 9.9,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "measured"
+  },
+  {
+   "id": "nemotron-3.5-bolt-74b-24gb",
+   "name": "Nemotron 3.5 Bolt 74B-A9B (24GB)",
+   "family": "nemotron-3.5-bolt",
+   "quant": "IQ2 (QAT, native)",
+   "params_b": 74.0,
+   "active_b": 9.0,
+   "moe": true,
+   "ctx": 65536,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 16,
+   "kv_fixed_gb": 0.5,
+   "n_layers": 88,
+   "dense_frac": 0.12,
+   "active_dense_frac": 0.5,
+   "license": "openmdw-1.1",
+   "strengths": [
+    "reasoning",
+    "vision",
+    "coding"
+   ],
+   "scores": {
+    "coding": 72,
+    "writing": 70,
+    "reasoning": 86
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 50.98,
+    "GPQA Diamond": 86.43
+   },
+   "spec": {
+    "type": "draft-dflash",
+    "draft": {
+     "repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr-GGUF",
+     "file": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-LiLiCorr.gguf"
+    },
+    "draft_gb": 1.0,
+    "gain": 1.6,
+    "flags": [
+     "--spec-type",
+     "draft-dflash",
+     "--spec-draft-n-max",
+     "6",
+     "--spec-draft-ngl",
+     "999"
+    ]
+   },
+   "why": "NVIDIA's 2-bit QAT agent model (Oct 2026) made for 24 GB: big-model reasoning, 9B-active speed.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF",
+    "file": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB.gguf",
+    "parts": [
+     {
+      "file": "NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB.gguf",
+      "size": 22018326528,
+      "sha256": "91d63363e782c8a3d5f4be42816eba8e0d42dd2530bd07a7d0d2dc440599af75"
+     }
+    ],
+    "sha256": "91d63363e782c8a3d5f4be42816eba8e0d42dd2530bd07a7d0d2dc440599af75",
+    "mmproj": {
+     "repo": "nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF",
+     "file": "mmproj-NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB.gguf",
+     "size_gb": 1.73,
+     "sha256": "0ee891eadc7bf0cae6289b249c74eb1ef420534351f6ef8b64d49f0ca6a926b0"
+    }
+   },
+   "file_gb": 22.02,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF",
+   "status": "available",
+   "bench_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-GGUF (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 24.8,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 27.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4070s-12+64": {
+     "tps": 29.2,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx5060ti-16": {
+     "tps": 35.7,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx4090-24": {
+     "tps": 96.7,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 65536
+    },
+    "rtx5090-32": {
+     "tps": 226.4,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "2x3090-48": {
+     "tps": 162.1,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 65536
+    },
+    "mac-m4max-36": {
+     "tps": 105.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 49152
+    },
+    "mac-m4pro-48": {
+     "tps": 60.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-64": {
+     "tps": 105.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-96": {
+     "tps": 139.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m4max-128": {
+     "tps": 105.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "mac-m3ultra-192": {
+     "tps": 139.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    },
+    "dgx-spark-128": {
+     "tps": 60.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 65536
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.8-27b-q6",
+   "name": "Qwen3.8 27B (6-bit)",
+   "family": "qwen3.8",
+   "quant": "UD-Q6_K",
+   "params_b": 27.8,
+   "active_b": 27.8,
+   "ctx": 131072,
+   "ctx_min": 16384,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.3,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "vision",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 89,
+    "writing": 79,
+    "reasoning": 90
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 73.0,
+    "SWE-bench Pro": 61.7,
+    "GPQA Diamond": 89.2
+   },
+   "spec": {
+    "type": "draft-mtp",
+    "draft": {
+     "repo": "unsloth/Qwen3.8-27B-GGUF",
+     "file": "MTP/mtp-Qwen3.8-27B-Q4_0.gguf"
+    },
+    "draft_gb": 1.37,
+    "gain": 1.8,
+    "flags": [
+     "--spec-type",
+     "draft-mtp",
+     "--spec-draft-n-max",
+     "2"
+    ]
+   },
+   "why": "Qwen3.8 27B at near-lossless 6-bit for 32 GB cards and 48 GB Macs.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Qwen3.8-27B-GGUF",
+    "file": "Qwen3.8-27B-UD-Q6_K.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.8-27B-UD-Q6_K.gguf",
+      "size": 21983677344,
+      "sha256": "c9c206812fbe4ac7b76a729e25928b63f2ae89d37f69da7a71c20aec763cd436"
+     }
+    ],
+    "sha256": "c9c206812fbe4ac7b76a729e25928b63f2ae89d37f69da7a71c20aec763cd436",
+    "mmproj": {
+     "repo": "unsloth/Qwen3.8-27B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.93,
+     "sha256": "cbb841a9ee0636b2ec172f5bb8df2ea8dfeb01e90fe7c6126581d662a0b4e43e"
+    }
+   },
+   "file_gb": 21.98,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+   "status": "available",
+   "bench_source": "https://huggingface.co/Qwen/Qwen3.8-27B (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 25.5,
+   "est_tps": {
+    "rtx5090-32": {
+     "tps": 54.9,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 30.7,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "mac-m4pro-48": {
+     "tps": 8.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-64": {
+     "tps": 16.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 24.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 16.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 24.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 8.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.8-27b-q8",
+   "name": "Qwen3.8 27B (8-bit)",
+   "family": "qwen3.8",
+   "quant": "Q8_0",
+   "params_b": 27.8,
+   "active_b": 27.8,
+   "ctx": 131072,
+   "ctx_min": 16384,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.3,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "vision",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 90,
+    "writing": 79,
+    "reasoning": 90
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 73.0,
+    "SWE-bench Pro": 61.7,
+    "GPQA Diamond": 89.2
+   },
+   "spec": {
+    "type": "draft-mtp",
+    "draft": {
+     "repo": "unsloth/Qwen3.8-27B-GGUF",
+     "file": "MTP/mtp-Qwen3.8-27B-Q4_0.gguf"
+    },
+    "draft_gb": 1.37,
+    "gain": 1.8,
+    "flags": [
+     "--spec-type",
+     "draft-mtp",
+     "--spec-draft-n-max",
+     "2"
+    ]
+   },
+   "why": "Full-quality Qwen3.8 27B with 128K+ context for 64 GB Macs and 48 GB GPU rigs.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Qwen3.8-27B-GGUF",
+    "file": "Qwen3.8-27B-Q8_0.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.8-27B-Q8_0.gguf",
+      "size": 29047086048,
+      "sha256": "a680f44a06920e5d689774823782006aa3acc8db95750323373b24139b67e348"
+     }
+    ],
+    "sha256": "a680f44a06920e5d689774823782006aa3acc8db95750323373b24139b67e348",
+    "mmproj": {
+     "repo": "unsloth/Qwen3.8-27B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.93,
+     "sha256": "cbb841a9ee0636b2ec172f5bb8df2ea8dfeb01e90fe7c6126581d662a0b4e43e"
+    }
+   },
+   "file_gb": 29.05,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.8-27B",
+   "status": "available",
+   "bench_source": "https://huggingface.co/Qwen/Qwen3.8-27B (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 32.7,
+   "est_tps": {
+    "2x3090-48": {
+     "tps": 23.6,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "mac-m4pro-48": {
+     "tps": 6.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 98304
+    },
+    "mac-m4max-64": {
+     "tps": 12.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 18.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 12.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 18.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 6.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "flint-40b-q4",
+   "name": "Flint 40B-A2.5B",
+   "family": "flint",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 39.8,
+   "active_b": 2.5,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 28,
+   "kv_fixed_gb": 0.1,
+   "n_layers": 49,
+   "dense_frac": 0.05,
+   "active_dense_frac": 0.63,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "speed"
+   ],
+   "scores": {
+    "coding": 80,
+    "writing": 50,
+    "reasoning": 70
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 54.9,
+    "SWE-bench Verified": 74.2
+   },
+   "why": "Recursive's coding-agent MoE at 4-bit: SWE-bench Verified 74.2 (self-reported), very fast.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/flint-GGUF",
+    "file": "flint-UD-Q4_K_XL.gguf",
+    "parts": [
+     {
+      "file": "flint-UD-Q4_K_XL.gguf",
+      "size": 25054688704,
+      "sha256": "63c2ecc461ca545134b670c660e76fa20f47240f8d39b6510bfd21c4dd6e072f"
+     }
+    ],
+    "sha256": "63c2ecc461ca545134b670c660e76fa20f47240f8d39b6510bfd21c4dd6e072f"
+   },
+   "file_gb": 25.05,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/RecursiveSI/flint",
+   "status": "available",
+   "bench_source": "https://huggingface.co/RecursiveSI/flint (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 26.6,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 54.2,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx4070s-12+64": {
+     "tps": 57.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx5060ti-16": {
+     "tps": 65.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx4090-24": {
+     "tps": 120.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx5090-32": {
+     "tps": 275.8,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 214.8,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "mac-m4pro-48": {
+     "tps": 93.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-64": {
+     "tps": 151.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 190.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 151.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 190.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 93.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "nemotron-3.5-lightning-30b-q4",
+   "name": "Nemotron 3.5 Lightning 30B-A3B",
+   "family": "nemotron-3.5-lightning",
+   "quant": "Q4_0",
+   "params_b": 31.6,
+   "active_b": 3.0,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 8,
+   "kv_fixed_gb": 0.3,
+   "n_layers": 52,
+   "dense_frac": 0.1,
+   "active_dense_frac": 0.5,
+   "license": "openmdw-1.1",
+   "strengths": [
+    "speed",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 52,
+    "writing": 62,
+    "reasoning": 74
+   },
+   "benchmarks": {
+    "SWE-bench Verified": 51.6,
+    "Terminal-Bench 2.1": 23.5,
+    "GPQA Diamond": 75.6
+   },
+   "why": "Hybrid Mamba MoE: tiny KV cache, so very long context stays cheap and fast.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ggml-org/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-GGUF",
+    "file": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Q4_0.gguf",
+    "parts": [
+     {
+      "file": "NVIDIA-Nemotron-3.5-Lightning-30B-A3B-Q4_0.gguf",
+      "size": 18898091584,
+      "sha256": "61f87e75974e4b535dcdf9aad056541a9514f1dfa4538b463b081d19b7a00e3c"
+     }
+    ],
+    "sha256": "61f87e75974e4b535dcdf9aad056541a9514f1dfa4538b463b081d19b7a00e3c"
+   },
+   "file_gb": 18.9,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+   "status": "available",
+   "bench_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16 (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 20.4,
+   "est_tps": {
+    "rtx3060-12": {
+     "tps": 45.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx4070s-12+64": {
+     "tps": 48.6,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx5060ti-16": {
+     "tps": 65.1,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx4090-24": {
+     "tps": 209.1,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "rtx5090-32": {
+     "tps": 264.3,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 201.7,
+     "source": "est",
+     "mode": "gpu",
+     "ctx": 131072
+    },
+    "mac-m4max-36": {
+     "tps": 139.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4pro-48": {
+     "tps": 84.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-64": {
+     "tps": 139.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 177.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 139.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 177.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 84.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "gpt-oss-120b",
+   "name": "gpt-oss 120B",
+   "family": "gpt-oss",
+   "quant": "MXFP4 (native)",
+   "params_b": 117.0,
+   "active_b": 5.1,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 131072,
+   "kv_kib_per_token": 36,
+   "kv_fixed_gb": 0.1,
+   "n_layers": 36,
+   "dense_frac": 0.04,
+   "active_dense_frac": 0.3,
+   "license": "apache-2.0",
+   "strengths": [
+    "speed",
+    "reasoning"
+   ],
+   "scores": {
+    "coding": 60,
+    "writing": 66,
+    "reasoning": 80
+   },
+   "speeds": [
+    {
+     "hw": "RTX Pro 6000 (96GB)",
+     "match": "rtx pro 6000",
+     "tps": 196.3,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/15396",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "",
+     "spec": false
+    },
+    {
+     "hw": "Apple M2 Ultra",
+     "match": "m2 ultra",
+     "tps": 79.7,
+     "source": "measured",
+     "url": "https://github.com/ggml-org/llama.cpp/discussions/4167",
+     "quant": "MXFP4",
+     "file_gb": null,
+     "note": "",
+     "spec": false
+    }
+   ],
+   "why": "OpenAI's big open MoE: fast and dependable on 96 GB+ machines.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ggml-org/gpt-oss-120b-GGUF",
+    "file": "gpt-oss-120b-MXFP4.gguf",
+    "parts": [
+     {
+      "file": "gpt-oss-120b-MXFP4.gguf",
+      "size": 63387346208,
+      "sha256": "582bd40f6886200101f4c4ed9f25f3fe80cc14c86e9e2b37746cd8904a0c622d"
+     }
+    ],
+    "sha256": "582bd40f6886200101f4c4ed9f25f3fe80cc14c86e9e2b37746cd8904a0c622d"
+   },
+   "file_gb": 63.39,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/openai/gpt-oss-120b",
+   "status": "available",
+   "bench_source": null,
+   "min_mem_gb": 65.7,
+   "est_tps": {
+    "rtx4090-24": {
+     "tps": 22.5,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx5090-32": {
+     "tps": 27.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 40.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 136.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 102.8,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 136.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 59.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "nemotron-3.5-bolt-74b-q4",
+   "name": "Nemotron 3.5 Bolt 74B-A9B (4-bit)",
+   "family": "nemotron-3.5-bolt",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 74.0,
+   "active_b": 9.0,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 16,
+   "kv_fixed_gb": 0.5,
+   "n_layers": 88,
+   "dense_frac": 0.12,
+   "active_dense_frac": 0.5,
+   "license": "openmdw-1.1",
+   "strengths": [
+    "reasoning",
+    "vision",
+    "coding"
+   ],
+   "scores": {
+    "coding": 74,
+    "writing": 72,
+    "reasoning": 87
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 50.98,
+    "GPQA Diamond": 86.43
+   },
+   "why": "Nemotron Bolt at 4-bit for 64-96 GB machines: more headroom than the 2-bit 24GB build.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF",
+    "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-UD-Q4_K_XL-00001-of-00003.gguf",
+    "parts": [
+     {
+      "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-UD-Q4_K_XL-00001-of-00003.gguf",
+      "size": 7876160,
+      "sha256": "d6f33b5e8a49ea57a0a3ae922dfd0b3033a19429993d3215fc4992f4270aa2df"
+     },
+     {
+      "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-UD-Q4_K_XL-00002-of-00003.gguf",
+      "size": 49524981280,
+      "sha256": "93c8485db6f9e9d26085acc368ca3b0993a36aa870e8f8b7748c1fbd174c6276"
+     },
+     {
+      "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-UD-Q4_K_XL-00003-of-00003.gguf",
+      "size": 686620928,
+      "sha256": "f97b7a5443b3f77150a1bf7bac6c00862411ee2f26b7bf57a599fb61dbe867df"
+     }
+    ],
+    "mmproj": {
+     "repo": "unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF",
+     "file": "mmproj-BF16.gguf",
+     "size_gb": 1.73,
+     "sha256": "acad03175d80ce7caea6854795e9ecc978e86d4b4caae0125efba5f970216f4f"
+    }
+   },
+   "file_gb": 50.22,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF",
+   "status": "available",
+   "bench_source": "https://huggingface.co/unsloth/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-GGUF (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 52.6,
+   "est_tps": {
+    "rtx4070s-12+64": {
+     "tps": 10.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx4090-24": {
+     "tps": 15.1,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx5090-32": {
+     "tps": 20.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 40.6,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 76.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 54.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 76.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 29.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "ornith-1.5-122b-q3",
+   "name": "Ornith 1.5 122B (3-bit)",
+   "family": "ornith",
+   "quant": "UD-Q3_K_XL",
+   "params_b": 125.1,
+   "active_b": 10.0,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 24,
+   "kv_fixed_gb": 0.4,
+   "n_layers": 48,
+   "dense_frac": 0.07,
+   "active_dense_frac": 0.64,
+   "license": "mit",
+   "strengths": [
+    "coding",
+    "reasoning",
+    "vision"
+   ],
+   "scores": {
+    "coding": 91,
+    "writing": 74,
+    "reasoning": 89
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 81.2,
+    "SWE-bench Pro": 76.9
+   },
+   "why": "Top open coder that fits 96 GB (Oct 2026): Terminal-Bench 2.1 81.2 (self-reported).",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Ornith-1.5-122B-GGUF",
+    "file": "UD-Q3_K_XL/Ornith-1.5-122B-UD-Q3_K_XL-00001-of-00003.gguf",
+    "parts": [
+     {
+      "file": "UD-Q3_K_XL/Ornith-1.5-122B-UD-Q3_K_XL-00001-of-00003.gguf",
+      "size": 10942929,
+      "sha256": "d8a23c487741fdac7026e10013fa8e320502cf01048a2333b2db8ba2a9f74fe5"
+     },
+     {
+      "file": "UD-Q3_K_XL/Ornith-1.5-122B-UD-Q3_K_XL-00002-of-00003.gguf",
+      "size": 49791670080,
+      "sha256": "95f76e67ffc49e2b0b4a4dfe5c42269b4b275ecf9e3696f599f3eeac92180323"
+     },
+     {
+      "file": "UD-Q3_K_XL/Ornith-1.5-122B-UD-Q3_K_XL-00003-of-00003.gguf",
+      "size": 9958641536,
+      "sha256": "1c4b52bbb1d45a21b5b7927429a5c80f264c688f2d14ed50ba0b6da0260d4028"
+     }
+    ],
+    "mmproj": {
+     "repo": "unsloth/Ornith-1.5-122B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.91,
+     "sha256": "39db176176a904b101f5173a4f03e785990f9279f94ab373c4fd629ae7011817"
+    }
+   },
+   "file_gb": 59.76,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+   "status": "available",
+   "bench_source": "https://huggingface.co/ornith-ai/Ornith-1.5-122B (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 62.3,
+   "est_tps": {
+    "rtx4090-24": {
+     "tps": 23.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "rtx5090-32": {
+     "tps": 29.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "2x3090-48": {
+     "tps": 43.0,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m3ultra-96": {
+     "tps": 92.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 66.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 92.3,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 36.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "ornith-1.5-122b-q4",
+   "name": "Ornith 1.5 122B",
+   "family": "ornith",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 125.1,
+   "active_b": 10.0,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 24,
+   "kv_fixed_gb": 0.4,
+   "n_layers": 48,
+   "dense_frac": 0.07,
+   "active_dense_frac": 0.64,
+   "license": "mit",
+   "strengths": [
+    "coding",
+    "reasoning",
+    "vision"
+   ],
+   "scores": {
+    "coding": 93,
+    "writing": 76,
+    "reasoning": 90
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 81.2,
+    "SWE-bench Pro": 76.9
+   },
+   "why": "Best coder for a 128 GB Mac or DGX Spark: Terminal-Bench 2.1 81.2, SWE-bench Pro 76.9 (self-reported).",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/Ornith-1.5-122B-GGUF",
+    "file": "UD-Q4_K_XL/Ornith-1.5-122B-UD-Q4_K_XL-00001-of-00003.gguf",
+    "parts": [
+     {
+      "file": "UD-Q4_K_XL/Ornith-1.5-122B-UD-Q4_K_XL-00001-of-00003.gguf",
+      "size": 10942929,
+      "sha256": "7159d31a6a6ce5528500b490880383844c3c9b21fcdaad94e66c9e65233ff359"
+     },
+     {
+      "file": "UD-Q4_K_XL/Ornith-1.5-122B-UD-Q4_K_XL-00002-of-00003.gguf",
+      "size": 49971099680,
+      "sha256": "e66952128394bb4c75554c7e10a12a8b63dd1c7f049d876a02885a946e30c1c3"
+     },
+     {
+      "file": "UD-Q4_K_XL/Ornith-1.5-122B-UD-Q4_K_XL-00003-of-00003.gguf",
+      "size": 29731729056,
+      "sha256": "21325ec18a9e3210eeffada0fc327a25a79171918f1d04f8f0a06b61866ac9ba"
+     }
+    ],
+    "mmproj": {
+     "repo": "unsloth/Ornith-1.5-122B-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 0.91,
+     "sha256": "39db176176a904b101f5173a4f03e785990f9279f94ab373c4fd629ae7011817"
+    }
+   },
+   "file_gb": 79.71,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B",
+   "status": "available",
+   "bench_source": "https://huggingface.co/ornith-ai/Ornith-1.5-122B (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 82.6,
+   "est_tps": {
+    "2x3090-48": {
+     "tps": 23.4,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 52.2,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 73.5,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 27.9,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "nemotron-3.5-super-120b-q4",
+   "name": "Nemotron 3.5 Super VL 120B-A12B",
+   "family": "nemotron-3.5-super",
+   "quant": "UD-Q4_K_XL",
+   "params_b": 124.5,
+   "active_b": 12.0,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 1048576,
+   "kv_kib_per_token": 16,
+   "kv_fixed_gb": 0.6,
+   "n_layers": 88,
+   "dense_frac": 0.1,
+   "active_dense_frac": 0.5,
+   "license": "openmdw-1.1",
+   "strengths": [
+    "reasoning",
+    "vision",
+    "writing"
+   ],
+   "scores": {
+    "coding": 80,
+    "writing": 76,
+    "reasoning": 88
+   },
+   "benchmarks": {
+    "SWE-bench Verified": 71.1,
+    "Terminal-Bench 2.1": 60.67
+   },
+   "why": "NVIDIA's 120B vision MoE: long context on cheap KV, strong all-round on 128 GB boxes.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF",
+    "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00001-of-00003.gguf",
+    "parts": [
+     {
+      "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00001-of-00003.gguf",
+      "size": 7874568,
+      "sha256": "04e0b45e70ab5c86c6b5d3b0133cc35fc10861015bac7dcff867dcf115dc81c5"
+     },
+     {
+      "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00002-of-00003.gguf",
+      "size": 49851272832,
+      "sha256": "868a7fa360ff10bc7e072e4bb4f8771b280ca35a087a55125bc21f7ebb9962b7"
+     },
+     {
+      "file": "UD-Q4_K_XL/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-UD-Q4_K_XL-00003-of-00003.gguf",
+      "size": 37048096032,
+      "sha256": "684abb5b5306b18a046ee69e3375a0e863d14d265e0ffa52c33442d375d08b7d"
+     }
+    ],
+    "mmproj": {
+     "repo": "unsloth/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-GGUF",
+     "file": "mmproj-BF16.gguf",
+     "size_gb": 1.73,
+     "sha256": "9c09381a5744d0ea9a30048c94922f6f25ee0d63842de9c45779eca4fb5924d9"
+    }
+   },
+   "file_gb": 86.91,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+   "status": "available",
+   "bench_source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16 (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 90.1,
+   "est_tps": {
+    "2x3090-48": {
+     "tps": 12.8,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 41.0,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 58.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 21.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.8-flash-next-iq3s",
+   "name": "Qwen3.8 Flash-Next (3.5-bit GSQ)",
+   "family": "qwen3.8-flash",
+   "quant": "GSQ-RCO IQ3_S",
+   "params_b": 180.0,
+   "active_b": 6.0,
+   "active_gb": 4.5,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 24,
+   "kv_fixed_gb": 0.4,
+   "n_layers": 48,
+   "dense_frac": 0.1,
+   "active_dense_frac": 0.6,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "reasoning",
+    "writing",
+    "vision"
+   ],
+   "scores": {
+    "coding": 92,
+    "writing": 82,
+    "reasoning": 92
+   },
+   "benchmarks": {
+    "SWE-bench Pro": 62.5,
+    "Terminal-Bench 2.1": 83.4,
+    "GPQA Diamond": 91.7
+   },
+   "why": "Qwen's 125B-A6B flagship MoE in 84 GB: frontier-class coding and writing, 6B-active speed.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+    "file": "IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+    "parts": [
+     {
+      "file": "IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00001-of-00002.gguf",
+      "size": 54817524224,
+      "sha256": "4c1eb2ceb4915e1192f4f386021897bde56a97f40a0bb78bb86465e0f7d2aca3"
+     },
+     {
+      "file": "IQ3_S/Qwen3.8-Flash-Next-GSQ-RCO-IQ3_S-00002-of-00002.gguf",
+      "size": 28800138432,
+      "sha256": "316b46f3a2dbd68c900f43136ab9449f9dcc3725dfd8c794847c204bc161e113"
+     }
+    ],
+    "mmproj": {
+     "repo": "ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-GGUF",
+     "file": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+     "size_gb": 0.91,
+     "sha256": "b1a82259702816a5330d7bd7607cd9676b11780e79ff7348c21103ff3ce49bd0"
+    }
+   },
+   "file_gb": 83.62,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+   "status": "available",
+   "bench_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 86.6,
+   "est_tps": {
+    "2x3090-48": {
+     "tps": 28.2,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m4max-128": {
+     "tps": 70.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 96.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    },
+    "dgx-spark-128": {
+     "tps": 38.4,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "qwen3.8-flash-next-q4",
+   "name": "Qwen3.8 Flash-Next",
+   "family": "qwen3.8-flash",
+   "quant": "Q4_K_M",
+   "params_b": 180.0,
+   "active_b": 6.0,
+   "active_gb": 5.5,
+   "moe": true,
+   "ctx": 131072,
+   "ctx_max": 262144,
+   "kv_kib_per_token": 24,
+   "kv_fixed_gb": 0.4,
+   "n_layers": 48,
+   "dense_frac": 0.1,
+   "active_dense_frac": 0.6,
+   "license": "apache-2.0",
+   "strengths": [
+    "coding",
+    "reasoning",
+    "writing",
+    "vision"
+   ],
+   "scores": {
+    "coding": 93,
+    "writing": 83,
+    "reasoning": 93
+   },
+   "benchmarks": {
+    "SWE-bench Pro": 62.5,
+    "Terminal-Bench 2.1": 83.4,
+    "GPQA Diamond": 91.7
+   },
+   "why": "Qwen3.8 Flash-Next at standard 4-bit for 192 GB Macs and multi-GPU workstations.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "lmstudio-community/Qwen3.8-Flash-Next-GGUF",
+    "file": "Qwen3.8-Flash-Next-Q4_K_M-00001-of-00003.gguf",
+    "parts": [
+     {
+      "file": "Qwen3.8-Flash-Next-Q4_K_M-00001-of-00003.gguf",
+      "size": 39928319168,
+      "sha256": "7f721917033a7e170625334c7f33f4a6ec1bf7a8d78c972e34360a77f593f60d"
+     },
+     {
+      "file": "Qwen3.8-Flash-Next-Q4_K_M-00002-of-00003.gguf",
+      "size": 39874671712,
+      "sha256": "31c358255d5d534cf5830f2e173065a4b26f960555f7891a64cc6b840ef80d8d"
+     },
+     {
+      "file": "Qwen3.8-Flash-Next-Q4_K_M-00003-of-00003.gguf",
+      "size": 39347731360,
+      "sha256": "85f66f79c3c3f29fb6ed1776a0c42d95dfff882a990dcbf1a650fc4231e3144a"
+     }
+    ],
+    "mmproj": {
+     "repo": "lmstudio-community/Qwen3.8-Flash-Next-GGUF",
+     "file": "mmproj-Qwen3.8-Flash-Next-BF16.gguf",
+     "size_gb": 0.91,
+     "sha256": "78ca6d0e8bb000494cbe688ba4ce0ff044048b0ae7728243fd71871037dcab5d"
+    }
+   },
+   "file_gb": 119.15,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+   "status": "available",
+   "bench_source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 122.8,
+   "est_tps": {
+    "2x3090-48": {
+     "tps": 19.1,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 131072
+    },
+    "mac-m3ultra-192": {
+     "tps": 82.7,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 131072
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "glm-5.3-flash-iq2xxs",
+   "name": "GLM-5.3-Flash (2-bit)",
+   "family": "glm-5.3-flash",
+   "quant": "UD-IQ2_XXS",
+   "params_b": 321.3,
+   "active_b": 18.0,
+   "active_gb": 11.0,
+   "moe": true,
+   "ctx": 32768,
+   "ctx_min": 16384,
+   "ctx_max": 1048576,
+   "kv_kib_per_token": 64,
+   "kv_fixed_gb": 0.5,
+   "n_layers": 45,
+   "dense_frac": 0.06,
+   "active_dense_frac": 0.5,
+   "license": "mit",
+   "strengths": [
+    "coding",
+    "reasoning",
+    "writing",
+    "vision"
+   ],
+   "scores": {
+    "coding": 95,
+    "writing": 86,
+    "reasoning": 94
+   },
+   "benchmarks": {
+    "Terminal-Bench 2.1": 84.3
+   },
+   "bench_note": "Terminal-Bench 2.1 from aireleasetracker.com/askclash.ai quoting Z.ai's card image",
+   "speeds_note": "autotrust GLM-5.3-Flash Q2 card: ~11 GB read/token, 15-20 tok/s single-stream on a Spark (est)",
+   "why": "Z.ai's 320B-A18B flagship squeezed into 102 GB: strongest model a single 128 GB box can hold.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "unsloth/GLM-5.3-Flash-GGUF",
+    "file": "UD-IQ2_XXS/GLM-5.3-Flash-UD-IQ2_XXS-00001-of-00004.gguf",
+    "parts": [
+     {
+      "file": "UD-IQ2_XXS/GLM-5.3-Flash-UD-IQ2_XXS-00001-of-00004.gguf",
+      "size": 9429984,
+      "sha256": "337870cefce5fb34b2aa3ade54a0fbf61676697f7f9a906670c20edde74561f4"
+     },
+     {
+      "file": "UD-IQ2_XXS/GLM-5.3-Flash-UD-IQ2_XXS-00002-of-00004.gguf",
+      "size": 49896298080,
+      "sha256": "d51a3d9ca05022d53e71753df75ee64ed5fd4e47655650ae023e9717b3ec158d"
+     },
+     {
+      "file": "UD-IQ2_XXS/GLM-5.3-Flash-UD-IQ2_XXS-00003-of-00004.gguf",
+      "size": 49248507840,
+      "sha256": "89180f13784dc1128586b98adf1ca876279881a20bc4f01747703ce352563372"
+     },
+     {
+      "file": "UD-IQ2_XXS/GLM-5.3-Flash-UD-IQ2_XXS-00004-of-00004.gguf",
+      "size": 2690716000,
+      "sha256": "9e0ef47daa1fdffce3cf2ac1594ce4634d176ad018be6e692729757f38d5fbf6"
+     }
+    ],
+    "mmproj": {
+     "repo": "unsloth/GLM-5.3-Flash-GGUF",
+     "file": "mmproj-F16.gguf",
+     "size_gb": 1.13,
+     "sha256": "922b809664d6a89cc1e40bfeaa63618000edc6651baf4082ce0718a784adf947"
+    }
+   },
+   "file_gb": 101.84,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+   "status": "available",
+   "bench_source": "Terminal-Bench 2.1 from aireleasetracker.com/askclash.ai quoting Z.ai's card image",
+   "speeds": [],
+   "min_mem_gb": 105.7,
+   "est_tps": {
+    "2x3090-48": {
+     "tps": 9.0,
+     "source": "est",
+     "mode": "offload",
+     "ctx": 32768
+    },
+    "mac-m3ultra-192": {
+     "tps": 46.1,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    },
+    "dgx-spark-128": {
+     "tps": 16.6,
+     "source": "est",
+     "mode": "unified",
+     "ctx": 32768
+    }
+   },
+   "tps_source": "est"
+  },
+  {
+   "id": "deepseek-v4.1-flash-1017-iq2xxs",
+   "name": "DeepSeek V4.1 Flash 1017 (2-bit GSQ)",
+   "family": "deepseek-v4.1",
+   "quant": "GSQ-RCO IQ2_XXS + Engram IQ4_NL",
+   "params_b": 763.2,
+   "active_b": 30.0,
+   "moe": true,
+   "ctx": 65536,
+   "ctx_max": 1048576,
+   "kv_kib_per_token": 16,
+   "license": "mit",
+   "strengths": [
+    "coding",
+    "reasoning",
+    "writing"
+   ],
+   "scores": {
+    "coding": 97,
+    "writing": 88,
+    "reasoning": 95
+   },
+   "benchmarks": {
+    "Terminal-Bench 4.0": 42.3,
+    "DeepSWE v1.1": 77.0
+   },
+   "status": "needs_runtime",
+   "status_note": "llama.cpp does not support DeepSeek-V4.1 yet (per ISTA-DASLab card, 2026-10-23); runs in Strata (NVIDIA) or antirez/DwarfStar (Metal, SSD streaming).",
+   "why": "DeepSeek's newest (Oct 17) \u2014 offered automatically once llama.cpp adds V4.1 support.",
+   "kind": "llm",
+   "runtime": "llama.cpp",
+   "model": {
+    "repo": "ISTA-DASLab/DeepSeek-V4.1-Flash-1017-GSQ-RCO-GGUF",
+    "file": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00001-of-00004.gguf",
+    "parts": [
+     {
+      "file": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00001-of-00004.gguf",
+      "size": 39075714624,
+      "sha256": "d46efb67ccffd8fb5d7f18b423896381b9e06d8491e161c370ddf3b05b07e050"
+     },
+     {
+      "file": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00002-of-00004.gguf",
+      "size": 39388449504,
+      "sha256": "cec1b2c3da429dc768b8bb9bc4dc4403d81f74d34db660a6a34ee3e555bf2c70"
+     },
+     {
+      "file": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00003-of-00004.gguf",
+      "size": 39246891616,
+      "sha256": "9d9c2140fcb134a0b9a74dedd0e5167e68077af6d08ce7f856bce112f0a35dd3"
+     },
+     {
+      "file": "DeepSeek-V4.1-Flash-1017-GSQ-RCO-IQ2_XXS-00004-of-00004.gguf",
+      "size": 20527837312,
+      "sha256": "9b790a2297ed3cdede379fc984f4a52bb95f3b23724c797af11d1fa6a69db059"
+     },
+     {
+      "file": "DeepSeek-V4.1-Flash-Engram-IQ4_NL.gguf",
+      "size": 110595290816,
+      "sha256": "eb19f30d368d393784e1fc54fdfaffc427ebb2110bf3762fdf5a8fbb9a2d740a"
+     }
+    ]
+   },
+   "file_gb": 248.83,
+   "flags": [
+    "-ngl",
+    "999",
+    "-fa",
+    "on",
+    "-ctk",
+    "q8_0",
+    "-ctv",
+    "q8_0"
+   ],
+   "card_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "bench_source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017 (self-reported)",
+   "speeds": [],
+   "min_mem_gb": 254.7,
+   "est_tps": {},
+   "tps_source": "est"
+  }
+ ],
+ "companions": [
+  {
+   "id": "whisper-small-q5",
+   "kind": "stt",
+   "name": "Whisper small",
+   "runtime": "whisper.cpp",
+   "model": {
+    "repo": "ggerganov/whisper.cpp",
+    "file": "ggml-small-q5_1.bin",
+    "size_gb": 0.19,
+    "sha256": "ae85e4a935d7a567bd102fe55afc16bb595bdb618e11b2fc7591bc08120411bb"
+   },
+   "license": "mit",
+   "rank": 1,
+   "requires": {
+    "min_mem_gb": 0
+   },
+   "why": "Light speech-to-text that keeps up in real time on any CPU.",
+   "size_gb": 0.19
+  },
+  {
+   "id": "whisper-large-v3-turbo-q5",
+   "kind": "stt",
+   "name": "Whisper large-v3 turbo",
+   "runtime": "whisper.cpp",
+   "model": {
+    "repo": "ggerganov/whisper.cpp",
+    "file": "ggml-large-v3-turbo-q5_0.bin",
+    "size_gb": 0.574,
+    "sha256": "394221709cd5ad1f40c46e6031ca61bce88931e6e088c188294c6d5a55ffa7e2"
+   },
+   "license": "mit",
+   "rank": 3,
+   "requires": {
+    "min_mem_gb": 6
+   },
+   "why": "Near-best open dictation accuracy, fast on any GPU or Apple Silicon.",
+   "size_gb": 0.57
+  },
+  {
+   "id": "nemotron-3.5-asr-0.6b",
+   "kind": "stt",
+   "name": "Nemotron 3.5 ASR streaming 0.6B",
+   "runtime": "transcribe.cpp",
+   "model": {
+    "repo": "handy-computer/nemotron-3.5-asr-streaming-0.6b-gguf",
+    "file": "nemotron-3.5-asr-streaming-0.6b-Q8_0.gguf",
+    "size_gb": 0.751,
+    "sha256": "b94545b313b3223fda7b2857a52681da813935c2127643d1e9ff0c23d988089c"
+   },
+   "license": "openmdw-1.1",
+   "rank": 0.5,
+   "requires": {
+    "min_mem_gb": 2
+   },
+   "why": "Streaming (live captions) ASR; optional, needs transcribe.cpp.",
+   "size_gb": 0.75
+  },
+  {
+   "id": "kitten-tts-nano",
+   "kind": "tts",
+   "name": "KittenTTS nano 0.8",
+   "runtime": "onnxruntime",
+   "model": {
+    "repo": "KittenML/kitten-tts-nano-0.8",
+    "file": "kitten_tts_nano_v0_8.onnx",
+    "size_gb": 0.057,
+    "sha256": "320564d2615f235de972ca27a7f39551c94185cfa24ca85b07a29084135f1e5e"
+   },
+   "license": "apache-2.0",
+   "rank": 1,
+   "requires": {
+    "min_mem_gb": 0
+   },
+   "why": "60 MB voice that runs on the weakest CPU.",
+   "size_gb": 0.06
+  },
+  {
+   "id": "piper-lessac-medium",
+   "kind": "tts",
+   "name": "Piper (en_US lessac)",
+   "runtime": "piper",
+   "model": {
+    "repo": "rhasspy/piper-voices",
+    "file": "en/en_US/lessac/medium/en_US-lessac-medium.onnx",
+    "size_gb": 0.063,
+    "sha256": "5efe09e69902187827af646e1a6e9d269dee769f9877d17b16b1b46eeaaf019f"
+   },
+   "license": "mit",
+   "rank": 2,
+   "requires": {
+    "min_mem_gb": 0
+   },
+   "why": "Fast, many languages (pick another voice file).",
+   "size_gb": 0.06
+  },
+  {
+   "id": "kokoro-82m",
+   "kind": "tts",
+   "name": "Kokoro 82M",
+   "runtime": "onnxruntime",
+   "model": {
+    "repo": "onnx-community/Kokoro-82M-v1.0-ONNX",
+    "file": "onnx/model_q8f16.onnx",
+    "size_gb": 0.086,
+    "sha256": "04c658aec1b6008857c2ad10f8c589d4180d0ec427e7e6118ceb487e215c3cd0"
+   },
+   "license": "apache-2.0",
+   "rank": 3,
+   "requires": {
+    "min_mem_gb": 2
+   },
+   "why": "Most natural small open voice; real-time on CPU.",
+   "size_gb": 0.09
+  },
+  {
+   "id": "z-image-turbo-q4",
+   "kind": "image",
+   "name": "Z-Image Turbo",
+   "runtime": "stable-diffusion.cpp",
+   "model": {
+    "repo": "unsloth/Z-Image-Turbo-GGUF",
+    "file": "z-image-turbo-Q4_K_M.gguf",
+    "text_encoder": {
+     "repo": "unsloth/Qwen3-4B-Instruct-2507-GGUF",
+     "file": "Qwen3-4B-Instruct-2507-Q4_K_M.gguf",
+     "size_gb": 2.497,
+     "sha256": "3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597"
+    },
+    "vae": {
+     "repo": "Tongyi-MAI/Z-Image-Turbo",
+     "file": "vae/diffusion_pytorch_model.safetensors",
+     "size_gb": 0.168,
+     "sha256": "f5b59a26851551b67ae1fe58d32e76486e1e812def4696a4bea97f16604d40a3"
+    },
+    "size_gb": 5.018,
+    "sha256": "e6494f87de6abaf6a561924f50317a5f271fc34bb4222aabbd801197df8f7daa"
+   },
+   "license": "apache-2.0",
+   "rank": 3,
+   "requires": {
+    "min_mem_gb": 8,
+    "gpu_only": true
+   },
+   "speed": "8 steps; ~seconds per 1024px image on a modern GPU (est)",
+   "why": "Fast photoreal images, Apache-2.0 (fine for commercial work), ~8 GB.",
+   "size_gb": 7.68
+  },
+  {
+   "id": "flux-3-klein-q4",
+   "kind": "image",
+   "name": "FLUX 3 Image Klein",
+   "runtime": "diffusers/ComfyUI",
+   "model": {
+    "repo": "unsloth/flux-3-image-klein-GGUF",
+    "file": "flux-3-image-klein-UD-Q4_K_XL.gguf",
+    "text_encoder": {
+     "repo": "unsloth/Qwen3-VL-4B-Instruct-GGUF",
+     "file": "Qwen3-VL-4B-Instruct-Q4_K_M.gguf",
+     "size_gb": 2.497,
+     "sha256": "d4dcd426bfba75752a312b266b80fec8136fbaca13c62d93b7ac41fa67f0492b"
+    },
+    "vae": {
+     "repo": "black-forest-labs/flux-3-image-klein",
+     "file": "ae.safetensors",
+     "size_gb": 0.336,
+     "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"
+    },
+    "size_gb": 3.93,
+    "sha256": "0a057e07550a5b2169e344d686171a7dd3c7d82c7d8d1d1605d8d881c16e9fa7"
+   },
+   "license": "flux-kommunity (non-commercial; commercial-output exception for qualifying users)",
+   "rank": 2.5,
+   "requires": {
+    "min_mem_gb": 8,
+    "gpu_only": true
+   },
+   "why": "Newest BFL open model (Oct 2026): text-to-image + editing with up to 10 reference images.",
+   "size_gb": 6.76
+  },
+  {
+   "id": "qwen-image-2.1-turbo-q4",
+   "kind": "image",
+   "name": "Qwen-Image 2.1 Turbo",
+   "runtime": "stable-diffusion.cpp",
+   "model": {
+    "repo": "unsloth/Qwen-Image-2.1-Turbo-GGUF",
+    "file": "qwen-image-2.1-turbo-Q4_K_M.gguf",
+    "text_encoder": {
+     "repo": "unsloth/Qwen3-VL-8B-Instruct-GGUF",
+     "file": "Qwen3-VL-8B-Instruct-UD-Q4_K_XL.gguf",
+     "size_gb": 5.149,
+     "sha256": "e3d1a6e87c5cb31e054f2c3bc0dd82ffde052f613de5eef3665b7bd33c9b703e"
+    },
+    "size_gb": 4.2,
+    "sha256": "8940e8b522af886e0c0f5afddf720e82dd223cb9a43580b5f61c4d740452ac20"
+   },
+   "license": "qwen-research (non-commercial)",
+   "rank": 2,
+   "requires": {
+    "min_mem_gb": 14,
+    "gpu_only": true
+   },
+   "why": "Best text rendering in images (posters, slides); research license.",
+   "size_gb": 9.35
+  },
+  {
+   "id": "wan2.2-ti2v-5b-q4",
+   "kind": "video",
+   "name": "Wan 2.2 TI2V 5B",
+   "runtime": "ComfyUI",
+   "model": {
+    "repo": "QuantStack/Wan2.2-TI2V-5B-GGUF",
+    "file": "Wan2.2-TI2V-5B-Q4_K_M.gguf",
+    "text_encoder": {
+     "repo": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
+     "file": "split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+     "size_gb": 6.736,
+     "sha256": "c3355d30191f1f066b26d93fba017ae9809dce6c627dda5f6a66eaa651204f68"
+    },
+    "vae": {
+     "repo": "QuantStack/Wan2.2-TI2V-5B-GGUF",
+     "file": "VAE/Wan2.2_VAE.safetensors",
+     "size_gb": 1.409,
+     "sha256": "e40321bd36b9709991dae2530eb4ac303dd168276980d3e9bc4b6e2b75fed156"
+    },
+    "size_gb": 3.433,
+    "sha256": "95b19697b7f98e65b0a543640e9ca7b4dfec32e2a6e3731e8e10708be52655e2"
+   },
+   "license": "apache-2.0",
+   "rank": 2,
+   "requires": {
+    "min_mem_gb": 12,
+    "gpu_only": true,
+    "accelerators": [
+     "cuda",
+     "rocm"
+    ]
+   },
+   "speed": "5 s 720p clip in minutes on a 12-16 GB NVIDIA card (est)",
+   "why": "Smallest decent text/image-to-video; needs a real GPU.",
+   "size_gb": 11.58
+  },
+  {
+   "id": "ltx-2.3-22b-q4",
+   "kind": "video",
+   "name": "LTX-2.3 22B (distilled)",
+   "runtime": "ComfyUI",
+   "model": {
+    "repo": "unsloth/LTX-2.3-GGUF",
+    "file": "distilled-1.1/ltx-2.3-22b-distilled-1.1-Q4_K_M.gguf",
+    "text_encoder": {
+     "repo": "unsloth/gemma-3-12b-it-qat-GGUF",
+     "file": "gemma-3-12b-it-qat-UD-Q4_K_XL.gguf",
+     "size_gb": 7.432,
+     "sha256": "da98f81c86916ed1c76b3eeda56b25cb7b8352b01093e2edb8028110fe2cb53b"
+    },
+    "size_gb": 14.194,
+    "sha256": "5d09efdc0b8ec2054c44a05366cd7c6634ffa333b379b1f8baf018a78974b73d"
+   },
+   "license": "ltx-2-community",
+   "rank": 3,
+   "requires": {
+    "min_mem_gb": 24,
+    "gpu_only": true,
+    "accelerators": [
+     "cuda"
+    ]
+   },
+   "why": "Best local video with synced audio; 24 GB+ NVIDIA or DGX Spark.",
+   "size_gb": 21.63
+  }
+ ]
+}

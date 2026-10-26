@@ -1,0 +1,99 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-4.1 · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+gpt-4.1 · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k
+
+===== choices =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-4.1 · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  ╭─ (o.o) set up a model ───────────────────────────────────────────────╮
+  │                                                                      │
+  │ ❯ ChatGPT subscription (login)     use your ChatGPT plan · no key    │
+  │   Any API (endpoint + key)         OpenAI, OpenRouter, Groq, Ollama… │
+  │   Local model (scan my hardware)   private · free · runs here        │
+  │                                                                      │
+  ╰─ ↑↓ move · enter choose · esc cancel ────────────────────────────────╯
+
+===== waiting =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-4.1 · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) ChatGPT login ────────────────────────────────────────────────╮
+  │                                                                      │
+  │                               1. open                                │
+  │                 https://auth.openai.com/codex/device                 │
+  │                                                                      │
+  │                          2. enter this code                          │
+  │                          P I C O - 1 2 3 4                           │
+  │                                                                      │
+  │             ⠼ waiting for you to finish in the browser…              │
+  │                                                                      │
+  ╰─ o open browser again · esc cancel ──────────────────────────────────╯
+
+===== signed-in =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-4.1 · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) ChatGPT login ────────────────────────────────────────────────╮
+  │                                                                      │
+  │ ✓ signed in  pick a model                                            │
+  │ ❯ gpt-5.5                                                            │
+  │   gpt-5-mini                                                         │
+  │                                                                      │
+  ╰─ ↑↓ move · enter save · esc cancel ──────────────────────────────────╯
+
+===== saved =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-4.1 · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ model ChatGPT · gpt-5.5
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+GPT-5.5 · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/272k
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-4.1 · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ model ChatGPT · gpt-5.5
+
+  (^.^)ﾉ bye for now
+u
+

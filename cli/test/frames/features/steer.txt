@@ -1,0 +1,180 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== busy =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› answer slowly please
+
+  ✻ thought 0.5s  ctrl+o
+
+  Working through part 1 of the answer. Working through part 2 of the answer. Working through part 3 of the answer.
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== steer-typed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› answer slowly please
+
+  ✻ thought 0.5s  ctrl+o
+
+  Working through part 1 of the answer. Working through part 2 of the answer. Working through part 3 of the answer.
+  Working through part 4 of the answer.
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› focus on the tests
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== steer-sent =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› answer slowly please
+
+  ✻ thought 0.5s  ctrl+o
+
+  Working through part 1 of the answer. Working through part 2 of the answer. Working through part 3 of the answer.
+  Working through part 4 of the answer.
+
+  ↳ steer: focus on the tests
+
+  ⠏ working  1.9s · esc to stop
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== steer-applied =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› answer slowly please
+
+  ✻ thought 0.5s  ctrl+o
+
+  Working through part 1 of the answer. Working through part 2 of the answer. Working through part 3 of the answer.
+  Working through part 4 of the answer.
+
+  ↳ steer: focus on the tests ✓
+
+  (steered: focus on the tests)
+
+  Working through part 5 of the answer. Working through part 6 of the answer. Working through part 7 of the answer.
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== done =====
+
+  (steered: focus on the tests)
+
+  Working through part 5 of the answer. Working through part 6 of the answer. Working through part 7 of the answer.
+  Working through part 8 of the answer. Working through part 9 of the answer. Working through part 10 of the answer.
+  Working through part 11 of the answer. Working through part 12 of the answer. Working through part 13 of the answer.
+  Working through part 14 of the answer. ## Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.8s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== quit =====
+
+  (steered: focus on the tests)
+
+  Working through part 5 of the answer. Working through part 6 of the answer. Working through part 7 of the answer.
+  Working through part 8 of the answer. Working through part 9 of the answer. Working through part 10 of the answer.
+  Working through part 11 of the answer. Working through part 12 of the answer. Working through part 13 of the answer.
+  Working through part 14 of the answer. ## Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.8s · 142 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_1oith
+u
+

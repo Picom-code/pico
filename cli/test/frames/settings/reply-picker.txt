@@ -1,0 +1,243 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱┊▱▱ 0/128k · you ▰▰▰▱ 210 · 72 tok/s
+today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== open =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │ ❯ accent       ‹ hotpink   ● ○ ○ ○ ○ ○ ›                                         │
+  │                Color of the cat, spinner, prompt, context bar and sign-off.      │
+  │   spinner      braille   ⠦  classic dots                                         │
+  │   reply style  band      ● ○ ○ ○  shaded band + header                           │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │  › fix the off-by-one in calc.py                                                 │
+  │                                                                                  │
+  │ (^.^) pico                                                                       │
+  │   ✓ edit 1  0.1s  ctrl+o                                                         │
+  │                                                                                  │
+  │   Fixed it: range(n - 1) stopped one short.                                      │
+  │                                                                                  │
+  │   (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== reply-row =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │   accent       hotpink   ● ○ ○ ○ ○ ○                                             │
+  │   spinner      braille   ⠹  classic dots                                         │
+  │ ❯ reply style  ‹ band      ● ○ ○ ○  shaded band + header ›                       │
+  │                band = shaded band on your messages + (^.^) pico header · label   │
+  │                · bar (▌) · plain.                                                │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │  › fix the off-by-one in calc.py                                                 │
+  │                                                                                  │
+  │ (^.^) pico                                                                       │
+  │   ✓ edit 1  0.1s  ctrl+o                                                         │
+  │                                                                                  │
+  │   Fixed it: range(n - 1) stopped one short.                                      │
+  │                                                                                  │
+  │   (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== label =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │   accent       hotpink   ● ○ ○ ○ ○ ○                                             │
+  │   spinner      braille   ⠧  classic dots                                         │
+  │ ❯ reply style  ‹ label     ○ ● ○ ○  you / pico labels ›  ✓                       │
+  │                band = shaded band on your messages + (^.^) pico header · label   │
+  │                · bar (▌) · plain.                                                │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │ you                                                                              │
+  │   fix the off-by-one in calc.py                                                  │
+  │                                                                                  │
+  │ (^.^) pico                                                                       │
+  │   ✓ edit 1  0.1s  ctrl+o                                                         │
+  │                                                                                  │
+  │   Fixed it: range(n - 1) stopped one short.                                      │
+  │                                                                                  │
+  │   (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ✓ saved reply style ────────────────────────────────────────────────────────────╯
+
+===== bar =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │   accent       hotpink   ● ○ ○ ○ ○ ○                                             │
+  │   spinner      braille   ⠸  classic dots                                         │
+  │ ❯ reply style  ‹ bar       ○ ○ ● ○  ▌ left bars ›  ✓                             │
+  │                band = shaded band on your messages + (^.^) pico header · label   │
+  │                · bar (▌) · plain.                                                │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │ ▌ fix the off-by-one in calc.py                                                  │
+  │                                                                                  │
+  │ ▌ ✓ edit 1  0.1s  ctrl+o                                                         │
+  │ ▌                                                                                │
+  │ ▌ Fixed it: range(n - 1) stopped one short.                                      │
+  │ ▌                                                                                │
+  │ ▌ (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ✓ saved reply style ────────────────────────────────────────────────────────────╯
+
+===== plain =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │   accent       hotpink   ● ○ ○ ○ ○ ○                                             │
+  │   spinner      braille   ⠧  classic dots                                         │
+  │ ❯ reply style  ‹ plain     ○ ○ ○ ●  the old look ›  ✓                            │
+  │                band = shaded band on your messages + (^.^) pico header · label   │
+  │                · bar (▌) · plain.                                                │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │ › fix the off-by-one in calc.py                                                  │
+  │                                                                                  │
+  │   ✓ edit 1  0.1s  ctrl+o                                                         │
+  │                                                                                  │
+  │   Fixed it: range(n - 1) stopped one short.                                      │
+  │                                                                                  │
+  │   (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ✓ saved reply style ────────────────────────────────────────────────────────────╯
+
+===== band =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ──────────────────────────━━━━━━━━━━━━━───────────────────────────────────────── │
+  │                                                                                  │
+  │   accent       hotpink   ● ○ ○ ○ ○ ○                                             │
+  │   spinner      braille   ⠼  classic dots                                         │
+  │ ❯ reply style  ‹ band      ● ○ ○ ○  shaded band + header ›  ✓                    │
+  │                band = shaded band on your messages + (^.^) pico header · label   │
+  │                · bar (▌) · plain.                                                │
+  │   reasoning    timer     ○ ● ○ ○  thinking 4.1s                                  │
+  │   tools        normal    ○ ● ○  tree + 4-line tail                               │
+  │   summary      ● on                                                              │
+  │                                                                                  │
+  │ preview                                                                          │
+  │  › fix the off-by-one in calc.py                                                 │
+  │                                                                                  │
+  │ (^.^) pico                                                                       │
+  │   ✓ edit 1  0.1s  ctrl+o                                                         │
+  │                                                                                  │
+  │   Fixed it: range(n - 1) stopped one short.                                      │
+  │                                                                                  │
+  │   (^.^)✧ done in 1.3s · 1 tool · 51 tok/s                                        │
+  │                                                                                  │
+  ╰─ ✓ saved reply style ────────────────────────────────────────────────────────────╯
+
+===== closed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱┊▱▱ 0/128k · you ▰▰▰▱ 210 · 72 tok/s
+today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "paws on the keyboard."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+  (^.^)ﾉ bye for now
+u
+

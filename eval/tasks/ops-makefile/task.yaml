@@ -1,0 +1,10 @@
+id: ops-makefile
+category: terminal
+timeout_s: 240
+prompt: |
+  Add two targets to the Makefile:
+  - `make test` runs the unit tests (`python3 -m unittest -q`) and must fail (non-zero) if they fail
+  - `make dist` depends on test, then creates `dist/calc-<VERSION>.tar.gz` containing calc.py and
+    README.md (VERSION comes from the existing VERSION variable in the Makefile).
+  Also make `make clean` remove the dist folder. Use real tabs for recipes.
+check: bash "$HIDDEN/check.sh"

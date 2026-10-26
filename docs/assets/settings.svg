@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1044" height="668" viewBox="0 0 1044 668" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13.6">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16161b"/><stop offset="1" stop-color="#0c0c0f"/></linearGradient><filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="0.5" y="0.5" width="1043" height="667" rx="12" fill="url(#g)" stroke="#2a2a32"/>
+<circle cx="22" cy="19" r="6" fill="#ff5f57"/><circle cx="42" cy="19" r="6" fill="#febc2e"/><circle cx="62" cy="19" r="6" fill="#28c840"/>
+<text x="522.0" y="23" fill="#6c6c78" text-anchor="middle" font-size="12">pico — /settings</text>
+<text x="18.0" y="78.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs"> /\_/\ </text>
+<text x="93.6" y="78.5" xml:space="preserve" fill="#d0d0d0" font-weight="700" textLength="33.6" lengthAdjust="spacingAndGlyphs">pico</text>
+<text x="127.2" y="78.5" xml:space="preserve" fill="#6c6c6c" textLength="58.8" lengthAdjust="spacingAndGlyphs"> v0.1.0</text>
+<text x="186.0" y="78.5" xml:space="preserve" fill="#444444" textLength="126.0" lengthAdjust="spacingAndGlyphs"> · engine 0.1.0</text>
+<text x="18.0" y="96.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs">( ^.^ )</text>
+<text x="93.6" y="96.5" xml:space="preserve" fill="#6c6c6c" textLength="159.6" lengthAdjust="spacingAndGlyphs">qwen3-coder-30b-a3b</text>
+<text x="253.2" y="96.5" xml:space="preserve" fill="#444444" textLength="25.2" lengthAdjust="spacingAndGlyphs"> · </text>
+<text x="278.4" y="96.5" xml:space="preserve" fill="#6c6c6c" textLength="92.4" lengthAdjust="spacingAndGlyphs">~/code/shop</text>
+<text x="18.0" y="114.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs"> &gt; ^ &lt; </text>
+<text x="93.6" y="114.5" xml:space="preserve" fill="#6c6c6c" textLength="310.8" lengthAdjust="spacingAndGlyphs">&quot;local, private, mildly opinionated.&quot;</text>
+<text x="18.0" y="150.5" xml:space="preserve" fill="#444444" textLength="537.6" lengthAdjust="spacingAndGlyphs">/ commands · @ files · shift+tab effort · /theme colors · ? help</text>
+<text x="34.8" y="204.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">╭─</text>
+<text x="60.0" y="204.5" xml:space="preserve" fill="#ff0087" font-weight="700" filter="url(#glow)" textLength="42.0" lengthAdjust="spacingAndGlyphs">(^.^)</text>
+<text x="102.0" y="204.5" xml:space="preserve" fill="#d7d7d7" font-weight="700" textLength="84.0" lengthAdjust="spacingAndGlyphs"> settings </text>
+<text x="186.0" y="204.5" xml:space="preserve" fill="#444444" textLength="554.4" lengthAdjust="spacingAndGlyphs">─────────────────────────────────────────────────────────────────╮</text>
+<text x="34.8" y="222.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="51.6" y="222.5" xml:space="preserve" fill="#949494" textLength="67.2" lengthAdjust="spacingAndGlyphs"> Status </text>
+<text x="127.2" y="222.5" xml:space="preserve" fill="#ff0087" font-weight="700" filter="url(#glow)" textLength="67.2" lengthAdjust="spacingAndGlyphs"> Config </text>
+<text x="202.8" y="222.5" xml:space="preserve" fill="#949494" textLength="58.8" lengthAdjust="spacingAndGlyphs"> Usage </text>
+<text x="270.0" y="222.5" xml:space="preserve" fill="#949494" textLength="109.2" lengthAdjust="spacingAndGlyphs"> Look &amp; feel </text>
+<text x="723.6" y="222.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="240.5" xml:space="preserve" fill="#444444" textLength="92.4" lengthAdjust="spacingAndGlyphs">│ ─────────</text>
+<text x="127.2" y="240.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="67.2" lengthAdjust="spacingAndGlyphs">━━━━━━━━</text>
+<text x="194.4" y="240.5" xml:space="preserve" fill="#444444" textLength="546.0" lengthAdjust="spacingAndGlyphs">─────────────────────────────────────────────────────────────── │</text>
+<text x="34.8" y="258.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="723.6" y="258.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="276.5" xml:space="preserve" fill="#444444" textLength="58.8" lengthAdjust="spacingAndGlyphs">│ model</text>
+<text x="723.6" y="276.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="294.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="51.6" y="294.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="8.4" lengthAdjust="spacingAndGlyphs">❯</text>
+<text x="68.4" y="294.5" xml:space="preserve" fill="#d0d0d0" font-weight="700" textLength="117.6" lengthAdjust="spacingAndGlyphs">default effort</text>
+<text x="194.4" y="294.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">‹ </text>
+<text x="211.2" y="294.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="25.2" lengthAdjust="spacingAndGlyphs">med</text>
+<text x="236.4" y="294.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> ›</text>
+<text x="723.6" y="294.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="312.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="177.6" y="312.5" xml:space="preserve" fill="#6c6c6c" textLength="520.8" lengthAdjust="spacingAndGlyphs">Effort for new chats. shift+tab changes only the current chat.</text>
+<text x="723.6" y="312.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="330.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="330.5" xml:space="preserve" fill="#949494" textLength="75.6" lengthAdjust="spacingAndGlyphs">approvals</text>
+<text x="177.6" y="330.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="25.2" lengthAdjust="spacingAndGlyphs">ask</text>
+<text x="723.6" y="330.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="348.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="348.5" xml:space="preserve" fill="#949494" textLength="58.8" lengthAdjust="spacingAndGlyphs">harness</text>
+<text x="177.6" y="348.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="33.6" lengthAdjust="spacingAndGlyphs">lean</text>
+<text x="723.6" y="348.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="366.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="366.5" xml:space="preserve" fill="#949494" textLength="75.6" lengthAdjust="spacingAndGlyphs">subagents</text>
+<text x="177.6" y="366.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="33.6" lengthAdjust="spacingAndGlyphs">● on</text>
+<text x="723.6" y="366.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="384.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="384.5" xml:space="preserve" fill="#949494" textLength="92.4" lengthAdjust="spacingAndGlyphs">max helpers</text>
+<text x="177.6" y="384.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="8.4" lengthAdjust="spacingAndGlyphs">3</text>
+<text x="723.6" y="384.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="402.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="723.6" y="402.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="420.5" xml:space="preserve" fill="#444444" textLength="100.8" lengthAdjust="spacingAndGlyphs">│ compaction</text>
+<text x="723.6" y="420.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="438.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="438.5" xml:space="preserve" fill="#949494" textLength="33.6" lengthAdjust="spacingAndGlyphs">auto</text>
+<text x="177.6" y="438.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="33.6" lengthAdjust="spacingAndGlyphs">● on</text>
+<text x="723.6" y="438.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="456.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="456.5" xml:space="preserve" fill="#949494" textLength="84.0" lengthAdjust="spacingAndGlyphs">compact at</text>
+<text x="177.6" y="456.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="25.2" lengthAdjust="spacingAndGlyphs">80%</text>
+<text x="723.6" y="456.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="474.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="474.5" xml:space="preserve" fill="#949494" textLength="92.4" lengthAdjust="spacingAndGlyphs">keep recent</text>
+<text x="177.6" y="474.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="84.0" lengthAdjust="spacingAndGlyphs">6 messages</text>
+<text x="723.6" y="474.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="492.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="492.5" xml:space="preserve" fill="#949494" textLength="33.6" lengthAdjust="spacingAndGlyphs">mode</text>
+<text x="177.6" y="492.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="58.8" lengthAdjust="spacingAndGlyphs">summary</text>
+<text x="723.6" y="492.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="510.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="510.5" xml:space="preserve" fill="#949494" textLength="50.4" lengthAdjust="spacingAndGlyphs">notify</text>
+<text x="177.6" y="510.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="33.6" lengthAdjust="spacingAndGlyphs">● on</text>
+<text x="723.6" y="510.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="528.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="723.6" y="528.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="546.5" xml:space="preserve" fill="#444444" textLength="75.6" lengthAdjust="spacingAndGlyphs">│ display</text>
+<text x="723.6" y="546.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="564.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="564.5" xml:space="preserve" fill="#949494" textLength="84.0" lengthAdjust="spacingAndGlyphs">usage line</text>
+<text x="177.6" y="564.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="33.6" lengthAdjust="spacingAndGlyphs">● on</text>
+<text x="723.6" y="564.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="582.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="582.5" xml:space="preserve" fill="#949494" textLength="75.6" lengthAdjust="spacingAndGlyphs">reasoning</text>
+<text x="177.6" y="582.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="42.0" lengthAdjust="spacingAndGlyphs">timer</text>
+<text x="723.6" y="582.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="600.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="600.5" xml:space="preserve" fill="#949494" textLength="92.4" lengthAdjust="spacingAndGlyphs">tool detail</text>
+<text x="177.6" y="600.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="50.4" lengthAdjust="spacingAndGlyphs">normal</text>
+<text x="723.6" y="600.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="618.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="68.4" y="618.5" xml:space="preserve" fill="#949494" textLength="100.8" lengthAdjust="spacingAndGlyphs">summary line</text>
+<text x="177.6" y="618.5" xml:space="preserve" fill="#ff0087" filter="url(#glow)" textLength="33.6" lengthAdjust="spacingAndGlyphs">● on</text>
+<text x="723.6" y="618.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="636.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">│ </text>
+<text x="723.6" y="636.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs"> │</text>
+<text x="34.8" y="654.5" xml:space="preserve" fill="#444444" textLength="16.8" lengthAdjust="spacingAndGlyphs">╰─</text>
+<text x="60.0" y="654.5" xml:space="preserve" fill="#444444" textLength="420.0" lengthAdjust="spacingAndGlyphs">‹› tabs · ↑↓ move · enter/space change · esc close</text>
+<text x="488.4" y="654.5" xml:space="preserve" fill="#444444" textLength="252.0" lengthAdjust="spacingAndGlyphs">─────────────────────────────╯</text>
+</svg>

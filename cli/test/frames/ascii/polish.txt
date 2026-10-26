@@ -1,0 +1,480 @@
+===== boot =====
+
+    ___     pico v0.1.0 | engine 0.1.0-mock
+   /o o\    gpt-oss-20b | local
+   \_^_/    ~/Developer/pico/cli
+    |=|
+   /|=|\    / commands | @ files | shift+tab effort | ? help
+   _/ \_
+
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | .......... 0/128k | 88 tok/s | ~/Developer/pico/cli
+
+===== tool-running-tail =====
+
+    ___     pico v0.1.0 | engine 0.1.0-mock
+   /o o\    gpt-oss-20b | local
+   \_^_/    ~/Developer/pico/cli
+    |=|
+   /|=|\    / commands | @ files | shift+tab effort | ? help
+   _/ \_
+
+
+  > run the tool please
+
+  * * thought 0.5s  ctrl+o
+  | | terminal `npm test`  0.8s
+  |   `- > pico@0.1.0 test
+  |     > bun test
+  |     test/unit.test.ts:
+  | v read_file `src/app.ts`  0.2s
+  |   `- 1| // Interactive chat TUI.
+  |     ... +1 line
+
+-------------------------------------------------------------------------------- medium --
+> type to queue… esc to stop
+------------------------------------------------------------------------------------------
+  /> <\ | gpt-oss 20B | * medium | .......... 0/128k | 88 tok/s | ~/Developer/pico/cli
+
+===== tools-done-diff-summary =====
+  |       ~ export class App {
+  |   122 +   // redraw step 1
+  |   123 +   // redraw step 2
+  |       ... +9 more (ctrl+o)
+  |
+  | Summary
+  |
+  | Here is what I found in your project:
+  |
+  | * The entry point is src/main.ts
+  | * Tests live in test/
+  |   * nested item
+  | 1. first
+  | 2. second
+  |
+  | +- ts -----------------------------------------------------------------------------+
+  | | // greet                                                                         |
+  | | export function hi(name: string) {                                               |
+  | |   return `hello ${name}` + 42;                                                   |
+  | | }                                                                                |
+  | +----------------------------------------------------------------------------------+
+  |
+  | | Note: this is a mock reply.
+  |
+  | See docs (https://pico.dev/docs).
+  + v 3 tools | 1 file (+13 -2) | 116 tok | 3.9s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /^ ^\ * | gpt-oss 20B | * medium | -......... 8.8k/128k cached 92% | 142 tok/s
+
+===== ctrl-o-expanded =====
+  |   129 +   // redraw step 8
+  |   130 +   // redraw step 9
+  |   131 +   // redraw step 10
+  |   132     render() {
+  |
+  | Summary
+  |
+  | Here is what I found in your project:
+  |
+  | * The entry point is src/main.ts
+  | * Tests live in test/
+  |   * nested item
+  | 1. first
+  | 2. second
+  |
+  | +- ts -----------------------------------------------------------------------------+
+  | | // greet                                                                         |
+  | | export function hi(name: string) {                                               |
+  | |   return `hello ${name}` + 42;                                                   |
+  | | }                                                                                |
+  | +----------------------------------------------------------------------------------+
+  |
+  | | Note: this is a mock reply.
+  |
+  | See docs (https://pico.dev/docs).
+  + v 3 tools | 1 file (+13 -2) | 116 tok | 3.9s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /^ ^\ * | gpt-oss 20B | * medium | -......... 9.1k/128k cached 92% | 142 tok/s
+
+===== ctrl-o-collapsed =====
+  |       ~ export class App {
+  |   122 +   // redraw step 1
+  |   123 +   // redraw step 2
+  |       ... +9 more (ctrl+o)
+  |
+  | Summary
+  |
+  | Here is what I found in your project:
+  |
+  | * The entry point is src/main.ts
+  | * Tests live in test/
+  |   * nested item
+  | 1. first
+  | 2. second
+  |
+  | +- ts -----------------------------------------------------------------------------+
+  | | // greet                                                                         |
+  | | export function hi(name: string) {                                               |
+  | |   return `hello ${name}` + 42;                                                   |
+  | | }                                                                                |
+  | +----------------------------------------------------------------------------------+
+  |
+  | | Note: this is a mock reply.
+  |
+  | See docs (https://pico.dev/docs).
+  + v 3 tools | 1 file (+13 -2) | 116 tok | 3.9s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | -......... 9.1k/128k cached 92% | 142 tok/s
+
+===== ctx-half =====
+  | * The entry point is src/main.ts
+  | * Tests live in test/
+  |   * nested item
+  | 1. first
+  | 2. second
+  |
+  | +- ts -----------------------------------------------------------------------------+
+  | | // greet                                                                         |
+  | | export function hi(name: string) {                                               |
+  | |   return `hello ${name}` + 42;                                                   |
+  | | }                                                                                |
+  | +----------------------------------------------------------------------------------+
+  |
+  | | Note: this is a mock reply.
+  |
+  | See docs (https://pico.dev/docs).
+  + v 3 tools | 1 file (+13 -2) | 116 tok | 3.9s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > say hi half
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | ======.... 81k/128k cached 92% | 142 tok/s
+
+===== ctx-fill =====
+  | |   return `hello ${name}` + 42;                                                   |
+  | | }                                                                                |
+  | +----------------------------------------------------------------------------------+
+  |
+  | | Note: this is a mock reply.
+  |
+  | See docs (https://pico.dev/docs).
+  + v 3 tools | 1 file (+13 -2) | 116 tok | 3.9s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > say hi half
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > say hi fill
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | =========. 118k/128k cached 92% run /compact
+
+===== notice =====
+  > say hi half
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > say hi fill
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > remember my dog say hi
+
+  * * thought 0.5s  ctrl+o
+  | + remembered: dog is Biscuit
+  |
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | =========- 127k/128k cached 92% run /compact
+
+===== compacted =====
+  > say hi fill
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > remember my dog say hi
+
+  * * thought 0.5s  ctrl+o
+  | + remembered: dog is Biscuit
+  |
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /^ ^\ * | gpt-oss 20B | * medium | ==........ 27k/128k @ compacted 136k->27k | 142 tok/s
+
+===== compacted-settled =====
+  > say hi fill
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > remember my dog say hi
+
+  * * thought 0.5s  ctrl+o
+  | + remembered: dog is Biscuit
+  |
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | ==........ 27k/128k cached 92% | 142 tok/s
+
+===== agents-running =====
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > agents slow say hi
+
+  * * thought 0.5s  ctrl+o
+  | > 3 subagents  1/3 done
+  |   - Survey the renderer for flicker      measuring bytes/frame  0.9s
+  |     `- $ measuring bytes/frame
+  |   v Write tests for the context bar      1.0s | 1.8k tok
+  |   - Check Windows console fallbacks      reading ansi.ts  0.9s
+  |     `- $ reading ansi.ts
+
+-------------------------------------------------------------------------------- medium --
+> type to queue… esc to stop
+------------------------------------------------------------------------------------------
+  /> <\ | gpt-oss 20B | * medium | ==........ 27k/128k cached 92% | 142 tok/s
+
+===== agents-done =====
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > agents slow say hi
+
+  * * thought 0.5s  ctrl+o
+  | x > 3 subagents  2/3 ok | 1.4s | 5.9k tok  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 4.4s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /^ ^\ * | gpt-oss 20B | * medium | ===....... 36k/128k cached 92% | 142 tok/s
+
+===== agents-expanded =====
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > agents slow say hi
+
+  * * thought 0.5s
+  |   The user said "agents slow say hi". Let me consider the codebase layout first,
+  |   then decide which tool to use. Effort is medium.
+  | > 3 subagents
+  |   v Survey the renderer for flicker      1.4s | 3.1k tok
+  |     `- Renderer only rewrites changed rows; ~40 bytes per spinner frame.
+  |   v Write tests for the context bar      1.0s | 1.8k tok
+  |     `- Added 6 tests covering 49/50/80/95% thresholds.
+  |     `- All pass.
+  |   x Check Windows console fallbacks      1.4s | 960 tok
+  |     `- conhost check needs a Windows box; skipped.
+  |
+  | Hi! 👋
+  + v 42 tok | 4.4s | 142 tok/s
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | ===....... 36k/128k cached 92% | 142 tok/s
+
+===== undo =====
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > remember my dog say hi
+
+  * * thought 0.5s  ctrl+o
+  | + remembered: dog is Biscuit
+  |
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+-------------------------------------------------------------------------------- medium --
+> ask anything · / for commands · @ to attach
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | ==........ 27k/128k cached 92% | 142 tok/s
+
+===== palette-undo =====
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > remember my dog say hi
+
+  * * thought 0.5s  ctrl+o
+  | + remembered: dog is Biscuit
+  |
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+-------------------------------------------------------------------------------- medium --
+> /un
+------------------------------------------------------------------------------------------
+  /o o\ | gpt-oss 20B | * medium | ==........ 27k/128k cached 92% | 142 tok/s
+  > /undo    undo the last turn (restores changed files)
+
+===== quit =====
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  --------------------------------------------------------------------------------------
+
+  > remember my dog say hi
+
+  * * thought 0.5s  ctrl+o
+  | + remembered: dog is Biscuit
+  |
+  | Hi! 👋
+  + v 42 tok | 0.6s | 142 tok/s
+  + new skill: deploy-checklist
+
+  --------------------------------------------------------------------------------------
+
+  > compact say hi
+
+  * * thought 0.5s  ctrl+o
+  |
+  | Hi! 👋
+  + v 42 tok | 0.5s | 142 tok/s
+
+  <- undid last turn  no file changes
+  session s_1ymzib | resume with pico -r s_1ymzib
+u
+

@@ -1,0 +1,24 @@
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> use a tool and fix calc
+
+  * thought 0.5s  ctrl+o
+
+  + 2 steps
+  |- \ npm test  1.0s
+  |  ` > pico@0.1.0 test
+  |    > bun test
+  |    test/unit.test.ts:
+  `- v read src/app.ts  0.2s
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> type to queue… esc to stop
+Qwen3-Coder 30B-A3B | * med | [----------] 0/128k | 72 tok/s

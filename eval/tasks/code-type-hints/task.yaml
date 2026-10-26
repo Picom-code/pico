@@ -1,0 +1,8 @@
+id: code-type-hints
+category: coding
+timeout_s: 240
+prompt: |
+  Add complete type hints to every function in geometry.py (all parameters and return types;
+  use built-in generics like list[...] / tuple[...] and `X | None` where appropriate). Don't change
+  behaviour; the existing doctest-style checks in the module's docstrings must still hold.
+check: python3 "$HIDDEN/check_hints.py"

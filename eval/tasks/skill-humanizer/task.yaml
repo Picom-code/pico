@@ -1,0 +1,16 @@
+id: skill-humanizer
+category: memory
+timeout_s: 360
+prompt: |
+  This blurb for our community garden newsletter reads like a robot wrote it. Rewrite it so it sounds
+  like a real person wrote it, use whatever writing skill you have for this, and save the result to
+  blurb.txt (plain text, one or two short paragraphs). Keep the facts: Saturday 9 May, 10am, Elm Street
+  plot, bring gloves, free seedlings.
+
+  "In today's fast-paced world, our vibrant community garden stands as a testament to the enduring power
+  of togetherness. We are thrilled to announce a pivotal planting day — a unique opportunity to delve
+  into the rich tapestry of seasonal growing! Join us on Saturday 9 May at 10am at the Elm Street plot,
+  where you'll not only foster connections but also enhance your gardening skills. Don't forget to bring
+  gloves — free seedlings will be provided. Additionally, it's a crucial moment to showcase our shared
+  commitment to sustainability. 🌱✨"
+check: python3 "$HIDDEN/check.py"

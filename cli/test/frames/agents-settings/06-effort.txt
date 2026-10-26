@@ -1,0 +1,28 @@
+
+    ___     pico v0.1.0 · engine 0.1.0-mock
+   /o o\    qwen3-coder-30b-a3b · local
+   \_^_/    ~/Developer/pico/cli
+    |=|
+   /|=|\    / commands · @ files · shift+tab effort · ? help
+   _/ \_
+
+
+  ╭─ ⎇ subagents ──────────────────────────────────────────────────────────────╮
+  │                                                                            │
+  │   subagents       ● on                                                     │
+  │                   Let pico hand side-tasks to helper agents that work in   │
+  │                   parallel.                                                │
+  │   max parallel    8 ━━━━━━━━                                               │
+  │                   How many helpers may run at once. More is faster but     │
+  │                   uses more memory.                                        │
+  │   model           GPT-5 (ChatGPT)                                          │
+  │                   Which model the helpers use. A smaller one is quicker    │
+  │                   and cheaper.                                             │
+  │ ❯ effort        ‹ off ›                                                    │
+  │                   How hard helpers think before acting. Low keeps them     │
+  │                   snappy.                                                  │
+  │   time budget     2 min                                                    │
+  │                   A helper is stopped after this long, so nothing runs     │
+  │                   away.                                                    │
+  │                                                                            │
+  ╰─ ↑↓ move · ←→ change · enter save · esc cancel ────────────────────────────╯

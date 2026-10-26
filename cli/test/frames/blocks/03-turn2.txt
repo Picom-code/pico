@@ -1,0 +1,34 @@
+  │   122 +   // redraw step 1
+  │   123 +   // redraw step 2
+  │       … +9 more (ctrl+o)
+  │ ✓ write_file `new.txt`  0.1s
+  │   ✎ new.txt  new  +2
+  │      ┄
+  │    1 + hello
+  │    2 + world
+  │
+  │ Summary
+  │
+  │ Here is what I found in your project:
+  │
+  │ • The entry point is src/main.ts
+  │ • Tests live in test/
+  │   • nested item
+  │ 1. first
+  │ 2. second
+  │
+  │ ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ │ // greet                                                                                         │
+  │ │ export function hi(name: string) {                                                               │
+  │ │   return `hello ${name}` + 42;                                                                   │
+  │ │ }                                                                                                │
+  │ ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+  │
+  │ ▎ Note: this is a mock reply.
+  │
+  │ See docs (https://pico.dev/docs).
+  ╰ ✓ 4 tools · 2 files (+15 −2) · 116 tok · 4.2s · 142 tok/s
+────────────────────────────────────────────────────────────────────────────────────────────────────────────── medium ──
+❯ ask anything · / for commands · @ to attach
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  /^ ^\ ✧ · Qwen3-Coder 30B-A3B · ● medium · ━╸━━━━━━━━ 18k/128k cached 92% · 142 tok/s · ~/Developer/pico/cli · say hi

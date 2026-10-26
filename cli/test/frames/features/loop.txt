@@ -1,0 +1,224 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== start =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · ↻ loop 0/20 · next now · 88 tok/s
+
+===== countdown =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #1
+
+  thinking 0.2s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› type to steer… esc to stop
+gpt-oss 20B · ● high · ▱▱▱▱▱▱▱▱▱▱ 0/128k · ↻ loop 1/20 · running · enter steer · esc stop · 88 tok/s
+
+===== loop-turn =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #1
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · ↻ loop 1/20 · next 0:04 · 142 tok/s
+
+===== loop-done-wait =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #1
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · ↻ loop 1/20 · next 0:01 · 142 tok/s
+
+===== countdown2 =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "ready when you are."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #1
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 9k/128k cached 92% · ↻ loop 2/20 · running · 142 tok/s
+
+===== stop =====
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #1
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #2
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ↻ loop stopped after 2 runs
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ── ● high ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● high · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== quit =====
+
+› /loop 5s check the build
+
+  Looping every 5s: check the build
+
+  (^.^)✧ done
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #1
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+↻ loop #2
+
+  ✻ thought 0.5s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)✧ done in 0.5s · 142 tok/s
+
+  ↻ loop stopped after 2 runs
+
+  (^.^)ﾉ bye for now · resume with pico -r s_7bl5x
+u
+

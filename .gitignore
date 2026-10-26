@@ -1,0 +1,27 @@
+# deps / builds
+node_modules/
+dist/
+build/
+target/
+src-tauri/gen/
+*.egg-info/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# logs / os
+*.log
+.DS_Store
+
+# secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets*
+auth.json

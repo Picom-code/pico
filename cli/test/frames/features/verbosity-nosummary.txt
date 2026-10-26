@@ -1,0 +1,171 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== set =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning timer · tools normal · summary off
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== thinking =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning timer · tools normal · summary off
+
+› ponder, then use a tool and fix calc
+
+  thinking 0.6s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== thinking-late =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning timer · tools normal · summary off
+
+› ponder, then use a tool and fix calc
+
+  thinking 1.0s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== tools-live =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "one more turn, then lunch."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning timer · tools normal · summary off
+
+› ponder, then use a tool and fix calc
+
+  ✻ thought 1.3s  ctrl+o
+
+  ┬ 2 steps
+  ├─ ⠦ npm test  1.2s
+  │  ╰ > pico@0.1.0 test
+  │    > bun test
+  │    test/unit.test.ts:
+  │    (pass) context bar > thresholds
+  └─ ✓ read src/app.ts  0.2s
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== done =====
+  ✻ thought 1.3s  ctrl+o
+
+  ┬ 3 steps
+  ├─ ✓ npm test  2.1s
+  ├─ ✓ read src/app.ts  0.2s
+  └─ ✓ patch src/app.ts  0.3s
+     ✎ src/app.ts  +13 −2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== quit =====
+  ✻ thought 1.3s  ctrl+o
+
+  ┬ 3 steps
+  ├─ ✓ npm test  2.1s
+  ├─ ✓ read src/app.ts  0.2s
+  └─ ✓ patch src/app.ts  0.3s
+     ✎ src/app.ts  +13 −2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)ﾉ bye for now · resume with pico -r s_11h08v
+u
+

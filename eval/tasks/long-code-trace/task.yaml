@@ -1,0 +1,9 @@
+id: long-code-trace
+category: long-context
+timeout_s: 420
+prompt: |
+  This repo (src/) is a large generated service. Users report that `compute_fee(amount=1000, tier="gold")`
+  returns the wrong value. Trace the call chain starting at src/api.py::compute_fee, find the one constant
+  or line responsible for the wrong gold-tier discount (the spec in SPEC.md says gold = 15% off the base
+  fee), and fix it with a minimal change. Don't rewrite unrelated modules.
+check: python3 "$HIDDEN/check.py"

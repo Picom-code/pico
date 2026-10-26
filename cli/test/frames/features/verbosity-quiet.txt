@@ -1,0 +1,161 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== set =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning hidden · tools quiet · summary on
+
+                                                                                                       /\_/\
+                                                                                                      ( •.• )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== thinking =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning hidden · tools quiet · summary on
+
+› ponder, then use a tool and fix calc
+
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== thinking-late =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning hidden · tools quiet · summary on
+
+› ponder, then use a tool and fix calc
+
+
+                                                                                                       /\_/\
+                                                                                                      ( o.O ) ?
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== tools-live =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "let's ship something boring and correct."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ✓ reasoning hidden · tools quiet · summary on
+
+› ponder, then use a tool and fix calc
+
+  ⠦ ran 1 · read 1  1.4s
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to steer… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · enter steer · esc stop · 72 tok/s
+
+===== done =====
+  ✓ reasoning hidden · tools quiet · summary on
+
+› ponder, then use a tool and fix calc
+
+  ✓ ran 1 · read 1 · edit 1  2.6s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.7s · 3 tools · 1 file +13 −2 · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== quit =====
+  ✓ reasoning hidden · tools quiet · summary on
+
+› ponder, then use a tool and fix calc
+
+  ✓ ran 1 · read 1 · edit 1  2.6s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.7s · 3 tools · 1 file +13 −2 · 142 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_ly0su
+u
+

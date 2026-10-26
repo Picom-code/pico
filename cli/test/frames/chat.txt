@@ -1,0 +1,511 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "git status, then coffee."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== effort-off =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "git status, then coffee."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● low · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== typing =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "git status, then coffee."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                         /\_/\
+                                                                        ( •.• )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› explain this repo
+Qwen3-Coder 30B-A3B · ● low · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== multiline =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "git status, then coffee."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                         /\_/\
+                                                                        ( •.• )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› explain this repo
+  second line
+Qwen3-Coder 30B-A3B · ● low · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== streaming =====
+
+› explain this repo
+  second line
+
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note:
+
+                                                                         /\_/\
+                                                                        ( >.< ) ~
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› type to queue… esc to stop
+Qwen3-Coder 30B-A3B · ● low · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s
+
+===== done =====
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                         /\_/\
+                                                                        ( -.- )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● low · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== palette =====
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                         /\_/\
+                                                                        ( •.• )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› /se
+Qwen3-Coder 30B-A3B · ● low · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+  ❯ /search <query>  search past chats
+    /sessions        list recent sessions
+    /release-notes   skill · Draft release notes from git log
+    /resume [id]     reopen a past session
+    ↑↓ · tab complete · enter run · esc close
+
+===== tools-midstream =====
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+──────────────────────────────────────────────────────────────────────────────────────────
+
+› use a tool and todo please
+
+  ✻ thought 1.1s  ctrl+o
+
+  ┬ 2 steps
+  ├─ ⠴ npm test  1.4s
+  │  ╰ > bun test
+  │    test/unit.test.ts:
+  │    (pass) context bar > thresholds
+  │    (pass) diff renderer > truncation
+  └─ ✓ read src/app.ts  0.2s
+
+  todo 1/3
+  ✓ Read the project layout
+  ▸ Write the failing test
+  ○ Fix the bug
+
+                                                                         /\_/\
+                                                                        ( >.< ) ~
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› type to queue… esc to stop
+Qwen3-Coder 30B-A3B · ● low · ▰▱▱▱▱▱▱▱▱▱ 9.1k/128k cached 92% · 142 tok/s
+
+===== tools-done =====
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.6s · 3 tools · 1 file +13 −2 · 142 tok/s
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● low · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== approval =====
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 4.6s · 3 tools · 1 file +13 −2 · 142 tok/s
+
+──────────────────────────────────────────────────────────────────────────────────────────
+
+› approve cleanup
+
+  ✻ thought 0.5s  ctrl+o
+
+  ⠴ working  4.5s · esc to stop
+
+  ╭─ run this? ────────────────────────────────────────────╮
+  │ › rm -rf ./build                                       │
+  │ Delete the build directory to force a clean rebuild.   │
+  ╰─ y allow · n deny · a always ──────────────────────────╯
+
+                                                                         /\_/\
+                                                                        ( >.< ) ~
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› type to queue… esc to stop
+Qwen3-Coder 30B-A3B · ● low · ▰▱▱▱▱▱▱▱▱▱ 18k/128k cached 92% · 142 tok/s
+
+===== approved =====
+  Cleaned the build directory.
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● low · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 142 tok/s
+
+===== thinking-expand =====
+  Cleaned the build directory.
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● low · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 142 tok/s
+
+===== files =====
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+
+                                                                         /\_/\
+                                                                        ( •.• )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› @src/ma
+Qwen3-Coder 30B-A3B · ● low · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 142 tok/s
+  ❯ src/main.ts
+    src/markdown.ts
+    src/commands.ts
+    test/frames/chat/04-multilin[39m[0m…
+    test/frames/chat/14-model-pi[39m[0m…
+    test/frames/chat/15-model-pi[39m[0m…
+    test/frames/chat/05-streamin[39m[0m…
+    test/frames/chat/08-tools-mi[39m[0m…
+    1 of 31 · ↑↓ · tab complete · enter attach · esc close
+
+===== model-picker =====
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+? Model
+❯ ● Qwen3-Coder 30B-A3B  local · 128k ctx · 72 tok/s
+    gpt-oss 20B          local · 128k ctx · 88 tok/s
+    GPT-5 (ChatGPT)      openai · 272k ctx
+↑↓ move · enter select
+
+===== model-picked =====
+  1. first
+  2. second
+
+  ╭─ ts ───────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                           │
+  │ export function hi(name: string) {                                                 │
+  │   return `hello ${name}` + 42;                                                     │
+  │ }                                                                                  │
+  ╰────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 6.2s · 142 tok/s
+  ✓ model → gpt-oss 20B
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● low · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 88 tok/s
+
+===== help =====
+  /goal           set a goal the agent works toward
+  /plan           plan before doing
+  /compact        summarize context to free tokens
+  /lean           slim your profile & show the speedup
+  /yolo           run commands without asking (toggle)
+  /undo           undo the last turn (restores changed files)
+  /agents         subagent settings
+  /theme          accent color & spinner
+  /memory         what pico remembers about you
+  /skills         list skills
+  /search         search past chats
+  /checkin        scheduled background replies
+  /connect        apps & connectors
+  /update         check for faster models/config
+  /effort         set reasoning effort
+  /copy           copy the last reply to the clipboard
+  /clear          clear the screen
+  /redraw         repaint the screen (after resize / garbled output)
+  /help           keys & commands
+  /quit           exit pico
+
+  skills · 2
+  /review         Review the current diff
+  /release-notes  Draft release notes from git log
+
+                                                                         /\_/\
+                                                                        ( •.• )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● low · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 88 tok/s
+
+===== update =====
+  /goal           set a goal the agent works toward
+  /plan           plan before doing
+  /compact        summarize context to free tokens
+  /lean           slim your profile & show the speedup
+  /yolo           run commands without asking (toggle)
+  /undo           undo the last turn (restores changed files)
+  /agents         subagent settings
+  /theme          accent color & spinner
+  /memory         what pico remembers about you
+  /skills         list skills
+  /search         search past chats
+  /checkin        scheduled background replies
+  /connect        apps & connectors
+  /update         check for faster models/config
+  /effort         set reasoning effort
+  /copy           copy the last reply to the clipboard
+  /clear          clear the screen
+  /redraw         repaint the screen (after resize / garbled output)
+  /help           keys & commands
+  /quit           exit pico
+
+  skills · 2
+  /review         Review the current diff
+  /release-notes  Draft release notes from git log
+
+
+  updates available
+  ↑ qwen3-coder-30b-a3b → qwen3.5-coder-35b-a3b  +12 tok/s, +32k ctx, +3 SWE-bench
+    Newer release, same memory footprint.
+? Apply model update → qwen3.5-coder-35b-a3b?  (y/n)
+
+===== update-no =====
+  /undo           undo the last turn (restores changed files)
+  /agents         subagent settings
+  /theme          accent color & spinner
+  /memory         what pico remembers about you
+  /skills         list skills
+  /search         search past chats
+  /checkin        scheduled background replies
+  /connect        apps & connectors
+  /update         check for faster models/config
+  /effort         set reasoning effort
+  /copy           copy the last reply to the clipboard
+  /clear          clear the screen
+  /redraw         repaint the screen (after resize / garbled output)
+  /help           keys & commands
+  /quit           exit pico
+
+  skills · 2
+  /review         Review the current diff
+  /release-notes  Draft release notes from git log
+
+
+  updates available
+  ↑ qwen3-coder-30b-a3b → qwen3.5-coder-35b-a3b  +12 tok/s, +32k ctx, +3 SWE-bench
+    Newer release, same memory footprint.
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● low ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● low · ▰▰▱▱▱▱▱▱▱▱ 27k/128k cached 92% · 88 tok/s
+
+===== quit =====
+  /undo           undo the last turn (restores changed files)
+  /agents         subagent settings
+  /theme          accent color & spinner
+  /memory         what pico remembers about you
+  /skills         list skills
+  /search         search past chats
+  /checkin        scheduled background replies
+  /connect        apps & connectors
+  /update         check for faster models/config
+  /effort         set reasoning effort
+  /copy           copy the last reply to the clipboard
+  /clear          clear the screen
+  /redraw         repaint the screen (after resize / garbled output)
+  /help           keys & commands
+  /quit           exit pico
+
+  skills · 2
+  /review         Review the current diff
+  /release-notes  Draft release notes from git log
+
+
+  updates available
+  ↑ qwen3-coder-30b-a3b → qwen3.5-coder-35b-a3b  +12 tok/s, +32k ctx, +3 SWE-bench
+    Newer release, same memory footprint.
+
+  (^.^)ﾉ bye for now · resume with pico -r s_3aiy82
+u
+

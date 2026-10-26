@@ -1,0 +1,230 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "the bug is probably off by one."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== long =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "the bug is probably off by one."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7 of a long answer.
+  Line 8 of a long answer.
+  Line 9 of a long answe
+
+                                                                         /\_/\
+                                                                        ( >.< ) ~
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to queue… esc to stop
+gpt-oss 20B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 88 tok/s
+
+===== stopped =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "the bug is probably off by one."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7 of a long answer.
+  Line 8 of a long answer.
+  Line 9 of a long answe
+
+  (-.-) stopped
+
+                                                                         /\_/\
+                                                                        ( ^.^ ) ✧
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.4k/128k cached 92% · 88 tok/s
+
+===== history =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  gpt-oss-20b · ~/Developer/pico/cli
+ > ^ <   "the bug is probably off by one."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7 of a long answer.
+  Line 8 of a long answer.
+  Line 9 of a long answe
+
+  (-.-) stopped
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› give me a long answer
+gpt-oss 20B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.4k/128k cached 92% · 88 tok/s
+
+===== resume =====
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7 of a long answer.
+  Line 8 of a long answer.
+  Line 9 of a long answe
+
+  (-.-) stopped
+? Resume which session?
+❯ give me a long answer            just now
+    Line 1 of a long answer. ⏎ Line 2 of a long answer. ⏎ Line 3 of a long answer. ⏎ Li…
+  run the tool please              just now
+  explain this repo ⏎ second line  just now
+  approve cleanup                  1m ago
+  approve cleanup                  2m ago
+  approve cleanup                  2m ago
+  use a tool and fix calc          2m ago
+  say hi                           3m ago
+  approve cleanup                  8m ago
+  approve cleanup                  9m ago
+  approve cleanup                  10m ago
+↑↓ move · enter select
+
+===== resume-pick =====
+
+› give me a long answer
+
+  ✻ thought 0.5s  ctrl+o
+
+  Line 1 of a long answer.
+  Line 2 of a long answer.
+  Line 3 of a long answer.
+  Line 4 of a long answer.
+  Line 5 of a long answer.
+  Line 6 of a long answer.
+  Line 7 of a long answer.
+  Line 8 of a long answer.
+  Line 9 of a long answe
+
+  (-.-) stopped
+? Resume which session?
+❯ give me a long answer            just now
+    Line 1 of a long answer. ⏎ Line 2 of a long answer. ⏎ Line 3 of a long answer. ⏎ Li…
+  run the tool please              just now
+  explain this repo ⏎ second line  just now
+  approve cleanup                  1m ago
+  approve cleanup                  2m ago
+  approve cleanup                  2m ago
+  use a tool and fix calc          2m ago
+  say hi                           3m ago
+  approve cleanup                  8m ago
+  approve cleanup                  9m ago
+  approve cleanup                  10m ago
+↑↓ move · enter select
+
+===== resumed =====
+  Line 39 of a long answer.
+  Line 40 of a long answer.
+  Line 41 of a long answer.
+  Line 42 of a long answer.
+  Line 43 of a long answer.
+  Line 44 of a long answer.
+  Line 45 of a long answer.
+  Line 46 of a long answer.
+  Line 47 of a long answer.
+  Line 48 of a long answer.
+  Line 49 of a long answer.
+  Line 50 of a long answer.
+  Line 51 of a long answer.
+  Line 52 of a long answer.
+  Line 53 of a long answer.
+  Line 54 of a long answer.
+  Line 55 of a long answer.
+  Line 56 of a long answer.
+  Line 57 of a long answer.
+  Line 58 of a long answer.
+  Line 59 of a long answer.
+  Line 60 of a long answer.
+
+  (^.^)✧ done
+
+                                                                         /\_/\
+                                                                        ( o.o )
+──────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+gpt-oss 20B · ● med · ▰▱▱▱▱▱▱▱▱▱ 9.4k/128k cached 92% · 88 tok/s
+
+===== quit =====
+  Line 39 of a long answer.
+  Line 40 of a long answer.
+  Line 41 of a long answer.
+  Line 42 of a long answer.
+  Line 43 of a long answer.
+  Line 44 of a long answer.
+  Line 45 of a long answer.
+  Line 46 of a long answer.
+  Line 47 of a long answer.
+  Line 48 of a long answer.
+  Line 49 of a long answer.
+  Line 50 of a long answer.
+  Line 51 of a long answer.
+  Line 52 of a long answer.
+  Line 53 of a long answer.
+  Line 54 of a long answer.
+  Line 55 of a long answer.
+  Line 56 of a long answer.
+  Line 57 of a long answer.
+  Line 58 of a long answer.
+  Line 59 of a long answer.
+  Line 60 of a long answer.
+
+  (^.^)✧ done
+
+  (^.^)ﾉ bye for now · resume with pico -r s_44j12r
+u
+

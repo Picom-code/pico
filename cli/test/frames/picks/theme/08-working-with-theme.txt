@@ -1,0 +1,27 @@
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "i read the docs so you don't have to."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+✓ theme cyan · equalizer  saved to ….hermes/cache/scratch/picohome/tui.json
+
+› use a tool please
+
+  ✻ thought 0.5s  ctrl+o
+
+  ┬ 2 steps
+  ├─ ▁▅▅ npm test  1.1s
+  │  ╰ > pico@0.1.0 test
+  │    > bun test
+  │    test/unit.test.ts:
+  │    (pass) context bar > thresholds
+  └─ ✓ read src/app.ts  0.2s
+
+                                                                                                       /\_/\
+                                                                                                      ( >.< ) ~
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› type to queue… esc to stop
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱▱ 0/128k · 72 tok/s

@@ -1,0 +1,348 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱┊▱▱ 0/128k · you ▰▰▰▱ 210 · 72 tok/s
+today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== config =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │ ❯ default effort ‹ med ›                                                         │
+  │                Effort for new chats. shift+tab changes only the current chat.    │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   80%                                                               │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== compact-at =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │ ❯ compact at   ‹ 80% ›                                                           │
+  │                Context fill that triggers auto-compaction (tick on the status    │
+  │                bar).                                                             │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ‹› tabs · ↑↓ move · enter/space change · esc close ─────────────────────────────╯
+
+===== compact-at-85 =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │ ❯ compact at   ‹ 85% ›  ✓                                                        │
+  │                Context fill that triggers auto-compaction (tick on the status    │
+  │                bar).                                                             │
+  │   keep recent  6 messages                                                        │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ✓ saved compact at 85% ─────────────────────────────────────────────────────────╯
+
+===== keep-recent =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   85%  ✓                                                            │
+  │ ❯ keep recent  ‹ 6 messages ›                                                    │
+  │                Newest messages kept word for word when compacting.               │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ✓ saved compact at 85% ─────────────────────────────────────────────────────────╯
+
+===== keep-7 =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   85%                                                               │
+  │ ❯ keep recent  ‹ 7 messages ›  ✓                                                 │
+  │                Newest messages kept word for word when compacting.               │
+  │   mode         summary                                                           │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ✓ saved keep recent 7 messages ─────────────────────────────────────────────────╯
+
+===== mode-trim =====
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+
+  ╭─ (^.^) settings ─────────────────────────────────────────────────────────────────╮
+  │  Status   Config   Usage   Look & feel                                           │
+  │ ─────────━━━━━━━━─────────────────────────────────────────────────────────────── │
+  │                                                                                  │
+  │ model                                                                            │
+  │   default effort med                                                             │
+  │   approvals    ask                                                               │
+  │   harness      lean                                                              │
+  │   subagents    ● on                                                              │
+  │   max helpers  3                                                                 │
+  │                                                                                  │
+  │ compaction                                                                       │
+  │   auto         ● on                                                              │
+  │   compact at   85%                                                               │
+  │   keep recent  7 messages                                                        │
+  │ ❯ mode         ‹ trim ›  ✓                                                       │
+  │                summary = the model writes a recap · trim = drop the oldest       │
+  │                messages (instant).                                               │
+  │   notify       ● on                                                              │
+  │                                                                                  │
+  │ display                                                                          │
+  │   usage line   ● on                                                              │
+  │   reasoning    timer                                                             │
+  │   tool detail  normal                                                            │
+  │   summary line ● on                                                              │
+  │                                                                                  │
+  ╰─ ✓ saved mode trim ──────────────────────────────────────────────────────────────╯
+
+===== closed =====
+
+ /\_/\   pico v0.1.0 · engine 0.1.0-mock
+( ^.^ )  Qwen3-Coder 30B-A3B · 128k ctx · ~/Developer/pico/cli
+ > ^ <   "local, private, mildly opinionated."
+
+/ commands · @ files · shift+tab effort · /theme colors · ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▱▱▱▱▱▱▱▱▱┊▱ 0/128k · you ▰▰▰▱ 210 · 72 tok/s
+today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== ticked =====
+ › half fill please
+
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▰▰▰▰▰▰▰┊▱ 118k/128k cached 92% run /compact · you ▰▰▰▱ 210 · 142 tok/s
+session 118k in · 116 out · cached 92%   today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== auto =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  ↺ auto-compacted (kept last 7)
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( ^.^ ) ✧
+────────────────────────────────────────────────────────────────────────────────────────────────────── > ^ < ─── ● med ─
+› ask anything · / for commands · @ to attach
+Qwen3-Coder 30B-A3B · ● med · ▰▰▱▱▱▱▱▱▱┊▱ 33k/128k ↺ compacted 118k→24k · you ▰▰▰▱ 210 · 142 tok/s
+session 150k in · 232 out · cached 92%   today 155k · 8 turns   30d 3.6M ▄▇█▆▃▅▄
+
+===== quit =====
+(^.^) pico
+  ✻ thought 0.5s  ctrl+o
+
+  ↺ auto-compacted (kept last 7)
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs https://pico.dev/docs.
+
+  (^.^)✧ done in 1.9s · 142 tok/s
+
+  (^.^)ﾉ bye for now · resume with pico -r s_1xy81
+u
+

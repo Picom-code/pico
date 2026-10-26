@@ -1,0 +1,9 @@
+id: code-add-feature
+category: coding
+timeout_s: 240
+prompt: |
+  Add a `remove(name, qty)` method to the Inventory class in inventory.py.
+  It decreases the stock of `name` by `qty`. Rules: qty must be a positive int (else ValueError);
+  removing an unknown item or more than is in stock raises ValueError and leaves stock unchanged;
+  when stock reaches 0 the item disappears from `items()`. Keep existing behaviour intact.
+check: python3 "$HIDDEN/test_inventory.py"

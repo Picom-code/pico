@@ -1,0 +1,12 @@
+Weekly sync — Monday 2 November 2026
+Attendees: Maya, Tom, Lucia, Ben
+
+Maya: The pricing page is still showing last year's plans. Tom, can you fix that?
+Tom: Sure, I'll update the pricing page by Wednesday.
+Lucia: I'll send the Q3 churn analysis to the whole team by Friday.
+Ben: Someone could look into dark mode at some point. Not urgent.
+Maya: Let's park dark mode.
+Maya: I'll book the venue for the December offsite — I'll have it done by 13 November.
+Ben: I'll review Lucia's analysis once it's out, no fixed date.
+Tom: Maybe we should rewrite the onboarding emails? Let's discuss next month.
+Lucia: Also, I'll renew the analytics license before it expires on the 30th.

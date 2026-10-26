@@ -1,0 +1,4 @@
+node_modules
+dist
+test/frames/*.raw
+test/frames/*.json

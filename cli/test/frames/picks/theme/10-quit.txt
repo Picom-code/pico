@@ -1,0 +1,31 @@
+
+  ┬ 3 steps
+  ├─ ✓ npm test  2.1s
+  ├─ ✓ read src/app.ts  0.2s
+  └─ ✓ patch src/app.ts  0.3s
+     ✎ src/app.ts  +13 −2  (ctrl+o to see)
+
+  Summary
+
+  Here is what I found in your project:
+
+  • The entry point is src/main.ts
+  • Tests live in test/
+    • nested item
+  1. first
+  2. second
+
+  ╭─ ts ─────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ // greet                                                                                         │
+  │ export function hi(name: string) {                                                               │
+  │   return `hello ${name}` + 42;                                                                   │
+  │ }                                                                                                │
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+  ▎ Note: this is a mock reply.
+
+  See docs (https://pico.dev/docs).
+
+  (^.^)✧ done in 3.9s · 3 tools · 1 file +13 −2 · 142 tok/s
+  session s_16pzvm · resume with pico -r s_16pzvm
+u

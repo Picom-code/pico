@@ -1,0 +1,108 @@
+===== boot =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything | / for commands | @ to attach
+Qwen3-Coder 30B-A3B | * med | [--------|--] 0/128k | you [###-] 210 | 72 tok/s
+today 155k | 8 turns   30d 3.6M -*#+:=-
+
+===== exchange =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> yo testing123
+
+pico:
+  * thought 0.5s  ctrl+o
+
+  Loud and clear.
+
+  (^.^)* done in 0.6s | 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything | / for commands | @ to attach
+Qwen3-Coder 30B-A3B | * med | [#-------|--] 9k/128k cached 92% | you [###-] 210 | 142 tok/s
+session 9k in | 44 out | cached 92%   today 155k | 8 turns   30d 3.6M -*#+:=-
+
+===== two =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> yo testing123
+
+pico:
+  * thought 0.5s  ctrl+o
+
+  Loud and clear.
+
+  (^.^)* done in 0.6s | 142 tok/s
+
+------------------------------------------------------------------------------------------------------------------------
+
+> say hi and wrap this deliberately long message so the band has to continue onto a second line of the terminal
+
+pico:
+  * thought 0.6s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+
+                                                                                                       /\_/\
+                                                                                                      ( o.o )
+------------------------------------------------------------------------------------------------------ > ^ < --- * med -
+> ask anything | / for commands | @ to attach
+Qwen3-Coder 30B-A3B | * med | [#-------|--] 18k/128k cached 92% | you [###-] 210 | 142 tok/s
+session 27k in | 86 out | cached 92%   today 155k | 8 turns   30d 3.6M -*#+:=-
+
+===== quit =====
+
+ /\_/\   pico v0.1.0 | engine 0.1.0-mock
+( ^.^ )  qwen3-coder-30b-a3b | ~/Developer/pico/cli
+ > ^ <   "say the word."
+
+/ commands | @ files | shift+tab effort | /theme colors | ? help
+
+
+> yo testing123
+
+pico:
+  * thought 0.5s  ctrl+o
+
+  Loud and clear.
+
+  (^.^)* done in 0.6s | 142 tok/s
+
+------------------------------------------------------------------------------------------------------------------------
+
+> say hi and wrap this deliberately long message so the band has to continue onto a second line of the terminal
+
+pico:
+  * thought 0.6s  ctrl+o
+
+  Hi! 👋
+
+  (^.^)* done in 0.6s | 142 tok/s
+
+  (^.^)/ bye for now | resume with pico -r s_1mcdk
+u
+
